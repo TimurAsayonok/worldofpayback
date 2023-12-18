@@ -15,11 +15,10 @@ opt_in_rules:
     - first_where
 
 included:
-    - Testio
+    - wordofpayback
     # - AppPackages
 
 excluded:
-    # - Pods
     # - AppPackages/Package.swift
     # - AppPackages/Tests
     

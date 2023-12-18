@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct wordofpaybackApp: App {
+struct WordOfPaybackApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
