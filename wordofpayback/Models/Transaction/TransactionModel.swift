@@ -19,4 +19,25 @@ struct Transaction: Codable, Equatable {
         case category
         case transactionDetail
     }
+    
+    static func mock() -> Self {
+        .init(
+            partnerDisplayName: "REWE Group",
+            alias: .init(reference: "795357452000810"),
+            category: 1,
+            transactionDetail: .init(
+                description: "Punkte sammeln",
+                bookingDate: DateFormatter().date(from: "2022-07-24T10:59:05+0200"),
+                value: TransactionValue(amount: 124, currency: .PBP)
+            )
+        )
+    }
+    
+    static func mockedList() -> [Self] {
+        return [
+            .mock(),
+            .mock(),
+            .mock()
+        ]
+    }
 }

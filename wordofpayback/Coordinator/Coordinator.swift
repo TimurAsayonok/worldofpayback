@@ -26,7 +26,7 @@ struct Coordinator: Reducer {
         return Reduce<State, Action> { state, action in
             switch action {
             case .routeAction(_, action: .welcome(.loginTapped)):
-                state.routes.push(.welcome(.init()))
+                state.routes.push(.transactionsList(.init()))
             default:
                 break
             }

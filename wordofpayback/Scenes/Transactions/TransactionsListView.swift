@@ -6,13 +6,41 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct TransactionsListView: View {
+    var store: StoreOf<TransactionListStore>
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Transaction List View").font(.headline)
+            Button("Open the App") {
+                store.send(.transactionItemTapped)
+            }
+        }
     }
 }
 
-#Preview {
-    TransactionsListView()
+struct TransactionListStore: Reducer {
+    struct State: Equatable {
+        let id = UUID()
+    }
+    
+    enum Action {
+        case transactionItemTapped
+    }
+    
+    var body: some ReducerOf<Self> {
+        Reduce<State, Action> { state, action in
+            switch action {
+            case .transactionItemTapped:
+                print("transactionItemTapped")
+                return .none
+            }
+        }
+    }
 }
+//
+//#Preview {
+//    TransactionsListView()
+//}

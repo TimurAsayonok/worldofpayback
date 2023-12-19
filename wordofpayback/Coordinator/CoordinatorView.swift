@@ -14,12 +14,21 @@ struct CoordinatorView: View {
     
     var body: some View {
         TCARouter(store) { screen in
-            SwitchStore(screen) { _ in
-                CaseLet(
-                    /ScreenRoute.State.welcome,
-                    action: ScreenRoute.Action.welcome,
-                    then: WelcomeView.init
-                )
+            SwitchStore(screen) { screen  in
+                switch screen {
+                case .welcome:
+                    CaseLet(
+                        /ScreenRoute.State.welcome,
+                        action: ScreenRoute.Action.welcome,
+                        then: WelcomeView.init
+                    )
+                case .transactionsList:
+                    CaseLet(
+                        /ScreenRoute.State.transactionsList,
+                        action: ScreenRoute.Action.transactionsList,
+                        then: TransactionsListView.init
+                    )
+                }
             }
         }
     }
