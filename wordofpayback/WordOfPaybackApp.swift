@@ -17,6 +17,7 @@ struct WordOfPaybackApp: App {
             CoordinatorView(store: Store(initialState: .initialState, reducer: {
                 Coordinator()
             }))
+            .safeAreaPadding(16)
         }
     }
 }

@@ -24,6 +24,7 @@
 		2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA892B31F46A00BA75AE /* TransactionDetail.swift */; };
 		2DDFEA8C2B31F4C500BA75AE /* TransactionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA8B2B31F4C500BA75AE /* TransactionValue.swift */; };
 		2DDFEA8F2B31F52A00BA75AE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA8E2B31F52A00BA75AE /* Currency.swift */; };
+		2DDFEA942B32227000BA75AE /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA932B32227000BA75AE /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		2DDFEA892B31F46A00BA75AE /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
 		2DDFEA8B2B31F4C500BA75AE /* TransactionValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionValue.swift; sourceTree = "<group>"; };
 		2DDFEA8E2B31F52A00BA75AE /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		2DDFEA902B32176000BA75AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2DDFEA932B32227000BA75AE /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +84,11 @@
 				2DDFEA722B31B39E00BA75AE /* Scenes */,
 				2DDFEA762B31D59000BA75AE /* ScreenRoute */,
 				2DDFEA822B31F33F00BA75AE /* Models */,
+				2DDFEA912B32224F00BA75AE /* Common */,
 				2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */,
 				2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */,
 				2D1C34362B30C5AB006E3FAE /* Assets.xcassets */,
+				2DDFEA902B32176000BA75AE /* Info.plist */,
 				2D1C34382B30C5AB006E3FAE /* Preview Content */,
 			);
 			path = wordofpayback;
@@ -158,6 +163,22 @@
 				2DDFEA8B2B31F4C500BA75AE /* TransactionValue.swift */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		2DDFEA912B32224F00BA75AE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEA922B32225B00BA75AE /* UIComponents */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2DDFEA922B32225B00BA75AE /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEA932B32227000BA75AE /* PrimaryButton.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +284,7 @@
 				2DDFEA7A2B31D65800BA75AE /* Coordinator.swift in Sources */,
 				2DDFEA7F2B31F2B800BA75AE /* TransactionsListView.swift in Sources */,
 				2DDFEA7C2B31D8E800BA75AE /* CoordinatorView.swift in Sources */,
+				2DDFEA942B32227000BA75AE /* PrimaryButton.swift in Sources */,
 				2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */,
 				2DDFEA782B31D59B00BA75AE /* ScreenRoute.swift in Sources */,
 				2DDFEA752B31B3D700BA75AE /* WelcomeView.swift in Sources */,
@@ -409,9 +431,9 @@
 				DEVELOPMENT_TEAM = 499939BRBP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = wordofpayback/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -440,9 +462,9 @@
 				DEVELOPMENT_TEAM = 499939BRBP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = wordofpayback/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
