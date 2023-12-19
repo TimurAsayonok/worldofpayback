@@ -9,15 +9,15 @@ import ComposableArchitecture
 
 struct Screen: Reducer {
     enum State: Equatable {
-        case home(WelcomeStore.State)
+        case welcome(WelcomeStore.State)
     }
     
     enum Action: Equatable {
-        case home(WelcomeStore.Action)
+        case welcome(WelcomeStore.Action)
     }
     
     var body: some Reducer<State, Action> {
-        Scope(state: /State.home, action: /Action.home) {
+        Scope(state: /State.welcome, action: /Action.welcome) {
             WelcomeStore()
         }
     }
