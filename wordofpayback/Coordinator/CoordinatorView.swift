@@ -16,8 +16,8 @@ struct CoordinatorView: View {
         TCARouter(store) { screen in
             SwitchStore(screen) { _ in
                 CaseLet(
-                    /Screen.State.home,
-                    action: Screen.Action.home,
+                    /ScreenRoute.State.welcome,
+                    action: ScreenRoute.Action.welcome,
                     then: WelcomeView.init
                 )
             }

@@ -7,7 +7,7 @@
 
 import ComposableArchitecture
 
-struct Screen: Reducer {
+struct ScreenRoute: Reducer {
     enum State: Equatable {
         case welcome(WelcomeStore.State)
     }

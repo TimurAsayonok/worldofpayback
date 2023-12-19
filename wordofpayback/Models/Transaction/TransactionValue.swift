@@ -9,7 +9,7 @@ import Foundation
 
 struct TransactionValue: Codable, Equatable {
     var amount: Int?
-    var currency: String?
+    var currency: Currency?
     
     enum CodingKeys: String, CodingKey {
         case amount
