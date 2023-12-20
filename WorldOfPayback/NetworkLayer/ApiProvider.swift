@@ -34,7 +34,7 @@ extension ApiProviderProtocol {
 
 class ApiProvider: ApiProviderProtocol {
     var basedUrl: URL {
-        URL(string: "")!
+        BuildConfiguration.shared.apiBasedURL
     }
     
     /// Sends Api request to the server and returns data

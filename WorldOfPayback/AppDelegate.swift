@@ -13,6 +13,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         print("Your code here")
+        print("Current configuration: \(BuildConfiguration.shared.environment)")
         return true
     }
 }

@@ -31,6 +31,8 @@
 		2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */; };
 		2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */; };
 		2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */; };
+		2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA72B339DC900BA75AE /* EnvironmentConfiguration.swift */; };
+		2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoder.swift; sourceTree = "<group>"; };
 		2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersRequestDecorator.swift; sourceTree = "<group>"; };
+		2DDFEAA72B339DC900BA75AE /* EnvironmentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfiguration.swift; sourceTree = "<group>"; };
+		2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				2DDFEA762B31D59000BA75AE /* ScreenRoute */,
 				2DDFEA822B31F33F00BA75AE /* Models */,
 				2DDFEA952B33672000BA75AE /* NetworkLayer */,
+				2DDFEAA52B339D8500BA75AE /* Services */,
 				2DDFEA9E2B33721500BA75AE /* Extensions */,
 				2DDFEA912B32224F00BA75AE /* Common */,
 				2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */,
@@ -215,6 +220,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2DDFEAA52B339D8500BA75AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEAA62B339DB500BA75AE /* AppConfiguration */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2DDFEAA62B339DB500BA75AE /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEAA72B339DC900BA75AE /* EnvironmentConfiguration.swift */,
+				2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */,
+			);
+			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,7 +345,9 @@
 				2DDFEA942B32227000BA75AE /* PrimaryButton.swift in Sources */,
 				2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */,
 				2DDFEA782B31D59B00BA75AE /* ScreenRoute.swift in Sources */,
+				2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */,
 				2DDFEA752B31B3D700BA75AE /* WelcomeView.swift in Sources */,
+				2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */,
 				2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */,
 				2DDFEA8F2B31F52A00BA75AE /* Currency.swift in Sources */,
 				2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */,
@@ -481,7 +505,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timurpersonal.worldofpayback;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timurpersonal.worldofpayback.dev;
 				PRODUCT_NAME = "WorldOfPaybak Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -606,7 +630,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timurpersonal.worldofpayback;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timurpersonal.worldofpayback.staging;
 				PRODUCT_NAME = "WorldOfPayback Staging";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
