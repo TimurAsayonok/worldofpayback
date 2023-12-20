@@ -33,6 +33,11 @@
 		2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */; };
 		2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA72B339DC900BA75AE /* EnvironmentConfiguration.swift */; };
 		2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */; };
+		2DDFEAAE2B33A39F00BA75AE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAAD2B33A39F00BA75AE /* ApiService.swift */; };
+		2DDFEAB02B33A3C600BA75AE /* TransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */; };
+		2DDFEAB32B33A54D00BA75AE /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB22B33A54D00BA75AE /* ErrorResponse.swift */; };
+		2DDFEAB62B33AD7400BA75AE /* ApiServiceDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB52B33AD7400BA75AE /* ApiServiceDependency.swift */; };
+		2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,11 @@
 		2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersRequestDecorator.swift; sourceTree = "<group>"; };
 		2DDFEAA72B339DC900BA75AE /* EnvironmentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfiguration.swift; sourceTree = "<group>"; };
 		2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
+		2DDFEAAD2B33A39F00BA75AE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRequest.swift; sourceTree = "<group>"; };
+		2DDFEAB22B33A54D00BA75AE /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		2DDFEAB52B33AD7400BA75AE /* ApiServiceDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceDependency.swift; sourceTree = "<group>"; };
+		2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 			children = (
 				2DDFEA722B31B39E00BA75AE /* Scenes */,
 				2DDFEA662B31A7B700BA75AE /* Coordinator */,
+				2DDFEAB42B33AD0B00BA75AE /* Dependencies */,
 				2DDFEA762B31D59000BA75AE /* ScreenRoute */,
 				2DDFEA822B31F33F00BA75AE /* Models */,
 				2DDFEA952B33672000BA75AE /* NetworkLayer */,
@@ -167,6 +178,7 @@
 		2DDFEA822B31F33F00BA75AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2DDFEAB12B33A54400BA75AE /* Common */,
 				2DDFEA8D2B31F4EE00BA75AE /* Transaction */,
 				2DDFEA8E2B31F52A00BA75AE /* Currency.swift */,
 			);
@@ -223,6 +235,7 @@
 		2DDFEAA52B339D8500BA75AE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2DDFEAAB2B33A37600BA75AE /* ApiService */,
 				2DDFEAA62B339DB500BA75AE /* AppConfiguration */,
 			);
 			path = Services;
@@ -235,6 +248,40 @@
 				2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */,
 			);
 			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		2DDFEAAB2B33A37600BA75AE /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEAAD2B33A39F00BA75AE /* ApiService.swift */,
+				2DDFEAAC2B33A38F00BA75AE /* Requests */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		2DDFEAAC2B33A38F00BA75AE /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		2DDFEAB12B33A54400BA75AE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEAB22B33A54D00BA75AE /* ErrorResponse.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2DDFEAB42B33AD0B00BA75AE /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */,
+				2DDFEAB52B33AD7400BA75AE /* ApiServiceDependency.swift */,
+			);
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,11 +388,14 @@
 				2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */,
 				2DDFEA7F2B31F2B800BA75AE /* TransactionsListView.swift in Sources */,
 				2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */,
+				2DDFEAB32B33A54D00BA75AE /* ErrorResponse.swift in Sources */,
 				2DDFEA7C2B31D8E800BA75AE /* CoordinatorView.swift in Sources */,
 				2DDFEA942B32227000BA75AE /* PrimaryButton.swift in Sources */,
 				2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */,
 				2DDFEA782B31D59B00BA75AE /* ScreenRoute.swift in Sources */,
 				2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */,
+				2DDFEAB62B33AD7400BA75AE /* ApiServiceDependency.swift in Sources */,
+				2DDFEAB02B33A3C600BA75AE /* TransactionListRequest.swift in Sources */,
 				2DDFEA752B31B3D700BA75AE /* WelcomeView.swift in Sources */,
 				2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */,
 				2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */,
@@ -354,6 +404,8 @@
 				2DDFEA812B31F2E800BA75AE /* TransactionDetailsView.swift in Sources */,
 				2DDFEA992B3368D900BA75AE /* RequestProtocol.swift in Sources */,
 				2DDFEA9B2B3369B500BA75AE /* HTTPMethod.swift in Sources */,
+				2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */,
+				2DDFEAAE2B33A39F00BA75AE /* ApiService.swift in Sources */,
 				2DDFEA882B31F42D00BA75AE /* TransactionAlias.swift in Sources */,
 				2DDFEA972B33687200BA75AE /* ApiProvider.swift in Sources */,
 				2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */,

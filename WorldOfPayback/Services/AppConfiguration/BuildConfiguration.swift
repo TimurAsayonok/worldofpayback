@@ -16,9 +16,9 @@ class BuildConfiguration {
     private var apiBasedURLStringL: String {
         switch environment {
         case .development, .staging:
-            "https://api-test.payback.com/transactions"
+            "https://api-test.payback.com"
         case .release:
-            "https://api.payback.com/"
+            "https://api.payback.com"
         }
     }
     var apiBasedURL: URL {

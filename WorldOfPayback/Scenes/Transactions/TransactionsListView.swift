@@ -39,6 +39,7 @@ struct TransactionListStore: Reducer {
     enum Action {
         case getTransactionList
         case transactionItemTapped
+        case getTransactionListSucceed([String])
     }
     
     var body: some ReducerOf<Self> {
@@ -46,10 +47,16 @@ struct TransactionListStore: Reducer {
             switch action {
             case .getTransactionList:
                 state.transactionList = TransactionModel.mockedList()
-                return .none
+                return .run { send in
+                    let response = try await apiService.getTransactionList()
+                    try await send(.getTransactionListSucceed)
+                }
                 
             case .transactionItemTapped:
                 print("transactionItemTapped")
+                return .none
+                
+            case .getTransactionListSucceed:
                 return .none
             }
         }
