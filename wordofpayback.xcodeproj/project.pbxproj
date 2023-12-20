@@ -30,6 +30,7 @@
 		2DDFEA9B2B3369B500BA75AE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */; };
 		2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */; };
 		2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */; };
+		2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoder.swift; sourceTree = "<group>"; };
 		2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersRequestDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,9 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEA962B33687200BA75AE /* ApiProvider.swift */,
+				2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */,
 				2DDFEA982B3368D900BA75AE /* RequestProtocol.swift */,
 				2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */,
-				2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */,
+				2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				2DDFEA752B31B3D700BA75AE /* WelcomeView.swift in Sources */,
 				2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */,
 				2DDFEA8F2B31F52A00BA75AE /* Currency.swift in Sources */,
+				2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */,
 				2DDFEA812B31F2E800BA75AE /* TransactionDetailsView.swift in Sources */,
 				2DDFEA992B3368D900BA75AE /* RequestProtocol.swift in Sources */,
 				2DDFEA9B2B3369B500BA75AE /* HTTPMethod.swift in Sources */,
