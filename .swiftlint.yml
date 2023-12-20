@@ -15,7 +15,7 @@ opt_in_rules:
     - first_where
 
 included:
-    - wordofpayback
+    - WorldOfPayback
     # - AppPackages
 
 excluded:
