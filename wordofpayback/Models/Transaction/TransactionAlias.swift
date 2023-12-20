@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TransactionAlias: Codable, Equatable {
+struct TransactionAlias: Codable, Equatable, Hashable {
     var reference: String?
     
     enum CodingKeys: String, CodingKey {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Transaction: Codable, Equatable {
+struct TransactionModel: Codable, Equatable, Hashable {
     var partnerDisplayName: String?
     var alias: TransactionAlias?
     var category: Int?

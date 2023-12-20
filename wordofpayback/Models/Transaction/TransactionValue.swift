@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TransactionValue: Codable, Equatable {
+struct TransactionValue: Codable, Equatable, Hashable {
     var amount: Int?
     var currency: Currency?
     

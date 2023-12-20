@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TransactionDetail: Codable, Equatable {
+struct TransactionDetail: Codable, Equatable, Hashable {
     var description: String?
     var bookingDate: Date?
     var value: TransactionValue?
