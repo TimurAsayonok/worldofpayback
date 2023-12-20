@@ -92,12 +92,12 @@
 		2D1C34312B30C5AA006E3FAE /* wordofpayback */ = {
 			isa = PBXGroup;
 			children = (
-				2DDFEA9E2B33721500BA75AE /* Extensions */,
-				2DDFEA952B33672000BA75AE /* NetworkLayer */,
-				2DDFEA662B31A7B700BA75AE /* Coordinator */,
 				2DDFEA722B31B39E00BA75AE /* Scenes */,
+				2DDFEA662B31A7B700BA75AE /* Coordinator */,
 				2DDFEA762B31D59000BA75AE /* ScreenRoute */,
 				2DDFEA822B31F33F00BA75AE /* Models */,
+				2DDFEA952B33672000BA75AE /* NetworkLayer */,
+				2DDFEA9E2B33721500BA75AE /* Extensions */,
 				2DDFEA912B32224F00BA75AE /* Common */,
 				2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */,
 				2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */,
