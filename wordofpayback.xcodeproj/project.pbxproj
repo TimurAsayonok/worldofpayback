@@ -25,6 +25,11 @@
 		2DDFEA8C2B31F4C500BA75AE /* TransactionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA8B2B31F4C500BA75AE /* TransactionValue.swift */; };
 		2DDFEA8F2B31F52A00BA75AE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA8E2B31F52A00BA75AE /* Currency.swift */; };
 		2DDFEA942B32227000BA75AE /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA932B32227000BA75AE /* PrimaryButton.swift */; };
+		2DDFEA972B33687200BA75AE /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA962B33687200BA75AE /* ApiProvider.swift */; };
+		2DDFEA992B3368D900BA75AE /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA982B3368D900BA75AE /* RequestProtocol.swift */; };
+		2DDFEA9B2B3369B500BA75AE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */; };
+		2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */; };
+		2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		2DDFEA8E2B31F52A00BA75AE /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		2DDFEA902B32176000BA75AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2DDFEA932B32227000BA75AE /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		2DDFEA962B33687200BA75AE /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		2DDFEA982B3368D900BA75AE /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoder.swift; sourceTree = "<group>"; };
+		2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,8 @@
 		2D1C34312B30C5AA006E3FAE /* wordofpayback */ = {
 			isa = PBXGroup;
 			children = (
+				2DDFEA9E2B33721500BA75AE /* Extensions */,
+				2DDFEA952B33672000BA75AE /* NetworkLayer */,
 				2DDFEA662B31A7B700BA75AE /* Coordinator */,
 				2DDFEA722B31B39E00BA75AE /* Scenes */,
 				2DDFEA762B31D59000BA75AE /* ScreenRoute */,
@@ -179,6 +191,25 @@
 				2DDFEA932B32227000BA75AE /* PrimaryButton.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		2DDFEA952B33672000BA75AE /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEA962B33687200BA75AE /* ApiProvider.swift */,
+				2DDFEA982B3368D900BA75AE /* RequestProtocol.swift */,
+				2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */,
+				2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		2DDFEA9E2B33721500BA75AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +313,9 @@
 			files = (
 				2DDFEA8C2B31F4C500BA75AE /* TransactionValue.swift in Sources */,
 				2DDFEA7A2B31D65800BA75AE /* Coordinator.swift in Sources */,
+				2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */,
 				2DDFEA7F2B31F2B800BA75AE /* TransactionsListView.swift in Sources */,
+				2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */,
 				2DDFEA7C2B31D8E800BA75AE /* CoordinatorView.swift in Sources */,
 				2DDFEA942B32227000BA75AE /* PrimaryButton.swift in Sources */,
 				2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */,
@@ -291,7 +324,10 @@
 				2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */,
 				2DDFEA8F2B31F52A00BA75AE /* Currency.swift in Sources */,
 				2DDFEA812B31F2E800BA75AE /* TransactionDetailsView.swift in Sources */,
+				2DDFEA992B3368D900BA75AE /* RequestProtocol.swift in Sources */,
+				2DDFEA9B2B3369B500BA75AE /* HTTPMethod.swift in Sources */,
 				2DDFEA882B31F42D00BA75AE /* TransactionAlias.swift in Sources */,
+				2DDFEA972B33687200BA75AE /* ApiProvider.swift in Sources */,
 				2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */,
 				2DDFEA862B31F36E00BA75AE /* TransactionModel.swift in Sources */,
 			);
