@@ -12,16 +12,7 @@ struct TransactionView: View {
 
     var body: some View {
         HStack {
-            Text(String(transaction.partnerDisplayName?.first ?? "T"))
-                .font(.title)
-                .bold()
-                .foregroundStyle(.white)
-                .frame(width: 80, height: 80)
-                .background {
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(Color(.purple))
-                }
-            
+            TransactionLogoView(transactionName: transaction.partnerDisplayName)
             VStack(alignment: .leading, spacing: 8) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(transaction.partnerDisplayName ?? "")

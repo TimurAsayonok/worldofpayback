@@ -44,6 +44,7 @@
 		2DDFEAC32B34888100BA75AE /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */; };
 		2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */; };
 		2DDFEAC82B34A76600BA75AE /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */; };
+		2DDFEACA2B34CCBF00BA75AE /* TransactionLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequest.swift; sourceTree = "<group>"; };
 		2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEA7E2B31F2B800BA75AE /* TransactionsListView.swift */,
-				2DDFEA802B31F2E700BA75AE /* TransactionDetailsView.swift */,
 				2DDFEABD2B34699700BA75AE /* TransactionView.swift */,
+				2DDFEA802B31F2E700BA75AE /* TransactionDetailsView.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEA932B32227000BA75AE /* PrimaryButton.swift */,
+				2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				2DDFEA7C2B31D8E800BA75AE /* CoordinatorView.swift in Sources */,
 				2DDFEA942B32227000BA75AE /* PrimaryButton.swift in Sources */,
 				2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */,
+				2DDFEACA2B34CCBF00BA75AE /* TransactionLogoView.swift in Sources */,
 				2DDFEA782B31D59B00BA75AE /* ScreenRoute.swift in Sources */,
 				2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */,
 				2DDFEAB62B33AD7400BA75AE /* ApiServiceDependency.swift in Sources */,

@@ -13,61 +13,41 @@ struct TransactionDetailsView: View {
     
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
-            VStack(alignment: .leading) {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(.purple))
-                    .frame(width: 40, height: 40)
+            let transaction = viewStore.state.transaction
+            
+            VStack(alignment: .center) {
+                TransactionLogoView(
+                    transactionName: transaction.partnerDisplayName,
+                    size: CGSize(width: 140, height: 140)
+                )
                 
-                Text(viewStore.transaction.partnerDisplayName ?? "")
-                    .font(.largeTitle)
-                    .bold()
-                
-                PrimaryButton(title: "Open the App") {
-                    store.send(.loginTapped)
+                VStack(alignment: .leading) {
+                    Text(transaction.partnerDisplayName ?? "")
+                        .font(.title)
+                        .bold()
+                    
+                    Text(transaction.transactionDetail?.description ?? "")
+                        .font(.callout)
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Spacer()
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
         }
-        
     }
 }
 
 struct TransactionDetailsStore: Reducer {
     struct State: Equatable {
         let id = UUID()
-        let transaction: TransactionModel
+        var transaction: TransactionModel
     }
     
-    enum Action: Equatable {
-        case loginTapped
-    }
-    
-    struct Environment {
-        
-    }
+    enum Action: Equatable {}
     
     var body: some ReducerOf<Self> {
-        Reduce<State, Action> { state, action in
-            switch action {
-            case .loginTapped:
-                print("loginTapped")
-                return .none
-            }
-        }
+        EmptyReducer()
     }
-}
-
-#Preview {
-    TransactionDetailsView(
-        store:
-            Store(
-                initialState: TransactionDetailsStore.State(transaction: .mock()),
-                reducer: {
-                    TransactionDetailsStore()
-                }
-            )
-    )
 }
