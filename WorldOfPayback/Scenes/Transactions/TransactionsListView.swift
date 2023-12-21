@@ -21,16 +21,20 @@ struct TransactionsListView: View {
                     }
                 }
             } else {
-                ScrollView {
-                    VStack {
-                        ForEach(viewStore.state.transactionList, id: \.self) { transaction in
-                            TransactionView(transaction: transaction)
-                                .onTapGesture {
-                                    store.send(.transactionItemTapped)
-                                }
+                NavigationView {
+                    ScrollView {
+                        VStack(alignment: .leading) {
+                            ForEach(viewStore.state.transactionList, id: \.self) { transaction in
+                                TransactionView(transaction: transaction)
+                                    .onTapGesture {
+                                        store.send(.transactionItemTapped)
+                                    }
+                            }
                         }
+                        .padding(.horizontal, 16)
                     }
-                    .padding(.horizontal, 16)
+                    .navigationTitle("Transactions")
+                    
                 }
             }
         }

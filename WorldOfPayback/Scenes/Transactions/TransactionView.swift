@@ -22,7 +22,7 @@ struct TransactionView: View {
                         .fill(Color(.purple))
                 }
             
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 8) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(transaction.partnerDisplayName ?? "")
                         .font(.callout)
