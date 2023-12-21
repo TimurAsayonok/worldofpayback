@@ -14,17 +14,12 @@ struct TransactionsListView: View {
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             if viewStore.isLoading {
-                ProgressView {
-                    VStack {
-                        Text("We are loading your Transactions").font(.title2)
-                        Text("Friendly reminder: Life if good☺️").font(.footnote)
-                    }
-                }
+                progressView()
             } else {
                 NavigationView {
                     ScrollView {
                         VStack(alignment: .leading) {
-                            ForEach(viewStore.state.transactionList, id: \.self) { transaction in
+                            ForEach(viewStore.state.transactionList, id: \.self.alias?.reference) { transaction in
                                 TransactionView(transaction: transaction)
                                     .onTapGesture {
                                         store.send(.transactionItemTapped)
@@ -34,13 +29,21 @@ struct TransactionsListView: View {
                         .padding(.horizontal, 16)
                     }
                     .navigationTitle("Transactions")
-                    
                 }
             }
         }
         .onAppear(perform: {
             store.send(.getTransactionList)
         })
+    }
+    
+    func progressView() -> some View {
+        ProgressView {
+            VStack {
+                Text("We are loading..").font(.title2)
+                Text("Friendly reminder: Life if good☺️").font(.footnote)
+            }
+        }
     }
 }
 
@@ -79,8 +82,9 @@ struct TransactionListStore: Reducer {
                 print("transactionItemTapped")
                 return .none
                 
-            case .getTransactionListSucceed:
+            case let .getTransactionListSucceed(items):
                 state.isLoading = false
+                state.transactionList = items
                 return .none
             
             case let .getTransactionListError(error):
@@ -89,8 +93,6 @@ struct TransactionListStore: Reducer {
 //                guard let errorMessage = error.lo else {
 //                    return .none
 //                }
-                
-                state.transactionList = TransactionModel.mockedList()
                 return .none
             }
         }

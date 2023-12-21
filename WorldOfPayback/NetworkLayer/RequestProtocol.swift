@@ -24,8 +24,11 @@ extension RequestProtocol {
     }
     
     /// Returns JSON Decoder
-    static func getJSONDecodet() -> JSONDecoder {
-        JSONDecoder()
+    static func getJSONDecoder() -> JSONDecoder {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
     }
     
     /// Get parameters Encoder based on method type

@@ -13,7 +13,6 @@ struct TransactionDetail: Codable, Equatable, Hashable {
     var value: TransactionValue?
     
     func getFormattedBookingData() -> String? {
-        print(bookingDate)
         return bookingDate?.formatted(date: .numeric, time: .shortened)
     }
 }

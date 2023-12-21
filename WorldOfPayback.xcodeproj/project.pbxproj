@@ -40,6 +40,9 @@
 		2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */; };
 		2DDFEABA2B33C1FB00BA75AE /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB92B33C1FB00BA75AE /* AuthorizationRequest.swift */; };
 		2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEABD2B34699700BA75AE /* TransactionView.swift */; };
+		2DDFEAC12B34817000BA75AE /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC02B34816F00BA75AE /* PBTransactions.json */; };
+		2DDFEAC32B34888100BA75AE /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */; };
+		2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		2DDFEAB92B33C1FB00BA75AE /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
 		2DDFEABD2B34699700BA75AE /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		2DDFEAC02B34816F00BA75AE /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PBTransactions.json; path = ../../Downloads/PAYBACK_Coding_Challenge/PBTransactions.json; sourceTree = "<group>"; };
+		2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
+		2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 				2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */,
 				2D1C34362B30C5AB006E3FAE /* Assets.xcassets */,
 				2DDFEA902B32176000BA75AE /* Info.plist */,
+				2DDFEAC02B34816F00BA75AE /* PBTransactions.json */,
 				2D1C34382B30C5AB006E3FAE /* Preview Content */,
 			);
 			path = WorldOfPayback;
@@ -197,6 +204,7 @@
 				2DDFEA872B31F42D00BA75AE /* TransactionAlias.swift */,
 				2DDFEA892B31F46A00BA75AE /* TransactionDetail.swift */,
 				2DDFEA8B2B31F4C500BA75AE /* TransactionValue.swift */,
+				2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 			children = (
 				2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */,
 				2DDFEAB92B33C1FB00BA75AE /* AuthorizationRequest.swift */,
+				2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */,
+				2DDFEAC12B34817000BA75AE /* PBTransactions.json in Resources */,
 				2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +406,7 @@
 				2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */,
 				2DDFEA7F2B31F2B800BA75AE /* TransactionsListView.swift in Sources */,
 				2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */,
+				2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */,
 				2DDFEAB32B33A54D00BA75AE /* ErrorResponse.swift in Sources */,
 				2DDFEA7C2B31D8E800BA75AE /* CoordinatorView.swift in Sources */,
 				2DDFEA942B32227000BA75AE /* PrimaryButton.swift in Sources */,
@@ -404,6 +415,7 @@
 				2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */,
 				2DDFEAB62B33AD7400BA75AE /* ApiServiceDependency.swift in Sources */,
 				2DDFEAB02B33A3C600BA75AE /* TransactionListRequest.swift in Sources */,
+				2DDFEAC32B34888100BA75AE /* TransactionResponse.swift in Sources */,
 				2DDFEA752B31B3D700BA75AE /* WelcomeView.swift in Sources */,
 				2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */,
 				2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */,
