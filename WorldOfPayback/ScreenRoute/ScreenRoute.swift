@@ -11,11 +11,13 @@ struct ScreenRoute: Reducer {
     enum State: Equatable {
         case welcome(WelcomeStore.State)
         case transactionsList(TransactionListStore.State)
+        case transactionItemDetails(TransactionDetailsStore.State)
     }
     
     enum Action: Equatable {
         case welcome(WelcomeStore.Action)
         case transactionsList(TransactionListStore.Action)
+        case transactionItemDetails(TransactionDetailsStore.Action)
     }
     
     var body: some Reducer<State, Action> {
@@ -24,6 +26,9 @@ struct ScreenRoute: Reducer {
         }
         Scope(state: /State.transactionsList, action: /Action.transactionsList) {
             TransactionListStore()
+        }
+        Scope(state: /State.transactionItemDetails, action: /Action.transactionItemDetails) {
+            TransactionDetailsStore()
         }
     }
 }

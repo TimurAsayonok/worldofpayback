@@ -28,6 +28,12 @@ struct CoordinatorView: View {
                         action: ScreenRoute.Action.transactionsList,
                         then: TransactionsListView.init
                     )
+                case .transactionItemDetails:
+                    CaseLet(
+                        /ScreenRoute.State.transactionItemDetails,
+                        action: ScreenRoute.Action.transactionItemDetails,
+                        then: TransactionDetailsView.init
+                    )
                 }
             }
         }

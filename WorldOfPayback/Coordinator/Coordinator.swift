@@ -27,6 +27,8 @@ struct Coordinator: Reducer {
             switch action {
             case .routeAction(_, action: .welcome(.loginTapped)):
                 state.routes.push(.transactionsList(.init()))
+            case .routeAction(_, action: .transactionsList(.transactionItemTapped(let transaction))):
+                state.routes.push(.transactionItemDetails(.init(transaction: transaction)))
             default:
                 break
             }

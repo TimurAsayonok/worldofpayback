@@ -22,7 +22,7 @@ struct TransactionsListView: View {
                             ForEach(viewStore.state.transactionList, id: \.self.alias?.reference) { transaction in
                                 TransactionView(transaction: transaction)
                                     .onTapGesture {
-                                        store.send(.transactionItemTapped)
+                                        store.send(.transactionItemTapped(transaction))
                                     }
                             }
                         }
@@ -48,7 +48,7 @@ struct TransactionsListView: View {
             }
         }
         .onAppear(perform: {
-            store.send(.getTransactionList)
+            store.send(.initScreen)
         })
     }
     
@@ -83,8 +83,9 @@ struct TransactionListStore: Reducer {
     }
     
     enum Action: Equatable {
+        case initScreen
         case getTransactionList
-        case transactionItemTapped
+        case transactionItemTapped(TransactionModel)
         case getTransactionListSucceed([TransactionModel])
         case getTransactionListError(ErrorResponse?)
         case closeAlertAndRefresh
@@ -96,6 +97,14 @@ struct TransactionListStore: Reducer {
     var body: some ReducerOf<Self> {
         Reduce<State, Action> { state, action in
             switch action {
+            case .initScreen:
+                print(state.transactionList.isEmpty)
+                guard state.transactionList.isEmpty else {
+                    return .none
+                }
+                
+                return .send(.getTransactionList)
+                
             case .getTransactionList:
                 state.isLoading = true
                 
@@ -107,6 +116,7 @@ struct TransactionListStore: Reducer {
                 }
 
             case .transactionItemTapped:
+                // will be handled in Coordinator.Reducer
                 return .none
                 
             case let .getTransactionListSucceed(items):
