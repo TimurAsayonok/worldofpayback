@@ -16,7 +16,7 @@ class BuildConfiguration {
     private var apiBasedURLStringL: String {
         switch environment {
         case .development, .staging:
-            "https://playground.tesonet.lt"
+            "https://api-test.payback.com/transactions"
         case .release:
             "https://api.payback.com"
         }

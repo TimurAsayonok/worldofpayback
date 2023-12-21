@@ -54,7 +54,11 @@ class ApiProvider: ApiProviderProtocol {
         return try await withCheckedThrowingContinuation { continuation in
             let dataTask = session.dataTask(with: urlRequest) { data, response, error in
                 if let error = error {
-                    continuation.resume(with: .failure(error))
+                    if let urlError = error as? URLError {
+                        continuation.resume(with: .failure(ErrorResponse(message: urlError.localizedDescription)))
+                    } else {
+                        continuation.resume(with: .failure(error))
+                    }
                 }
                 
                 if let httpResponse = response as? HTTPURLResponse {
@@ -76,6 +80,5 @@ class ApiProvider: ApiProviderProtocol {
             
             dataTask.resume()
         }
-        
     }
 }

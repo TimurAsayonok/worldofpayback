@@ -27,7 +27,7 @@ struct TransactionModel: Codable, Equatable, Hashable {
             category: 1,
             transactionDetail: .init(
                 description: "Punkte sammeln",
-                bookingDate: DateFormatter().date(from: "2022-07-24T10:59:05+0200"),
+                bookingDate: Date(),
                 value: TransactionValue(amount: 124, currency: .PBP)
             )
         )

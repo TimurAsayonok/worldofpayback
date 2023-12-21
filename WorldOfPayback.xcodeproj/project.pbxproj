@@ -39,6 +39,7 @@
 		2DDFEAB62B33AD7400BA75AE /* ApiServiceDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB52B33AD7400BA75AE /* ApiServiceDependency.swift */; };
 		2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */; };
 		2DDFEABA2B33C1FB00BA75AE /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB92B33C1FB00BA75AE /* AuthorizationRequest.swift */; };
+		2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEABD2B34699700BA75AE /* TransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		2DDFEAB52B33AD7400BA75AE /* ApiServiceDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceDependency.swift; sourceTree = "<group>"; };
 		2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		2DDFEAB92B33C1FB00BA75AE /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
+		2DDFEABD2B34699700BA75AE /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				2DDFEA7E2B31F2B800BA75AE /* TransactionsListView.swift */,
 				2DDFEA802B31F2E700BA75AE /* TransactionDetailsView.swift */,
+				2DDFEABD2B34699700BA75AE /* TransactionView.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				2DDFEA7A2B31D65800BA75AE /* Coordinator.swift in Sources */,
 				2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */,
 				2DDFEABA2B33C1FB00BA75AE /* AuthorizationRequest.swift in Sources */,
+				2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */,
 				2DDFEA7F2B31F2B800BA75AE /* TransactionsListView.swift in Sources */,
 				2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */,
 				2DDFEAB32B33A54D00BA75AE /* ErrorResponse.swift in Sources */,

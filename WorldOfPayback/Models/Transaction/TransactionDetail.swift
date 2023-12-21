@@ -12,6 +12,13 @@ struct TransactionDetail: Codable, Equatable, Hashable {
     var bookingDate: Date?
     var value: TransactionValue?
     
+    func getFormattedBookingData() -> String? {
+        print(bookingDate)
+        return bookingDate?.formatted(date: .numeric, time: .shortened)
+    }
+}
+
+extension TransactionDetail {
     enum CodingKeys: String, CodingKey {
         case description
         case bookingDate
