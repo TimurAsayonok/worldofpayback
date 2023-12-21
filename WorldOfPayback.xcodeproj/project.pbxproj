@@ -43,6 +43,7 @@
 		2DDFEAC12B34817000BA75AE /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC02B34816F00BA75AE /* PBTransactions.json */; };
 		2DDFEAC32B34888100BA75AE /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */; };
 		2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */; };
+		2DDFEAC82B34A76600BA75AE /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		2DDFEAC02B34816F00BA75AE /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PBTransactions.json; path = ../../Downloads/PAYBACK_Coding_Challenge/PBTransactions.json; sourceTree = "<group>"; };
 		2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequest.swift; sourceTree = "<group>"; };
+		2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEAB22B33A54D00BA75AE /* ErrorResponse.swift */,
+				2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				2DDFEA752B31B3D700BA75AE /* WelcomeView.swift in Sources */,
 				2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */,
 				2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */,
+				2DDFEAC82B34A76600BA75AE /* AlertModel.swift in Sources */,
 				2DDFEA8F2B31F52A00BA75AE /* Currency.swift in Sources */,
 				2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */,
 				2DDFEA812B31F2E800BA75AE /* TransactionDetailsView.swift in Sources */,

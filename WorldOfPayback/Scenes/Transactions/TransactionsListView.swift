@@ -13,10 +13,10 @@ struct TransactionsListView: View {
     
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
-            if viewStore.isLoading {
-                progressView()
-            } else {
-                NavigationView {
+            VStack {
+                if viewStore.state.transactionList.isEmpty {
+                    emptyView()
+                } else {
                     ScrollView {
                         VStack(alignment: .leading) {
                             ForEach(viewStore.state.transactionList, id: \.self.alias?.reference) { transaction in
@@ -28,8 +28,23 @@ struct TransactionsListView: View {
                         }
                         .padding(.horizontal, 16)
                     }
-                    .navigationTitle("Transactions")
                 }
+            }
+            .navigationTitle("Transactions")
+            .toolbar {
+                toolbarLoading(viewStore.state.isLoading) {
+                    store.send(.getTransactionList)
+                }
+            }
+            .alert(isPresented: viewStore.binding(
+                get: { $0.alertModel != nil },
+                send: { _ in .closeAlertAndRefresh }
+            )) {
+                Alert(
+                    title: Text(viewStore.state.alertModel?.title ?? ""),
+                    message: Text(viewStore.state.alertModel?.message ?? ""),
+                    dismissButton: .cancel(Text("Close"))
+                )
             }
         }
         .onAppear(perform: {
@@ -37,12 +52,24 @@ struct TransactionsListView: View {
         })
     }
     
-    func progressView() -> some View {
-        ProgressView {
-            VStack {
-                Text("We are loading..").font(.title2)
-                Text("Friendly reminder: Life if good☺️").font(.footnote)
-            }
+    @ViewBuilder
+    private func toolbarLoading(_ isLoading: Bool, refresh: @escaping () -> Void) -> some View {
+        if isLoading {
+            ProgressView()
+        } else {
+            Button(action: {
+                refresh()
+            }, label: {
+                Image(systemName: "arrow.clockwise")
+            })
+        }
+    }
+    
+    @ViewBuilder
+    private func emptyView() -> some View {
+        VStack {
+            Text("List is Empty").font(.title2)
+            Text("Try to refresh the list or try later").font(.footnote)
         }
     }
 }
@@ -51,9 +78,8 @@ struct TransactionListStore: Reducer {
     struct State: Equatable {
         let id = UUID()
         var transactionList: [TransactionModel] = []
-        var alertMessage: String?
         var isLoading: Bool = false
-//        var loadingState: LoadingProcess = LoadingProcess(state: .loading)
+        var alertModel: AlertModel?
     }
     
     enum Action: Equatable {
@@ -61,6 +87,7 @@ struct TransactionListStore: Reducer {
         case transactionItemTapped
         case getTransactionListSucceed([TransactionModel])
         case getTransactionListError(ErrorResponse?)
+        case closeAlertAndRefresh
     }
     
     @Dependency(\.apiService) 
@@ -71,6 +98,7 @@ struct TransactionListStore: Reducer {
             switch action {
             case .getTransactionList:
                 state.isLoading = true
+                
                 return .run { send in
                     let response = try await apiService.getTransactionList()
                     await send(.getTransactionListSucceed(response))
@@ -79,7 +107,6 @@ struct TransactionListStore: Reducer {
                 }
 
             case .transactionItemTapped:
-                print("transactionItemTapped")
                 return .none
                 
             case let .getTransactionListSucceed(items):
@@ -89,65 +116,16 @@ struct TransactionListStore: Reducer {
             
             case let .getTransactionListError(error):
                 state.isLoading = false
+                state.alertModel = AlertModel(message: error?.localizedDescription
+                  )
+                
                 print("Error:", error?.localizedDescription)
-//                guard let errorMessage = error.lo else {
-//                    return .none
-//                }
                 return .none
+                
+            case .closeAlertAndRefresh:
+                state.alertModel = nil
+                return .send(.getTransactionList)
             }
         }
-    }
-}
-
-enum LoadingState {
-    case idle
-    case loading
-    case failed(Error)
-    case loaded
-}
-
-protocol LoadableObject: ObservableObject{
-    var state: LoadingState { get }
-    func load()
-}
-
-class LoadingProcess: LoadableObject {
-    var state: LoadingState
-    
-    init(state: LoadingState) {
-        self.state = state
-    }
-    
-    func load() {}
-}
-
-struct AsyncContentView<Source: LoadableObject, Content: View>: View {
-    @ObservedObject var source: Source
-    var content: () -> Content
-    
-    init(source: Source, @ViewBuilder content: @escaping () -> Content) {
-        self.source = source
-        self.content = content
-    }
-    
-    var body: some View {
-        switch source.state {
-        case .idle:
-            Color.clear.onAppear(perform: source.load)
-        case .loading:
-            ProgressView()
-        case .failed(let error):
-            ErrorView(error: error)
-        case .loaded:
-            content()
-        }
-    }
-}
-
-struct ErrorView: View {
-    var error: Error
-    
-    var body: some View {
-        Text("Error")
     }
 }
