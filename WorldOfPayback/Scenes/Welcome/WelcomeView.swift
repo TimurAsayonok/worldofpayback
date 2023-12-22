@@ -18,15 +18,13 @@ struct WelcomeView: View {
                     .fill(Color(.purple))
                     .frame(width: 40, height: 40)
                 
-                Text("Welcome").font(.largeTitle).bold()
-                                
-                Button(action: {
+                Text(L10N.welcomeScreenTitle).font(.largeTitle).bold()
+                    
+                Button(L10N.startButtonTitle) {
                     viewStore.send(.loginTapped)
-                }, label: {
-                    Text("Open the App")
-                })
+                }
                 .buttonStyle(PrimaryButtonStyle())
-                
+        
                 Spacer()
             }
             .frame(maxWidth: .infinity, alignment: .leading)
