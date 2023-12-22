@@ -37,5 +37,6 @@ struct CoordinatorView: View {
                 }
             }
         }
+        .accentColor(.black)
     }
 }

@@ -45,6 +45,7 @@
 		2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */; };
 		2DDFEAC82B34A76600BA75AE /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */; };
 		2DDFEACA2B34CCBF00BA75AE /* TransactionLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */; };
+		2DDFEACC2B35977800BA75AE /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEACB2B35977800BA75AE /* FiltersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequest.swift; sourceTree = "<group>"; };
 		2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 		2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLogoView.swift; sourceTree = "<group>"; };
+		2DDFEACB2B35977800BA75AE /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEA922B32225B00BA75AE /* UIComponents */,
+				2DDFEACB2B35977800BA75AE /* FiltersView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				2DDFEABA2B33C1FB00BA75AE /* AuthorizationRequest.swift in Sources */,
 				2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */,
 				2DDFEA7F2B31F2B800BA75AE /* TransactionsListView.swift in Sources */,
+				2DDFEACC2B35977800BA75AE /* FiltersView.swift in Sources */,
 				2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */,
 				2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */,
 				2DDFEAB32B33A54D00BA75AE /* ErrorResponse.swift in Sources */,

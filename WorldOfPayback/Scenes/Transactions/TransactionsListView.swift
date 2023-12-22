@@ -18,8 +18,12 @@ struct TransactionsListView: View {
                     emptyView()
                 } else {
                     ScrollView {
+                        Text("Total Amount: \(viewStore.state.totalAmount)")
+                            .font(.callout)
+                            .bold()
+                        
                         VStack(alignment: .leading) {
-                            ForEach(viewStore.state.transactionList, id: \.self.alias?.reference) { transaction in
+                            ForEach(viewStore.state.filteredList, id: \.self.alias?.reference) { transaction in
                                 TransactionView(transaction: transaction)
                                     .onTapGesture {
                                         store.send(.transactionItemTapped(transaction))
@@ -46,6 +50,14 @@ struct TransactionsListView: View {
                     dismissButton: .cancel(Text("Close"))
                 )
             }
+            .sheet(isPresented: viewStore.binding(
+                get: { $0.alertModel == nil },
+                send: { _ in .closeAlertAndRefresh }
+            )) {
+                FiltersView()
+                .padding()
+                .presentationDetents([.fraction(0.4)])
+            }
         }
         .onAppear(perform: {
             store.send(.initScreen)
@@ -57,11 +69,20 @@ struct TransactionsListView: View {
         if isLoading {
             ProgressView()
         } else {
-            Button(action: {
-                refresh()
-            }, label: {
-                Image(systemName: "arrow.clockwise")
-            })
+            HStack {
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "slider.horizontal.3")
+                        .tint(Color.black)
+                })
+                Button(action: {
+                    refresh()
+                }, label: {
+                    Image(systemName: "arrow.clockwise")
+                        .tint(Color.black)
+                })
+            }
         }
     }
     
@@ -76,10 +97,38 @@ struct TransactionsListView: View {
 
 struct TransactionListStore: Reducer {
     struct State: Equatable {
+        enum FilterType: String {
+            case descending
+            case ascending
+        }
+        
         let id = UUID()
         var transactionList: [TransactionModel] = []
         var isLoading: Bool = false
         var alertModel: AlertModel?
+        var filteredType: FilterType?
+        
+        var filteredList: [TransactionModel] {
+            let sorting: (ComparisonResult) -> [TransactionModel] = { comparison in
+                transactionList.sorted(by: {
+                    let leftDate = $0.transactionDetail?.bookingDate
+                    let rightDate = $1.transactionDetail?.bookingDate
+                    return leftDate?.compare(rightDate ?? Date()) == comparison
+                })
+            }
+            switch filteredType {
+            case .descending:
+                return sorting(.orderedDescending)
+            case .ascending:
+                return sorting(.orderedAscending)
+            case .none:
+                return transactionList
+            }
+        }
+        
+        var totalAmount: Int {
+            filteredList.reduce(0, { $0 + ($1.transactionDetail?.value?.amount ?? 0) })
+        }
     }
     
     enum Action: Equatable {
@@ -89,6 +138,8 @@ struct TransactionListStore: Reducer {
         case getTransactionListSucceed([TransactionModel])
         case getTransactionListError(ErrorResponse?)
         case closeAlertAndRefresh
+        case sortByDateDescending
+        case sortByDateAscending
     }
     
     @Dependency(\.apiService) 
@@ -126,15 +177,20 @@ struct TransactionListStore: Reducer {
             
             case let .getTransactionListError(error):
                 state.isLoading = false
-                state.alertModel = AlertModel(message: error?.localizedDescription
-                  )
-                
-                print("Error:", error?.localizedDescription)
+                state.alertModel = AlertModel(message: error?.localizedDescription)
                 return .none
                 
             case .closeAlertAndRefresh:
                 state.alertModel = nil
                 return .send(.getTransactionList)
+                
+            case .sortByDateAscending:
+                state.filteredType = .ascending
+                return .none
+                
+            case .sortByDateDescending:
+                state.filteredType = .descending
+                return .none
             }
         }
     }
