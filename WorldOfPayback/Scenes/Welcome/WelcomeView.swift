@@ -19,10 +19,13 @@ struct WelcomeView: View {
                     .frame(width: 40, height: 40)
                 
                 Text("Welcome").font(.largeTitle).bold()
-                
-                PrimaryButton(title: "Open the App") {
+                                
+                Button(action: {
                     viewStore.send(.loginTapped)
-                }
+                }, label: {
+                    Text("Open the App")
+                })
+                .buttonStyle(PrimaryButtonStyle())
                 
                 Spacer()
             }

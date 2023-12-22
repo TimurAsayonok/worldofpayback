@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1381802B35B08E00C870BF /* OutlineButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13817F2B35B08E00C870BF /* OutlineButtonStyle.swift */; };
+		2D1381822B35B2E200C870BF /* ClearButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1381812B35B2E200C870BF /* ClearButtonStyle.swift */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
 		2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */; };
+		2D6D93072B35AB240057E0EB /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D93062B35AB240057E0EB /* FilterType.swift */; };
+		2D6D930B2B35AF1D0057E0EB /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D930A2B35AF1D0057E0EB /* PrimaryButtonStyle.swift */; };
 		2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */; };
 		2DDFEA6E2B31B2D800BA75AE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2DDFEA6D2B31B2D800BA75AE /* ComposableArchitecture */; };
 		2DDFEA712B31B32100BA75AE /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 2DDFEA702B31B32100BA75AE /* TCACoordinators */; };
@@ -49,10 +53,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D13817F2B35B08E00C870BF /* OutlineButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineButtonStyle.swift; sourceTree = "<group>"; };
+		2D1381812B35B2E200C870BF /* ClearButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButtonStyle.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPaybak Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPaybak Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2D6D93062B35AB240057E0EB /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
+		2D6D930A2B35AF1D0057E0EB /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DDFEA742B31B3D700BA75AE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		2DDFEA772B31D59B00BA75AE /* ScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRoute.swift; sourceTree = "<group>"; };
@@ -149,6 +157,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2D6D93092B35AF000057E0EB /* StyleHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				2D6D930A2B35AF1D0057E0EB /* PrimaryButtonStyle.swift */,
+				2D13817F2B35B08E00C870BF /* OutlineButtonStyle.swift */,
+				2D1381812B35B2E200C870BF /* ClearButtonStyle.swift */,
+			);
+			path = StyleHelpers;
+			sourceTree = "<group>";
+		};
 		2DDFEA662B31A7B700BA75AE /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEA922B32225B00BA75AE /* UIComponents */,
-				2DDFEACB2B35977800BA75AE /* FiltersView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -227,6 +244,8 @@
 		2DDFEA922B32225B00BA75AE /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				2D6D93092B35AF000057E0EB /* StyleHelpers */,
+				2DDFEACB2B35977800BA75AE /* FiltersView.swift */,
 				2DDFEA932B32227000BA75AE /* PrimaryButton.swift */,
 				2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */,
 			);
@@ -295,6 +314,7 @@
 			children = (
 				2DDFEAB22B33A54D00BA75AE /* ErrorResponse.swift */,
 				2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */,
+				2D6D93062B35AB240057E0EB /* FilterType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -408,10 +428,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6D930B2B35AF1D0057E0EB /* PrimaryButtonStyle.swift in Sources */,
 				2DDFEA8C2B31F4C500BA75AE /* TransactionValue.swift in Sources */,
 				2DDFEA7A2B31D65800BA75AE /* Coordinator.swift in Sources */,
 				2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */,
 				2DDFEABA2B33C1FB00BA75AE /* AuthorizationRequest.swift in Sources */,
+				2D1381822B35B2E200C870BF /* ClearButtonStyle.swift in Sources */,
 				2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */,
 				2DDFEA7F2B31F2B800BA75AE /* TransactionsListView.swift in Sources */,
 				2DDFEACC2B35977800BA75AE /* FiltersView.swift in Sources */,
@@ -428,6 +450,7 @@
 				2DDFEAB02B33A3C600BA75AE /* TransactionListRequest.swift in Sources */,
 				2DDFEAC32B34888100BA75AE /* TransactionResponse.swift in Sources */,
 				2DDFEA752B31B3D700BA75AE /* WelcomeView.swift in Sources */,
+				2D6D93072B35AB240057E0EB /* FilterType.swift in Sources */,
 				2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */,
 				2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */,
 				2DDFEAC82B34A76600BA75AE /* AlertModel.swift in Sources */,
@@ -436,6 +459,7 @@
 				2DDFEA812B31F2E800BA75AE /* TransactionDetailsView.swift in Sources */,
 				2DDFEA992B3368D900BA75AE /* RequestProtocol.swift in Sources */,
 				2DDFEA9B2B3369B500BA75AE /* HTTPMethod.swift in Sources */,
+				2D1381802B35B08E00C870BF /* OutlineButtonStyle.swift in Sources */,
 				2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */,
 				2DDFEAAE2B33A39F00BA75AE /* ApiService.swift in Sources */,
 				2DDFEA882B31F42D00BA75AE /* TransactionAlias.swift in Sources */,

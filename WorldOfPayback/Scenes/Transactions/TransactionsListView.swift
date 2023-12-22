@@ -54,9 +54,14 @@ struct TransactionsListView: View {
                 get: { $0.alertModel == nil },
                 send: { _ in .closeAlertAndRefresh }
             )) {
-                FiltersView()
-                .padding()
-                .presentationDetents([.fraction(0.4)])
+                IfLetStore(
+                    self.store.scope(state: { $0.filtersState }, action: TransactionListStore.Action.filtersAction)
+                ) { store in
+                    FiltersView(store: store)
+                    .padding()
+                    .presentationDetents([.fraction(0.4)])
+                }
+                
             }
         }
         .onAppear(perform: {
@@ -96,17 +101,13 @@ struct TransactionsListView: View {
 }
 
 struct TransactionListStore: Reducer {
-    struct State: Equatable {
-        enum FilterType: String {
-            case descending
-            case ascending
-        }
-        
+    struct State: Equatable {        
         let id = UUID()
         var transactionList: [TransactionModel] = []
         var isLoading: Bool = false
         var alertModel: AlertModel?
         var filteredType: FilterType?
+        var filtersState = FiltersStore.State()
         
         var filteredList: [TransactionModel] {
             let sorting: (ComparisonResult) -> [TransactionModel] = { comparison in
@@ -117,11 +118,13 @@ struct TransactionListStore: Reducer {
                 })
             }
             switch filteredType {
-            case .descending:
+            case .byDate(0):
                 return sorting(.orderedDescending)
-            case .ascending:
+            case .byDate(1):
                 return sorting(.orderedAscending)
-            case .none:
+            case .category(let number):
+                return transactionList.filter { $0.category == number }
+            default:
                 return transactionList
             }
         }
@@ -138,8 +141,7 @@ struct TransactionListStore: Reducer {
         case getTransactionListSucceed([TransactionModel])
         case getTransactionListError(ErrorResponse?)
         case closeAlertAndRefresh
-        case sortByDateDescending
-        case sortByDateAscending
+        case filtersAction(FiltersStore.Action)
     }
     
     @Dependency(\.apiService) 
@@ -184,12 +186,9 @@ struct TransactionListStore: Reducer {
                 state.alertModel = nil
                 return .send(.getTransactionList)
                 
-            case .sortByDateAscending:
-                state.filteredType = .ascending
-                return .none
-                
-            case .sortByDateDescending:
-                state.filteredType = .descending
+            case let .filtersAction(.selectFilter(filterType)):
+                print("filtersAction", filterType)
+                state.filteredType = filterType
                 return .none
             }
         }
