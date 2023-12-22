@@ -175,6 +175,7 @@ struct TransactionListStore: Reducer {
             case let .getTransactionListSucceed(items):
                 state.isLoading = false
                 state.transactionList = items
+                state.filteredType = .byDate(0)
                 return .none
             
             case let .getTransactionListError(error):
