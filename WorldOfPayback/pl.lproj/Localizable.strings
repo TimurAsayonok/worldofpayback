@@ -6,5 +6,27 @@
   
 */
 
-"welcome_screen_title" = "Miło cię widzieć";
+// MARK: - Welcome View
+"welcome_screen_title" = "Welcome";
 "start_button_title" = "Zaczynamy!";
+
+// MARK: - Transaction List View
+"transaction_list_title" = "Transakcje";
+"transaction_list_total_amount" = "Suma:";
+"transaction_list_empty_title" = "Lista jest pusta";
+"transaction_list_empty_description" = "Spróbuj odświeżyć listę lub spróbuj później";
+
+// MARK: - Filters View
+"filter_sort_by_title" = "Sortuj według:";
+"filter_sort_date_descending" = "Data malejąco";
+"filter_sort_date_ascending" = "Data rosnąco";
+"filter_category_title" = "Kategoria";
+
+// MARK: - Buttons
+"close_button" = "Zamknij";
+"clear_button" = "Wyczyść";
+"cancel_button" = "Anuluj";
+"ok_button" = "OK";
+
+// MARK: - Alert
+"alert_title" = "Ups!";

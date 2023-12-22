@@ -14,10 +14,10 @@ struct AlertModel: Equatable {
     var cancelButtonTitle: String?
     
     init(
-        title: String = "Ups!",
+        title: String = L10N.alertTitle,
         message: String? = nil,
-        primaryButtonTitle: String? = "Ok",
-        cancelButtonTitle: String? = "Cancel"
+        primaryButtonTitle: String? = L10N.okButton,
+        cancelButtonTitle: String? = L10N.cancelButton
     ) {
         self.title = title
         self.message = message

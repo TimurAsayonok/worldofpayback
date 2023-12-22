@@ -15,22 +15,22 @@ struct FiltersView: View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Sort By:")
+                    Text(L10N.filterSortByTitle)
                         .font(.headline)
                     HStack {
-                        Button("Up") {
+                        Button(L10N.filterSortDateDescending) {
                             viewStore.send(.selectFilter(.byDate(0)))
                         }
                         .buttonStyle(OutlineButtonStyle())
                         
-                        Button("Down") {
+                        Button(L10N.filterSortDateAscending) {
                             viewStore.send(.selectFilter(.byDate(1)))
                         }
                         .buttonStyle(OutlineButtonStyle())
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text("Cathegory")
+                    Text(L10N.filterCategoryTitle)
                         .font(.headline)
                     
                     HStack {
@@ -42,7 +42,7 @@ struct FiltersView: View {
                         }
                     }
                     
-                    Button("Clear") {
+                    Button(L10N.clearButton) {
                         viewStore.send(.selectFilter(nil))
                     }
                     .buttonStyle(ClearButtonStyle(labelColor: .purple))
@@ -64,7 +64,7 @@ struct FiltersStore: Reducer {
     }
     
     var body: some ReducerOf<Self> {
-        Reduce { state, action in
+        Reduce { _, action in
             switch action {
             case .selectFilter:
                 // will be handled in TransactionListView.reducer
@@ -73,7 +73,3 @@ struct FiltersStore: Reducer {
         }
     }
 }
-
-//#Preview {
-//    FiltersView()
-//}

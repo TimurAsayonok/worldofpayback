@@ -18,7 +18,7 @@ struct TransactionsListView: View {
                     emptyView()
                 } else {
                     ScrollView {
-                        Text("Total Amount: \(viewStore.state.totalAmount)")
+                        Text("\(L10N.transactionListTotalAmount) \(viewStore.state.totalAmount)")
                             .font(.callout)
                             .bold()
                         
@@ -34,7 +34,7 @@ struct TransactionsListView: View {
                     }
                 }
             }
-            .navigationTitle("Transactions")
+            .navigationTitle(L10N.transactionListTitle)
             .toolbar {
                 toolbarLoading(viewStore.state.isLoading) {
                     store.send(.getTransactionList)
@@ -47,7 +47,7 @@ struct TransactionsListView: View {
                 Alert(
                     title: Text(viewStore.state.alertModel?.title ?? ""),
                     message: Text(viewStore.state.alertModel?.message ?? ""),
-                    dismissButton: .cancel(Text("Close"))
+                    dismissButton: .cancel(Text(L10N.closeButton))
                 )
             }
             .sheet(isPresented: viewStore.binding(
@@ -59,7 +59,7 @@ struct TransactionsListView: View {
                 ) { store in
                     FiltersView(store: store)
                     .padding()
-                    .presentationDetents([.fraction(0.4)])
+                    .presentationDetents([.fraction(0.5)])
                 }
                 
             }
@@ -94,8 +94,8 @@ struct TransactionsListView: View {
     @ViewBuilder
     private func emptyView() -> some View {
         VStack {
-            Text("List is Empty").font(.title2)
-            Text("Try to refresh the list or try later").font(.footnote)
+            Text(L10N.transactionListEmptyTitle).font(.title2)
+            Text(L10N.transactionListEmptyDescription).font(.footnote)
         }
     }
 }
@@ -188,7 +188,6 @@ struct TransactionListStore: Reducer {
                 return .send(.getTransactionList)
                 
             case let .filtersAction(.selectFilter(filterType)):
-                print("filtersAction", filterType)
                 state.filteredType = filterType
                 return .none
             }

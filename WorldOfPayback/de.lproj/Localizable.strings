@@ -6,5 +6,27 @@
   
 */
 
+// MARK: - Welcome View
 "welcome_screen_title" = "Willkommen";
-"start_button_title" = "";
+"start_button_title" = "Lass uns anfangen!";
+
+// MARK: - Transaction List View
+"transaction_list_title" = "Transaktionen";
+"transaction_list_total_amount" = "Gesamtbetrag:";
+"transaction_list_empty_title" = "Liste ist leer";
+"transaction_list_empty_description" = "Versuche, die Liste zu aktualisieren oder versuche es später erneut";
+
+// MARK: - Filters View
+"filter_sort_by_title" = "Sortieren nach:";
+"filter_sort_date_descending" = "Datum absteigend";
+"filter_sort_date_ascending" = "Datum aufsteigend";
+"filter_category_title" = "Kategorie";
+
+// MARK: - Buttons
+"close_button" = "Schließen";
+"clear_button" = "Löschen";
+"cancel_button" = "Abbrechen";
+"ok_button" = "OK";
+
+// MARK: - Alert
+"alert_title" = "Hoppla!";
