@@ -7,7 +7,7 @@
 */
 
 // MARK: - Welcome View
-"welcome_screen_title" = "Welcome";
+"welcome_screen_title" = "Miło cie widzieć";
 "start_button_title" = "Zaczynamy!";
 
 // MARK: - Transaction List View

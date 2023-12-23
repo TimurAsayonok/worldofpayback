@@ -11,6 +11,7 @@
 		2D1381822B35B2E200C870BF /* ClearButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1381812B35B2E200C870BF /* ClearButtonStyle.swift */; };
 		2D1381852B35DED300C870BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D1381872B35DED300C870BF /* Localizable.strings */; };
 		2D13818C2B35E11700C870BF /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13818B2B35E11700C870BF /* LocalizationHelper.swift */; };
+		2D13818E2B37514A00C870BF /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13818D2B37514A00C870BF /* Date+Extension.swift */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
 		2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		2D1381882B35DF3200C870BF /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D1381892B35DF4A00C870BF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D13818B2B35E11700C870BF /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
+		2D13818D2B37514A00C870BF /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPaybak Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPaybak Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */,
+				2D13818D2B37514A00C870BF /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				2DDFEA7A2B31D65800BA75AE /* Coordinator.swift in Sources */,
 				2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */,
 				2DDFEABA2B33C1FB00BA75AE /* AuthorizationRequest.swift in Sources */,
+				2D13818E2B37514A00C870BF /* Date+Extension.swift in Sources */,
 				2D1381822B35B2E200C870BF /* ClearButtonStyle.swift in Sources */,
 				2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */,
 				2DDFEA7F2B31F2B800BA75AE /* TransactionsListView.swift in Sources */,

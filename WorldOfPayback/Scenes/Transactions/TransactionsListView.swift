@@ -59,7 +59,7 @@ struct TransactionsListView: View {
                 ) { store in
                     FiltersView(store: store)
                     .padding()
-                    .presentationDetents([.fraction(0.5)])
+                    .presentationDetents([.fraction(0.45)])
                 }
                 
             }

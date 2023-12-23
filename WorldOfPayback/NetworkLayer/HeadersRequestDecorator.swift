@@ -15,7 +15,8 @@ protocol HeadersRequestDecoratorProtocol {
 // MARK: HeadersRequestDecorator
 // Contains methods for decorating HTTP header like BearerToken
 class HeadersRequestDecorator: HeadersRequestDecoratorProtocol {
-    var requestHeaders: [String : String?] {
+    var requestHeaders: [String: String?] {
+        // We need to change Token for Bearer in the feature!
         [HeaderRequestKey.xAuthorization.rawValue: "Token"]
     }
     

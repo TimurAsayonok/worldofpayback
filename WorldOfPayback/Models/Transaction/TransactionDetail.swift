@@ -11,10 +11,6 @@ struct TransactionDetail: Codable, Equatable, Hashable {
     var description: String?
     var bookingDate: Date?
     var value: TransactionValue?
-    
-    func getFormattedBookingData() -> String? {
-        return bookingDate?.formatted(date: .numeric, time: .shortened)
-    }
 }
 
 extension TransactionDetail {

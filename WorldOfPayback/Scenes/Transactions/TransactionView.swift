@@ -24,7 +24,7 @@ struct TransactionView: View {
                         .font(.footnote)
                         .foregroundStyle(.gray)
                     
-                    Text(transaction.transactionDetail?.getFormattedBookingData() ?? "")
+                    Text(transaction.transactionDetail?.bookingDate?.timestamp ?? "")
                         .font(.footnote)
                         .foregroundStyle(.gray)
                 }
