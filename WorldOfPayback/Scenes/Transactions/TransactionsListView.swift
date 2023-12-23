@@ -36,8 +36,17 @@ struct TransactionsListView: View {
             }
             .navigationTitle(L10N.transactionListTitle)
             .toolbar {
-                toolbarLoading(viewStore.state.isLoading) {
-                    store.send(.getTransactionList)
+                if viewStore.state.isLoading {
+                    ProgressView()
+                } else {
+                    IfLetStore(
+                        self.store.scope(
+                            state: { $0.toolbarButtonsState },
+                            action: TransactionListStore.Action.toolbarButtonsAction
+                        )
+                    ) { store in
+                        MainToolbarView(store: store)
+                    }
                 }
             }
             .alert(isPresented: viewStore.binding(
@@ -51,8 +60,8 @@ struct TransactionsListView: View {
                 )
             }
             .sheet(isPresented: viewStore.binding(
-                get: { $0.alertModel == nil },
-                send: { _ in .closeAlertAndRefresh }
+                get: { $0.isFilterViewPresented },
+                send: { .presentFilterView($0) }
             )) {
                 IfLetStore(
                     self.store.scope(state: { $0.filtersState }, action: TransactionListStore.Action.filtersAction)
@@ -61,34 +70,11 @@ struct TransactionsListView: View {
                     .padding()
                     .presentationDetents([.fraction(0.45)])
                 }
-                
             }
         }
         .onAppear(perform: {
             store.send(.initScreen)
         })
-    }
-    
-    @ViewBuilder
-    private func toolbarLoading(_ isLoading: Bool, refresh: @escaping () -> Void) -> some View {
-        if isLoading {
-            ProgressView()
-        } else {
-            HStack {
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: "slider.horizontal.3")
-                        .tint(Color.black)
-                })
-                Button(action: {
-                    refresh()
-                }, label: {
-                    Image(systemName: "arrow.clockwise")
-                        .tint(Color.black)
-                })
-            }
-        }
     }
     
     @ViewBuilder
@@ -104,10 +90,12 @@ struct TransactionListStore: Reducer {
     struct State: Equatable {        
         let id = UUID()
         var transactionList: [TransactionModel] = []
-        var isLoading: Bool = false
+        var isLoading = false
         var alertModel: AlertModel?
+        var isFilterViewPresented = false
         var filteredType: FilterType?
         var filtersState = FiltersStore.State()
+        var toolbarButtonsState = MainToolbarStore.State()
         
         var filteredList: [TransactionModel] {
             let sorting: (ComparisonResult) -> [TransactionModel] = { comparison in
@@ -142,6 +130,8 @@ struct TransactionListStore: Reducer {
         case getTransactionListError(ErrorResponse?)
         case closeAlertAndRefresh
         case filtersAction(FiltersStore.Action)
+        case toolbarButtonsAction(MainToolbarStore.Action)
+        case presentFilterView(Bool)
     }
     
     @Dependency(\.apiService) 
@@ -151,7 +141,6 @@ struct TransactionListStore: Reducer {
         Reduce<State, Action> { state, action in
             switch action {
             case .initScreen:
-                print(state.transactionList.isEmpty)
                 guard state.transactionList.isEmpty else {
                     return .none
                 }
@@ -187,9 +176,23 @@ struct TransactionListStore: Reducer {
                 state.alertModel = nil
                 return .send(.getTransactionList)
                 
+            case let .presentFilterView(present):
+                state.isFilterViewPresented = present
+                return .none
+                
             case let .filtersAction(.selectFilter(filterType)):
                 state.filteredType = filterType
-                return .none
+                return .send(.presentFilterView(false))
+                
+            case let .toolbarButtonsAction(.toolbarButtonPressed(button)):
+                switch button.type {
+                case .refresh:
+                    return .send(.getTransactionList)
+                case .filter:
+                    return .send(.presentFilterView(true))
+                case .none:
+                    return .none
+                }
             }
         }
     }
