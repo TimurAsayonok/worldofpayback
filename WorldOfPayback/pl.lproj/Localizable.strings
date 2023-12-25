@@ -8,6 +8,7 @@
 
 // MARK: - Welcome View
 "welcome_screen_title" = "Miło cie widzieć";
+"welcome_screen_message" = "Ta aplikacja testowa została stworzona do wykonania testowego zadania. Aby rozpocząć, naciśnij przycisk: ";
 "start_button_title" = "Zaczynamy!";
 
 // MARK: - Transaction List View
@@ -17,10 +18,10 @@
 "transaction_list_empty_description" = "Spróbuj odświeżyć listę lub spróbuj później";
 
 // MARK: - Filters View
-"filter_sort_by_title" = "Sortuj według:";
-"filter_sort_date_descending" = "Data malejąco";
-"filter_sort_date_ascending" = "Data rosnąco";
-"filter_category_title" = "Kategoria";
+"filter_sort_by_title" = "Sortuj według daty:";
+"filter_sort_date_descending" = "Malejąco";
+"filter_sort_date_ascending" = "Rosnąco";
+"filter_category_title" = "Kategoria:";
 
 // MARK: - Buttons
 "close_button" = "Zamknij";

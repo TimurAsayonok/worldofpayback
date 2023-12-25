@@ -14,17 +14,23 @@ struct WelcomeView: View {
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             VStack(alignment: .leading) {
+                Spacer()
+                
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color(.purple))
                     .frame(width: 40, height: 40)
+                    .padding(.vertical, 20)
                 
                 Text(L10N.welcomeScreenTitle).font(.largeTitle).bold()
-                    
+                
+                Text(L10N.welcomeScreenMessage + L10N.startButtonTitle).font(.caption)
+                
                 Button(L10N.startButtonTitle) {
                     viewStore.send(.loginTapped)
                 }
                 .buttonStyle(PrimaryButtonStyle())
-        
+                .padding(.vertical, 20)
+                
                 Spacer()
             }
             .frame(maxWidth: .infinity, alignment: .leading)

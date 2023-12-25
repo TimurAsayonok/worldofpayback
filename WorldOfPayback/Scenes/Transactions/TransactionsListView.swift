@@ -72,6 +72,7 @@ struct TransactionsListView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden()
         .onAppear(perform: {
             store.send(.initScreen)
         })

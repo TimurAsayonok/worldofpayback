@@ -8,6 +8,7 @@
 
 // MARK: - Welcome View
 "welcome_screen_title" = "Welcome";
+"welcome_screen_message" = "This test application is created for completing a test assignment. To begin, press the button: ";
 "start_button_title" = "Lets start!";
 
 // MARK: - Transaction List View
@@ -17,10 +18,10 @@
 "transaction_list_empty_description" = "Try to refresh the list or try later";
 
 // MARK: - Filters View
-"filter_sort_by_title" = "Sort by:";
-"filter_sort_date_descending" = "Date descending";
-"filter_sort_date_ascending" = "Date ascending";
-"filter_category_title" = "Category";
+"filter_sort_by_title" = "Sort by date:";
+"filter_sort_date_descending" = "Descending";
+"filter_sort_date_ascending" = "Ascending";
+"filter_category_title" = "Category:";
 
 // MARK: - Buttons
 "close_button" = "Close";

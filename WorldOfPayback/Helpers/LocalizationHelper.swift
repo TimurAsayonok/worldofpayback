@@ -10,6 +10,7 @@ import Foundation
 enum L10N {
     static var welcomeScreenTitle = localizedString("welcome_screen_title")
     static var startButtonTitle = localizedString("start_button_title")
+    static var welcomeScreenMessage = localizedString("welcome_screen_message")
     
     static var transactionListTitle = localizedString("transaction_list_title")
     static var transactionListTotalAmount = localizedString("transaction_list_total_amount") 
