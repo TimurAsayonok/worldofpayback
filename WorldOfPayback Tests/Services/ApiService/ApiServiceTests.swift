@@ -60,3 +60,15 @@ final class ApiServiceTests: XCTestCase {
         XCTAssertEqual(thrownError, ErrorResponse.sut)
     }
 }
+
+extension ApiService {
+    static func sut() -> Self {
+        .init(
+            apiProvider: ApiProvider(
+                buildConfiguration: BuildConfigurationProtocolMock(),
+                urlSession: URLSessionMock(),
+                headersRequestDecorator: HeadersRequestDecoratorProtocolMock()
+            )
+        )
+    }
+}

@@ -23,7 +23,7 @@ extension TransactionDetail {
     static func sut(date: Date) -> Self {
         .init(
             description: "description",
-            bookingDate: date,
+            bookingDate: nil,
             value: TransactionValue.sut
         )
     }
