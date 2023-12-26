@@ -8,7 +8,7 @@
 import Foundation
 
 struct TransactionListRequest: RequestProtocol {
-    typealias Response = [TransactionModel]
+    typealias Response = TransactionResponse
     typealias Error = ErrorResponse
     
     var path: String {

@@ -5,31 +5,58 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
+@testable import WorldOfPayback_Dev
 import XCTest
 
 final class ApiServiceTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var sut: ApiService!
+    var apiProvider: ApiProvider!
+    var urlSessionMock: URLSessionMock!
+    
+    override func setUp() {
+        super.setUp()
+        
+        urlSessionMock = URLSessionMock()
+        
+        apiProvider = ApiProvider(
+            buildConfiguration: BuildConfigurationProtocolMock(),
+            urlSession: urlSessionMock,
+            headersRequestDecorator: HeadersRequestDecoratorProtocolMock()
+        )
+        
+        sut = ApiService(apiProvider: apiProvider)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testGetTransactionListSuccess() async throws {
+        let testDate = Date()
+        
+        urlSessionMock.data = try? TransactionListRequest.Response(
+            items: [.sut(date: testDate)]
+        ).toData(jsonEncoder: TransactionListRequest.getJSONEncoder())
+        urlSessionMock.response = HTTPURLResponse.mock(200)
+        
+        let request = TransactionListRequest()
+        let result = try await sut.apiProvider.get(apiRequest: request)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testGetTransactionListError() async {
+        let testDate = Date()
+        var thrownError: ErrorResponse?
+        let errorHandler = { thrownError = $0 }
+        
+        urlSessionMock.data = try? TransactionListRequest.Response(
+            items: [.sut(date: testDate)]
+        ).toData(jsonEncoder: JSONEncoder())
+        urlSessionMock.response = HTTPURLResponse.mock(401)
+        
+        let request = TransactionListRequest()
+        
+        do {
+            let result = try await sut.apiProvider.get(apiRequest: request)
+        } catch {
+            errorHandler(ErrorResponse.sut)
         }
-    }
 
+        XCTAssertEqual(thrownError, ErrorResponse.sut)
+    }
 }

@@ -20,14 +20,15 @@ extension RequestProtocol {
     
     /// Returns JSONEncoder
     static func getJSONEncoder() -> JSONEncoder {
-        JSONEncoder()
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        return encoder
     }
     
     /// Returns JSON Decoder
     static func getJSONDecoder() -> JSONDecoder {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }
     

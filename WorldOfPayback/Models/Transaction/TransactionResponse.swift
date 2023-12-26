@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TransactionResponse: Codable {
+struct TransactionResponse: Codable, Equatable {
     var items: [TransactionModel]?
     
     enum CodingKeys: String, CodingKey {

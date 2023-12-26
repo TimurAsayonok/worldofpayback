@@ -40,9 +40,7 @@ struct WelcomeView: View {
 }
 
 struct WelcomeStore: Reducer {
-    struct State: Equatable {
-        let id = UUID()
-    }
+    struct State: Equatable {}
     
     enum Action: Equatable {
         case loginTapped

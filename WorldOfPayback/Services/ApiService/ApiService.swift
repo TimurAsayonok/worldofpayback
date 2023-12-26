@@ -11,7 +11,7 @@ import Foundation
 // Contains api service methods
 
 struct ApiService {
-    private var apiProvider: ApiProviderProtocol
+    var apiProvider: ApiProviderProtocol
     
     init(apiProvider: ApiProviderProtocol) {
         self.apiProvider = apiProvider
@@ -28,7 +28,7 @@ struct ApiService {
         
         let request = TransactionListRequest()
         let response: TransactionListRequest.Response = try await apiProvider.get(apiRequest: request)
-        return response
+        return response.items ?? []
     }
     
     func getDummyTransactionList() async throws -> [TransactionModel] {
