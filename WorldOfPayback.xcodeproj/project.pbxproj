@@ -36,6 +36,9 @@
 		2D1382292B3B0F5400C870BF /* TestErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382282B3B0F5400C870BF /* TestErrorMock.swift */; };
 		2D13822E2B3B198900C870BF /* BuildConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13822D2B3B198900C870BF /* BuildConfigurationTests.swift */; };
 		2D1382302B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13822F2B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift */; };
+		2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382322B3B20D900C870BF /* ApiServiceTests.swift */; };
+		2D1382352B3B210600C870BF /* TransactionListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */; };
+		2D1382392B3B211E00C870BF /* DummyTransactionListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
 		2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */; };
@@ -69,7 +72,6 @@
 		2DDFEAB32B33A54D00BA75AE /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB22B33A54D00BA75AE /* ErrorResponse.swift */; };
 		2DDFEAB62B33AD7400BA75AE /* ApiServiceDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB52B33AD7400BA75AE /* ApiServiceDependency.swift */; };
 		2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */; };
-		2DDFEABA2B33C1FB00BA75AE /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB92B33C1FB00BA75AE /* AuthorizationRequest.swift */; };
 		2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEABD2B34699700BA75AE /* TransactionView.swift */; };
 		2DDFEAC12B34817000BA75AE /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC02B34816F00BA75AE /* PBTransactions.json */; };
 		2DDFEAC32B34888100BA75AE /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */; };
@@ -122,6 +124,9 @@
 		2D1382282B3B0F5400C870BF /* TestErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrorMock.swift; sourceTree = "<group>"; };
 		2D13822D2B3B198900C870BF /* BuildConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfigurationTests.swift; sourceTree = "<group>"; };
 		2D13822F2B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfigurationTests.swift; sourceTree = "<group>"; };
+		2D1382322B3B20D900C870BF /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
+		2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRequestTests.swift; sourceTree = "<group>"; };
+		2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequestTests.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,7 +160,6 @@
 		2DDFEAB22B33A54D00BA75AE /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		2DDFEAB52B33AD7400BA75AE /* ApiServiceDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceDependency.swift; sourceTree = "<group>"; };
 		2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
-		2DDFEAB92B33C1FB00BA75AE /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
 		2DDFEABD2B34699700BA75AE /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		2DDFEAC02B34816F00BA75AE /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PBTransactions.json; path = ../../Downloads/PAYBACK_Coding_Challenge/PBTransactions.json; sourceTree = "<group>"; };
 		2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
@@ -273,6 +277,8 @@
 		2D13822B2B3B196600C870BF /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
+				2D1382312B3B20C400C870BF /* Requests */,
+				2D1382322B3B20D900C870BF /* ApiServiceTests.swift */,
 			);
 			path = ApiService;
 			sourceTree = "<group>";
@@ -284,6 +290,15 @@
 				2D13822F2B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift */,
 			);
 			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		2D1382312B3B20C400C870BF /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */,
+				2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		2D1C34262B30C5AA006E3FAE = {
@@ -484,7 +499,6 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */,
-				2DDFEAB92B33C1FB00BA75AE /* AuthorizationRequest.swift */,
 				2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */,
 			);
 			path = Requests;
@@ -649,13 +663,16 @@
 				2D1382172B3B010500C870BF /* HTTPMethodTests.swift in Sources */,
 				2D1382102B3ADBD200C870BF /* TransactionValueTests.swift in Sources */,
 				2D13820A2B3ADB9400C870BF /* TransactionModelTests.swift in Sources */,
+				2D1382352B3B210600C870BF /* TransactionListRequestTests.swift in Sources */,
 				2D1382252B3B0EE900C870BF /* TestRequestMock.swift in Sources */,
 				2D1381FD2B3ACBC600C870BF /* AlertModelTests.swift in Sources */,
 				2D1382302B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift in Sources */,
 				2D13822E2B3B198900C870BF /* BuildConfigurationTests.swift in Sources */,
 				2D13820C2B3ADBB100C870BF /* TransactionAliasTests.swift in Sources */,
 				2D1382082B3ADB8700C870BF /* CurrencyTests.swift in Sources */,
+				2D1382392B3B211E00C870BF /* DummyTransactionListRequestTests.swift in Sources */,
 				2D1382022B3ACFF400C870BF /* FilterTypeTests.swift in Sources */,
+				2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */,
 				2D1382232B3B06B300C870BF /* HeadersRequestDecoratorProtocolMock.swift in Sources */,
 				2D1382212B3B05B200C870BF /* BuildConfigurationProtocolMock.swift in Sources */,
 				2D1382042B3AD00300C870BF /* ErrorResponseTests.swift in Sources */,
@@ -676,7 +693,6 @@
 				2DDFEA8C2B31F4C500BA75AE /* TransactionValue.swift in Sources */,
 				2DDFEA7A2B31D65800BA75AE /* Coordinator.swift in Sources */,
 				2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */,
-				2DDFEABA2B33C1FB00BA75AE /* AuthorizationRequest.swift in Sources */,
 				2D1381922B375E4E00C870BF /* ToolbarButton.swift in Sources */,
 				2D13818E2B37514A00C870BF /* Date+Extension.swift in Sources */,
 				2D1381822B35B2E200C870BF /* ClearButtonStyle.swift in Sources */,

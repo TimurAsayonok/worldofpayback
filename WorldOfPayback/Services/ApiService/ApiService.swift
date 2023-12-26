@@ -35,11 +35,4 @@ struct ApiService {
         let dummyRequest = DummyTransactionListRequest()
         return try await apiProvider.getDummyItems(apiRequest: dummyRequest)
     }
-    
-    func postData() async throws -> String {
-        let request = AuthorizationRequest()
-        
-        let response: AuthorizationRequest.Response = try await apiProvider.post(apiRequest: request)
-        return response.token
-    }
 }
