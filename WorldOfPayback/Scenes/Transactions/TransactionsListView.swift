@@ -107,9 +107,9 @@ struct TransactionListStore: Reducer {
                 })
             }
             switch filteredType {
-            case .byDate(0):
+            case .byDate(.descending):
                 return sorting(.orderedDescending)
-            case .byDate(1):
+            case .byDate(.ascending):
                 return sorting(.orderedAscending)
             case .category(let number):
                 return transactionList.filter { $0.category == number }
@@ -165,7 +165,7 @@ struct TransactionListStore: Reducer {
             case let .getTransactionListSucceed(items):
                 state.isLoading = false
                 state.transactionList = items
-                state.filteredType = .byDate(0)
+                state.filteredType = .byDate(.descending)
                 return .none
             
             case let .getTransactionListError(error):

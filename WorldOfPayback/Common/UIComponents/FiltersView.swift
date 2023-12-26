@@ -19,12 +19,12 @@ struct FiltersView: View {
                         .font(.headline)
                     HStack {
                         Button(L10N.filterSortDateDescending) {
-                            viewStore.send(.selectFilter(.byDate(0)))
+                            viewStore.send(.selectFilter(.byDate(.descending)))
                         }
                         .buttonStyle(OutlineButtonStyle())
                         
                         Button(L10N.filterSortDateAscending) {
-                            viewStore.send(.selectFilter(.byDate(1)))
+                            viewStore.send(.selectFilter(.byDate(.ascending)))
                         }
                         .buttonStyle(OutlineButtonStyle())
                     }

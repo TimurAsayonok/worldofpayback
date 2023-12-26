@@ -8,6 +8,11 @@
 import Foundation
 
 enum FilterType: Equatable {
-    case byDate(Int)
+    case byDate(DateFilter)
     case category(Int)
+    
+    enum DateFilter: Int, Equatable {
+        case descending = 0
+        case ascending = 1
+    }
 }
