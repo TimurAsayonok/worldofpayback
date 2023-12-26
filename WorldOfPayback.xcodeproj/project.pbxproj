@@ -21,7 +21,7 @@
 		2D1382082B3ADB8700C870BF /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382072B3ADB8700C870BF /* CurrencyTests.swift */; };
 		2D13820A2B3ADB9400C870BF /* TransactionModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382092B3ADB9400C870BF /* TransactionModelTests.swift */; };
 		2D13820C2B3ADBB100C870BF /* TransactionAliasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13820B2B3ADBB100C870BF /* TransactionAliasTests.swift */; };
-		2D13820E2B3ADBC300C870BF /* TransactionDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13820D2B3ADBC300C870BF /* TransactionDetailsTests.swift */; };
+		2D13820E2B3ADBC300C870BF /* TransactionDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13820D2B3ADBC300C870BF /* TransactionDetailTests.swift */; };
 		2D1382102B3ADBD200C870BF /* TransactionValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13820F2B3ADBD200C870BF /* TransactionValueTests.swift */; };
 		2D1382122B3ADBE900C870BF /* TransactionResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382112B3ADBE900C870BF /* TransactionResponseTests.swift */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
@@ -95,7 +95,7 @@
 		2D1382072B3ADB8700C870BF /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 		2D1382092B3ADB9400C870BF /* TransactionModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModelTests.swift; sourceTree = "<group>"; };
 		2D13820B2B3ADBB100C870BF /* TransactionAliasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAliasTests.swift; sourceTree = "<group>"; };
-		2D13820D2B3ADBC300C870BF /* TransactionDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsTests.swift; sourceTree = "<group>"; };
+		2D13820D2B3ADBC300C870BF /* TransactionDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailTests.swift; sourceTree = "<group>"; };
 		2D13820F2B3ADBD200C870BF /* TransactionValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionValueTests.swift; sourceTree = "<group>"; };
 		2D1382112B3ADBE900C870BF /* TransactionResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponseTests.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,7 +203,7 @@
 				2D1382072B3ADB8700C870BF /* CurrencyTests.swift */,
 				2D1382092B3ADB9400C870BF /* TransactionModelTests.swift */,
 				2D13820B2B3ADBB100C870BF /* TransactionAliasTests.swift */,
-				2D13820D2B3ADBC300C870BF /* TransactionDetailsTests.swift */,
+				2D13820D2B3ADBC300C870BF /* TransactionDetailTests.swift */,
 				2D13820F2B3ADBD200C870BF /* TransactionValueTests.swift */,
 				2D1382112B3ADBE900C870BF /* TransactionResponseTests.swift */,
 			);
@@ -575,7 +575,7 @@
 				2D1382022B3ACFF400C870BF /* FilterTypeTests.swift in Sources */,
 				2D1382042B3AD00300C870BF /* ErrorResponseTests.swift in Sources */,
 				2D1382062B3AD01000C870BF /* ToolbarButtonTests.swift in Sources */,
-				2D13820E2B3ADBC300C870BF /* TransactionDetailsTests.swift in Sources */,
+				2D13820E2B3ADBC300C870BF /* TransactionDetailTests.swift in Sources */,
 				2D1382122B3ADBE900C870BF /* TransactionResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,7 +42,3 @@ struct TransactionView: View {
         .padding(.top, 8)
     }
 }
-
-#Preview {
-    TransactionView(transaction: .mock())
-}
