@@ -10,17 +10,17 @@ import XCTest
 
 final class AlertModelTests: XCTestCase {
     func testModel() {
-        let stub = AlertModel.stub
+        let sut = AlertModel.sut
         
-        XCTAssertEqual(stub.title, L10N.alertTitle)
-        XCTAssertEqual(stub.message, "Message")
-        XCTAssertEqual(stub.primaryButtonTitle, L10N.okButton)
-        XCTAssertEqual(stub.cancelButtonTitle, L10N.cancelButton)
+        XCTAssertEqual(sut.title, L10N.alertTitle)
+        XCTAssertEqual(sut.message, "Message")
+        XCTAssertEqual(sut.primaryButtonTitle, L10N.okButton)
+        XCTAssertEqual(sut.cancelButtonTitle, L10N.cancelButton)
     }
 }
 
 extension AlertModel {
-    static var stub: Self {
+    static var sut: Self {
         .init(
             title: L10N.alertTitle,
             message: "Message",

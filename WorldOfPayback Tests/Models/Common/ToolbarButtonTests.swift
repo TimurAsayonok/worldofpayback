@@ -12,23 +12,23 @@ import SwiftUI
 final class ToolbarButtonTests: XCTestCase {
     func testAllValues() {
         let testID = UUID(uuidString: "1111111")
-        let stub = ToolbarButton(uuid: testID, type: .filter)
+        let sut = ToolbarButton(uuid: testID, type: .filter)
         
-        XCTAssertEqual(stub.uuid, testID)
-        XCTAssertEqual(stub.type, .filter)
+        XCTAssertEqual(sut.uuid, testID)
+        XCTAssertEqual(sut.type, .filter)
     }
     
     func testFilterButtonType() {
-        let stub = ToolbarButton(type: .filter)
+        let sut = ToolbarButton(type: .filter)
         
-        XCTAssertEqual(stub.type, .filter)
-        XCTAssertEqual(stub.type?.getIcon(), Image(systemName: "slider.horizontal.3"))
+        XCTAssertEqual(sut.type, .filter)
+        XCTAssertEqual(sut.type?.getIcon(), Image(systemName: "slider.horizontal.3"))
     }
     
     func testRefreshButtonType() {
-        let stub = ToolbarButton(type: .refresh)
+        let sut = ToolbarButton(type: .refresh)
         
-        XCTAssertEqual(stub.type, .refresh)
-        XCTAssertEqual(stub.type?.getIcon(), Image(systemName: "arrow.clockwise"))
+        XCTAssertEqual(sut.type, .refresh)
+        XCTAssertEqual(sut.type?.getIcon(), Image(systemName: "arrow.clockwise"))
     }
 }

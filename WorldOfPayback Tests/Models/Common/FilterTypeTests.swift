@@ -10,20 +10,20 @@ import XCTest
 
 final class FilterTypeTests: XCTestCase {
     func testDateDescending() {
-        let stub: FilterType = .byDate(.descending)
+        let sut: FilterType = .byDate(.descending)
         
-        XCTAssertEqual(stub, .byDate(.descending))
+        XCTAssertEqual(sut, .byDate(.descending))
     }
     
     func testDateAscending() {
-        let stub: FilterType = .byDate(.ascending)
+        let sut: FilterType = .byDate(.ascending)
         
-        XCTAssertEqual(stub, .byDate(.ascending))
+        XCTAssertEqual(sut, .byDate(.ascending))
     }
     
     func testCategory() {
-        let stub: FilterType = .category(1)
+        let sut: FilterType = .category(1)
         
-        XCTAssertEqual(stub, .category(1))
+        XCTAssertEqual(sut, .category(1))
     }
 }
