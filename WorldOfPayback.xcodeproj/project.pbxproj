@@ -154,9 +154,33 @@
 		2D1381F32B3AC87400C870BF /* WorldOfPayback Tests */ = {
 			isa = PBXGroup;
 			children = (
-				2D1381FC2B3ACBC600C870BF /* AlertModelTests.swift */,
+				2D1381FE2B3ACDF200C870BF /* Models */,
 			);
 			path = "WorldOfPayback Tests";
+			sourceTree = "<group>";
+		};
+		2D1381FE2B3ACDF200C870BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D1382002B3ACE0000C870BF /* Transaction */,
+				2D1381FF2B3ACDF800C870BF /* Common */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D1381FF2B3ACDF800C870BF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2D1381FC2B3ACBC600C870BF /* AlertModelTests.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2D1382002B3ACE0000C870BF /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 		2D1C34262B30C5AA006E3FAE = {
