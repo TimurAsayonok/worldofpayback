@@ -28,6 +28,6 @@ class HeadersRequestDecorator: HeadersRequestDecoratorProtocol {
     }
 }
 
-private enum HeaderRequestKey: String {
+enum HeaderRequestKey: String {
     case xAuthorization = "Authorization"
 }

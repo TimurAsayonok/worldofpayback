@@ -24,6 +24,9 @@
 		2D13820E2B3ADBC300C870BF /* TransactionDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13820D2B3ADBC300C870BF /* TransactionDetailTests.swift */; };
 		2D1382102B3ADBD200C870BF /* TransactionValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13820F2B3ADBD200C870BF /* TransactionValueTests.swift */; };
 		2D1382122B3ADBE900C870BF /* TransactionResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382112B3ADBE900C870BF /* TransactionResponseTests.swift */; };
+		2D1382152B3B00FB00C870BF /* HeadersRequestDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382142B3B00FB00C870BF /* HeadersRequestDecoratorTests.swift */; };
+		2D1382172B3B010500C870BF /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382162B3B010500C870BF /* HTTPMethodTests.swift */; };
+		2D13821A2B3B01EC00C870BF /* URLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382192B3B01EC00C870BF /* URLMock.swift */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
 		2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */; };
@@ -98,6 +101,9 @@
 		2D13820D2B3ADBC300C870BF /* TransactionDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailTests.swift; sourceTree = "<group>"; };
 		2D13820F2B3ADBD200C870BF /* TransactionValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionValueTests.swift; sourceTree = "<group>"; };
 		2D1382112B3ADBE900C870BF /* TransactionResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponseTests.swift; sourceTree = "<group>"; };
+		2D1382142B3B00FB00C870BF /* HeadersRequestDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersRequestDecoratorTests.swift; sourceTree = "<group>"; };
+		2D1382162B3B010500C870BF /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
+		2D1382192B3B01EC00C870BF /* URLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMock.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 		2D1381F32B3AC87400C870BF /* WorldOfPayback Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2D1382182B3B01DE00C870BF /* Mock */,
+				2D1382132B3B00EB00C870BF /* NetworkLayer */,
 				2D1381FE2B3ACDF200C870BF /* Models */,
 			);
 			path = "WorldOfPayback Tests";
@@ -208,6 +216,23 @@
 				2D1382112B3ADBE900C870BF /* TransactionResponseTests.swift */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		2D1382132B3B00EB00C870BF /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2D1382162B3B010500C870BF /* HTTPMethodTests.swift */,
+				2D1382142B3B00FB00C870BF /* HeadersRequestDecoratorTests.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		2D1382182B3B01DE00C870BF /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				2D1382192B3B01EC00C870BF /* URLMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		2D1C34262B30C5AA006E3FAE = {
@@ -567,6 +592,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D13821A2B3B01EC00C870BF /* URLMock.swift in Sources */,
+				2D1382172B3B010500C870BF /* HTTPMethodTests.swift in Sources */,
 				2D1382102B3ADBD200C870BF /* TransactionValueTests.swift in Sources */,
 				2D13820A2B3ADB9400C870BF /* TransactionModelTests.swift in Sources */,
 				2D1381FD2B3ACBC600C870BF /* AlertModelTests.swift in Sources */,
@@ -575,6 +602,7 @@
 				2D1382022B3ACFF400C870BF /* FilterTypeTests.swift in Sources */,
 				2D1382042B3AD00300C870BF /* ErrorResponseTests.swift in Sources */,
 				2D1382062B3AD01000C870BF /* ToolbarButtonTests.swift in Sources */,
+				2D1382152B3B00FB00C870BF /* HeadersRequestDecoratorTests.swift in Sources */,
 				2D13820E2B3ADBC300C870BF /* TransactionDetailTests.swift in Sources */,
 				2D1382122B3ADBE900C870BF /* TransactionResponseTests.swift in Sources */,
 			);
