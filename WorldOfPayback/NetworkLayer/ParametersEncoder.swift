@@ -14,7 +14,7 @@ protocol ParametersEncoder {
 struct URLParametersEncoder: ParametersEncoder {
     
     /// Encode  urlRequest in case of GET, DELETE
-    func encode(_ urlRequest: URLRequest, with parameters: [String : Any]?) throws -> URLRequest {
+    func encode(_ urlRequest: URLRequest, with parameters: [String: Any]?) throws -> URLRequest {
         var urlRequest = urlRequest
         
         // set urlRequest value
@@ -32,7 +32,7 @@ struct URLParametersEncoder: ParametersEncoder {
 struct JsonParametersEncoder: ParametersEncoder {
     
     /// Encodes parameters in the urlRequest in case of POST, PUT
-    func encode(_ urlRequest: URLRequest, with parameters: [String : Any]?) throws -> URLRequest {
+    func encode(_ urlRequest: URLRequest, with parameters: [String: Any]?) throws -> URLRequest {
         var urlRequest = urlRequest
         
         // return urlRequest if parameters == nil

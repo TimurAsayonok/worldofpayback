@@ -9,12 +9,12 @@
 import XCTest
 
 final class HeadersRequestDecoratorTests: XCTestCase {
-    var sut: HeadersRequestDecorator!
+    var sut: HeadersRequestDecoratorProtocolMock!
     
     override func setUp() {
         super.setUp()
         
-        sut = HeadersRequestDecorator()
+        sut = HeadersRequestDecoratorProtocolMock()
     }
     
     func testInit() {
@@ -32,7 +32,7 @@ final class HeadersRequestDecoratorTests: XCTestCase {
         let headers = urlRequest.allHTTPHeaderFields
         if let headers {
             XCTAssertEqual(Array(headers.keys), [HeaderRequestKey.xAuthorization.rawValue])
-            XCTAssertEqual(headers[HeaderRequestKey.xAuthorization.rawValue], "Token")
+            XCTAssertEqual(headers[HeaderRequestKey.xAuthorization.rawValue], "Bearer Token")
         }
     }
 }

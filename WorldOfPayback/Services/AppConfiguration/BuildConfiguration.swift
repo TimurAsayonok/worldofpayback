@@ -7,7 +7,15 @@
 
 import Foundation
 
-class BuildConfiguration {
+protocol BuildConfigurationProtocol {
+    var apiBasedUrl: URL { get }
+}
+
+class BuildConfiguration: BuildConfigurationProtocol {
+    var apiBasedUrl: URL {
+        URL(string: apiBasedURLStringL)! // swiftlint:disable:this force_unwrapping
+    }
+    
     static let shared = BuildConfiguration()
     
     var environment: EnvironmentConfiguration
@@ -20,9 +28,6 @@ class BuildConfiguration {
         case .release:
             "https://api.payback.com"
         }
-    }
-    var apiBasedURL: URL {
-        URL(string: apiBasedURLStringL)! // swiftlint:disable:this force_unwrapping
     }
     
     init() {

@@ -37,7 +37,21 @@ extension ApiProviderProtocol {
 
 class ApiProvider: ApiProviderProtocol {
     var basedUrl: URL {
-        BuildConfiguration.shared.apiBasedURL
+        buildConfiguration.apiBasedUrl
+    }
+    
+    private let buildConfiguration: BuildConfigurationProtocol
+    private let urlSession: URLSession
+    private let headersRequestDecorator: HeadersRequestDecoratorProtocol
+    
+    init(
+        buildConfiguration: BuildConfigurationProtocol = BuildConfiguration.shared,
+        urlSession: URLSession = URLSession(configuration: .default),
+        headersRequestDecorator: HeadersRequestDecoratorProtocol = HeadersRequestDecorator()
+    ) {
+        self.buildConfiguration = buildConfiguration
+        self.urlSession = urlSession
+        self.headersRequestDecorator = headersRequestDecorator
     }
     
     /// Sends Api request to the server and returns data
@@ -46,14 +60,13 @@ class ApiProvider: ApiProviderProtocol {
         
         do {
             urlRequest = try apiRequest.buildRequest(with: basedUrl, method: method)
-            
-            // add headers decorator
+            headersRequestDecorator.decorate(urlRequest: &urlRequest)
         } catch {
             print("🐞", type(of: self), "->", error)
             throw error
         }
         
-        let session = URLSession(configuration: .default)
+        let session = urlSession
         return try await withCheckedThrowingContinuation { continuation in
             let dataTask = session.dataTask(with: urlRequest) { data, response, error in
                 if let error = error {
@@ -92,7 +105,7 @@ class ApiProvider: ApiProviderProtocol {
                 let dummyData = try self.dummyResponse()
                 let model = try T.getJSONDecoder().decode(TransactionResponse.self, from: dummyData)
                 
-                // we are using force unwrap just for testing!
+                // we are using force unwrap just for testing dummy data!
                 continuation.resume(with: .success(model.items as! T.Response))
             } catch {
                 print("Error", error)
