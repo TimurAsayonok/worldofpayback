@@ -17,12 +17,6 @@ struct TransactionDetail: Codable, Equatable, Hashable {
         self.bookingDate = bookingDate
         self.value = value
     }
-    
-    static func == (lhs: TransactionDetail, rhs: TransactionDetail) -> Bool {
-        lhs.value == rhs.value
-        && lhs.description == rhs.description
-        && lhs.bookingDate?.compare(rhs.bookingDate ?? Date()) == .orderedSame
-    }
 }
 
 extension TransactionDetail {

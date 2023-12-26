@@ -9,8 +9,11 @@ import Foundation
 
 // MARK: ApiService
 // Contains api service methods
+protocol ApiServiceProtocol {
+    func getTransactionList() async throws -> [TransactionModel]
+}
 
-struct ApiService {
+struct ApiService: ApiServiceProtocol {
     var apiProvider: ApiProviderProtocol
     
     init(apiProvider: ApiProviderProtocol) {

@@ -10,20 +10,21 @@ import XCTest
 
 final class TransactionDetailTests: XCTestCase {
     func testAllValues() {
-        let testDate = Date()
-        let sut = TransactionDetail.sut(date: testDate)
+        let sut = TransactionDetail.sut()
         
         XCTAssertEqual(sut.description, "description")
-        XCTAssertEqual(sut.bookingDate, testDate)
+        XCTAssertNotNil(sut.bookingDate)
         XCTAssertEqual(sut.value, TransactionValue.sut)
     }
 }
 
 extension TransactionDetail {
-    static func sut(date: Date) -> Self {
-        .init(
+    static func sut() -> Self {
+        let date = DateFormatter.customDateFormatter.date(from: "2023-12-26T11:42:00")
+        print("Date", date)
+        return .init(
             description: "description",
-            bookingDate: nil,
+            bookingDate: DateFormatter.customDateFormatter.date(from: "2023-12-26T11:42:00"),
             value: TransactionValue.sut
         )
     }

@@ -31,21 +31,22 @@ final class ApiServiceTests: XCTestCase {
         let testDate = Date()
         
         urlSessionMock.data = try? TransactionListRequest.Response(
-            items: [.sut(date: testDate)]
+            items: [.sut()]
         ).toData(jsonEncoder: TransactionListRequest.getJSONEncoder())
         urlSessionMock.response = HTTPURLResponse.mock(200)
         
         let request = TransactionListRequest()
         let result = try await sut.apiProvider.get(apiRequest: request)
+        
+        XCTAssertEqual(result.items, [TransactionModel.sut()])
     }
     
     func testGetTransactionListError() async {
-        let testDate = Date()
         var thrownError: ErrorResponse?
         let errorHandler = { thrownError = $0 }
         
         urlSessionMock.data = try? TransactionListRequest.Response(
-            items: [.sut(date: testDate)]
+            items: [.sut()]
         ).toData(jsonEncoder: JSONEncoder())
         urlSessionMock.response = HTTPURLResponse.mock(401)
         

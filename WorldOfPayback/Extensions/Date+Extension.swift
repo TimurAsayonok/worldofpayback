@@ -15,3 +15,14 @@ extension Date {
         return String(format: "%@", dataFormatter.string(from: self))
     }
 }
+
+extension DateFormatter {
+    static var customDateFormatter: Self {
+        let dataFormatter = Self()
+        dataFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dataFormatter.timeZone = TimeZone.current
+        dataFormatter.locale = Locale.current
+        
+        return dataFormatter
+    }
+}

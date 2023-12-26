@@ -10,7 +10,7 @@ import XCTest
 
 final class TransactionModelTests: XCTestCase {
     func testAllValues() {
-        let sut = TransactionModel.sut(date: Date())
+        let sut = TransactionModel.sut()
         
         XCTAssertEqual(sut.partnerDisplayName, "partnerDisplayName")
         XCTAssertEqual(sut.alias?.reference, "reference")
@@ -21,12 +21,12 @@ final class TransactionModelTests: XCTestCase {
 
 
 extension TransactionModel {
-    static func sut(date: Date) -> Self {
+    static func sut() -> Self {
         .init(
             partnerDisplayName: "partnerDisplayName",
             alias: .init(reference: "reference"),
             category: 1,
-            transactionDetail: TransactionDetail.sut(date: date)
+            transactionDetail: TransactionDetail.sut()
         )
     }
 }
