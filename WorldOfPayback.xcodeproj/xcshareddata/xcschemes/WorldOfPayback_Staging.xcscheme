@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D1C342E2B30C5AA006E3FAE"
-               BuildableName = "WorldOfPayback Production.app"
+               BuildableName = "WorldOfPayback Dev.app"
                BlueprintName = "WorldOfPayback"
                ReferencedContainer = "container:WorldOfPayback.xcodeproj">
             </BuildableReference>
@@ -28,6 +28,30 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2D1381F12B3AC87400C870BF"
+               BuildableName = "WorldOfPayback Tests.xctest"
+               BlueprintName = "WorldOfPayback Tests"
+               ReferencedContainer = "container:WorldOfPayback.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2D1381E32B3AC7DB00C870BF"
+               BuildableName = "WorldOfPaybak Tests.xctest"
+               BlueprintName = "WorldOfPaybak Tests"
+               ReferencedContainer = "container:WorldOfPayback.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Staging"
@@ -45,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D1C342E2B30C5AA006E3FAE"
-            BuildableName = "WorldOfPayback Production.app"
+            BuildableName = "WorldOfPayback Dev.app"
             BlueprintName = "WorldOfPayback"
             ReferencedContainer = "container:WorldOfPayback.xcodeproj">
          </BuildableReference>
@@ -62,7 +86,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D1C342E2B30C5AA006E3FAE"
-            BuildableName = "WorldOfPayback Production.app"
+            BuildableName = "WorldOfPayback Dev.app"
             BlueprintName = "WorldOfPayback"
             ReferencedContainer = "container:WorldOfPayback.xcodeproj">
          </BuildableReference>
