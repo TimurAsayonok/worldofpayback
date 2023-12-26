@@ -17,7 +17,7 @@
 		2D1381FD2B3ACBC600C870BF /* AlertModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1381FC2B3ACBC600C870BF /* AlertModelTests.swift */; };
 		2D1382022B3ACFF400C870BF /* FilterTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382012B3ACFF400C870BF /* FilterTypeTests.swift */; };
 		2D1382042B3AD00300C870BF /* ErrorResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382032B3AD00300C870BF /* ErrorResponseTests.swift */; };
-		2D1382062B3AD01000C870BF /* ToolbatButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382052B3AD01000C870BF /* ToolbatButtonTests.swift */; };
+		2D1382062B3AD01000C870BF /* ToolbarButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382052B3AD01000C870BF /* ToolbarButtonTests.swift */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
 		2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */; };
@@ -85,7 +85,7 @@
 		2D1381FC2B3ACBC600C870BF /* AlertModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModelTests.swift; sourceTree = "<group>"; };
 		2D1382012B3ACFF400C870BF /* FilterTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTypeTests.swift; sourceTree = "<group>"; };
 		2D1382032B3AD00300C870BF /* ErrorResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseTests.swift; sourceTree = "<group>"; };
-		2D1382052B3AD01000C870BF /* ToolbatButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbatButtonTests.swift; sourceTree = "<group>"; };
+		2D1382052B3AD01000C870BF /* ToolbarButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButtonTests.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 				2D1382032B3AD00300C870BF /* ErrorResponseTests.swift */,
 				2D1381FC2B3ACBC600C870BF /* AlertModelTests.swift */,
 				2D1382012B3ACFF400C870BF /* FilterTypeTests.swift */,
-				2D1382052B3AD01000C870BF /* ToolbatButtonTests.swift */,
+				2D1382052B3AD01000C870BF /* ToolbarButtonTests.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -552,7 +552,7 @@
 				2D1381FD2B3ACBC600C870BF /* AlertModelTests.swift in Sources */,
 				2D1382022B3ACFF400C870BF /* FilterTypeTests.swift in Sources */,
 				2D1382042B3AD00300C870BF /* ErrorResponseTests.swift in Sources */,
-				2D1382062B3AD01000C870BF /* ToolbatButtonTests.swift in Sources */,
+				2D1382062B3AD01000C870BF /* ToolbarButtonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

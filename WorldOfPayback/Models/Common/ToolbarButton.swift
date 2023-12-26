@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ToolbarButton: Equatable {
-    let uuid = UUID()
-    
+    var uuid: UUID?
     var type: ButtonType?
+    
+    init(uuid: UUID? = UUID(), type: ButtonType) {
+        self.uuid = uuid
+        self.type = type
+    }
 }
 
 extension ToolbarButton {
