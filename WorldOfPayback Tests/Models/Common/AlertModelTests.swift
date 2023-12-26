@@ -10,7 +10,7 @@ import XCTest
 
 final class AlertModelTests: XCTestCase {
     func testModel() {
-        let sut = AlertModel.sut
+        let sut = AlertModel.sut()
         
         XCTAssertEqual(sut.title, L10N.alertTitle)
         XCTAssertEqual(sut.message, "Message")
@@ -20,10 +20,10 @@ final class AlertModelTests: XCTestCase {
 }
 
 extension AlertModel {
-    static var sut: Self {
+    static func sut(message: String? = "Message") -> Self {
         .init(
             title: L10N.alertTitle,
-            message: "Message",
+            message: message,
             primaryButtonTitle: L10N.okButton,
             cancelButtonTitle: L10N.cancelButton
         )

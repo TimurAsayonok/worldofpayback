@@ -9,11 +9,21 @@
 import Foundation
 
 extension ApiServiceKey {
-    static var testValue: any ApiServiceProtocol = ApiServiceMock()
+    static var testValue: (_ throwError: Bool) -> any ApiServiceProtocol {
+        return { throwError in
+            throwError ? ApiServiceFailMock() : ApiServiceMock()
+        }
+    }
 }
 
 struct ApiServiceMock: ApiServiceProtocol {
     func getTransactionList() async throws -> [TransactionModel] {
         [TransactionModel.sut()]
+    }
+}
+
+struct ApiServiceFailMock: ApiServiceProtocol {
+    func getTransactionList() async throws -> [TransactionModel] {
+        throw ErrorResponse.sut
     }
 }

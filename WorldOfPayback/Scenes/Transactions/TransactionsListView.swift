@@ -166,6 +166,7 @@ struct TransactionListStore: Reducer {
                 state.isLoading = false
                 state.transactionList = items
                 state.filteredType = .byDate(.descending)
+                state.alertModel = nil
                 return .none
             
             case let .getTransactionListError(error):

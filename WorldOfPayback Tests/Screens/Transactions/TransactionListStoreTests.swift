@@ -11,11 +11,11 @@ import XCTest
 
 @MainActor
 final class TransactionListStoreTests: XCTestCase {
-    func testGetTransactionList() async {
+    func testGetTransactionListSucceed() async {
         let store = TestStore(initialState: TransactionListStore.State()) {
             TransactionListStore()
         } withDependencies: {
-            $0.apiService = ApiServiceKey.testValue
+            $0.apiService = ApiServiceKey.testValue(false)
         }
         
         await store.send(.initScreen)
@@ -28,6 +28,23 @@ final class TransactionListStoreTests: XCTestCase {
             state.isLoading = false
             state.filteredType = .byDate(.descending)
             state.transactionList = transactionList
+        }
+    }
+    
+    func testGetTransactionListFailed() async {
+        let store = TestStore(initialState: TransactionListStore.State()) {
+            TransactionListStore()
+        } withDependencies: {
+            $0.apiService = ApiServiceKey.testValue(true)
+        }
+        
+        await store.send(.initScreen)
+        await store.receive(.getTransactionList) {
+            $0.isLoading = true
+        }
+        await store.receive(.getTransactionListError(ErrorResponse.sut), timeout: Duration.seconds(1)) {
+            $0.isLoading = false
+            $0.alertModel = AlertModel.sut(message: ErrorResponse.sut.errorDescription)
         }
     }
     

@@ -13,4 +13,8 @@ struct ErrorResponse: Codable, Equatable, Error, LocalizedError {
     enum CodingKeys: String, CodingKey {
         case message
     }
+    
+    var errorDescription: String? {
+        "We have error with message: \(message)"
+    }
 }
