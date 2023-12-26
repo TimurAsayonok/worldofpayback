@@ -25,7 +25,7 @@ class BuildConfiguration: BuildConfigurationProtocol {
         switch environment {
         case .development, .staging:
             "https://api-test.payback.com"
-        case .release:
+        case .production:
             "https://api.payback.com"
         }
     }
