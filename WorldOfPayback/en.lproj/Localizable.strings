@@ -31,3 +31,7 @@
 
 // MARK: - Alert
 "alert_title" = "Ups!";
+
+// MARK: - Network Unavailable
+"no_internet_connection_title" = "No Internet Connection";
+"no_internet_connection_description" = "Please check your connection and try again.";

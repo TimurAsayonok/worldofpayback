@@ -28,6 +28,9 @@ enum L10N {
     static var okButton = localizedString("ok_button")
     
     static var alertTitle = localizedString("alert_title")
+    
+    static var noInternetConnectionTitle = localizedString("no_internet_connection_title")
+    static var noInternetConnectionDescription = localizedString("no_internet_connection_description")
 }
 
 extension L10N {
