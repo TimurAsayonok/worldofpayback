@@ -54,8 +54,6 @@
 		2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */; };
 		2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */; };
 		2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */; };
-		2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA72B339DC900BA75AE /* EnvironmentConfiguration.swift */; };
-		2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */; };
 		2DDFEAAE2B33A39F00BA75AE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAAD2B33A39F00BA75AE /* ApiService.swift */; };
 		2DDFEAB02B33A3C600BA75AE /* TransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */; };
 		2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */; };
@@ -125,8 +123,6 @@
 		2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoder.swift; sourceTree = "<group>"; };
 		2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersRequestDecorator.swift; sourceTree = "<group>"; };
-		2DDFEAA72B339DC900BA75AE /* EnvironmentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfiguration.swift; sourceTree = "<group>"; };
-		2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
 		2DDFEAAD2B33A39F00BA75AE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRequest.swift; sourceTree = "<group>"; };
 		2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
@@ -415,18 +411,8 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEAAB2B33A37600BA75AE /* ApiService */,
-				2DDFEAA62B339DB500BA75AE /* AppConfiguration */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		2DDFEAA62B339DB500BA75AE /* AppConfiguration */ = {
-			isa = PBXGroup;
-			children = (
-				2DDFEAA72B339DC900BA75AE /* EnvironmentConfiguration.swift */,
-				2DDFEAA92B339E5200BA75AE /* BuildConfiguration.swift */,
-			);
-			path = AppConfiguration;
 			sourceTree = "<group>";
 		};
 		2DDFEAAB2B33A37600BA75AE /* ApiService */ = {
@@ -631,9 +617,7 @@
 				2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */,
 				2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */,
 				2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */,
-				2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */,
 				2DDFEAB02B33A3C600BA75AE /* TransactionListRequest.swift in Sources */,
-				2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */,
 				2D13818C2B35E11700C870BF /* LocalizationHelper.swift in Sources */,
 				2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */,
 				2DDFEA992B3368D900BA75AE /* RequestProtocol.swift in Sources */,
