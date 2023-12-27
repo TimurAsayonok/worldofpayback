@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum Currency: String, Codable {
+public enum Currency: String, Codable {
     case PBP
 }

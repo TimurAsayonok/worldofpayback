@@ -7,14 +7,26 @@
 
 import Foundation
 
-struct TransactionModel: Codable, Equatable, Hashable {
-    var partnerDisplayName: String?
-    var alias: TransactionAlias?
-    var category: Int?
-    var transactionDetail: TransactionDetail?
+public struct TransactionModel: Codable, Equatable, Hashable {
+    public var partnerDisplayName: String?
+    public var alias: TransactionAlias?
+    public var category: Int?
+    public var transactionDetail: TransactionDetail?
+    
+    public init(
+        partnerDisplayName: String? = nil,
+        alias: TransactionAlias? = nil,
+        category: Int? = nil,
+        transactionDetail: TransactionDetail? = nil
+    ) {
+        self.partnerDisplayName = partnerDisplayName
+        self.alias = alias
+        self.category = category
+        self.transactionDetail = transactionDetail
+    }
 }
 
-extension TransactionModel {
+public extension TransactionModel {
     enum CodingKeys: String, CodingKey {
         case partnerDisplayName
         case alias

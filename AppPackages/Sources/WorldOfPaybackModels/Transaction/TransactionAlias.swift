@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct TransactionAlias: Codable, Equatable, Hashable {
-    var reference: String?
+public struct TransactionAlias: Codable, Equatable, Hashable {
+    public var reference: String?
+    
+    public init(reference: String? = nil) {
+        self.reference = reference
+    }
     
     enum CodingKeys: String, CodingKey {
         case reference

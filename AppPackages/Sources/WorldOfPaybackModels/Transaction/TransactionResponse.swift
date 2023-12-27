@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct TransactionResponse: Codable, Equatable {
-    var items: [TransactionModel]?
+public struct TransactionResponse: Codable, Equatable {
+    public var items: [TransactionModel]?
+    
+    public init(items: [TransactionModel]? = nil) {
+        self.items = items
+    }
     
     enum CodingKeys: String, CodingKey {
         case items

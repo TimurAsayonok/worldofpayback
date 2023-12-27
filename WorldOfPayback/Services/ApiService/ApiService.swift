@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WorldOfPaybackModels
 
 // MARK: ApiService
 // Contains api service methods

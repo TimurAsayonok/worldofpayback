@@ -5,6 +5,7 @@
 //  Created by Tsimur Asayonak on 12/21/23.
 //
 
+import WorldOfPaybackModels
 import SwiftUI
 
 struct TransactionView: View {

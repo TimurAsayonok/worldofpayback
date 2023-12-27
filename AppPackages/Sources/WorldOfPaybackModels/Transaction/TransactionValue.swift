@@ -7,12 +7,17 @@
 
 import Foundation
 
-struct TransactionValue: Codable, Equatable, Hashable {
-    var amount: Int?
-    var currency: Currency?
+public struct TransactionValue: Codable, Equatable, Hashable {
+    public var amount: Int?
+    public var currency: Currency?
     
-    var formattedValue: String {
+    public var formattedValue: String {
         "\(amount ?? 0) \(currency?.rawValue ?? "")"
+    }
+    
+    public init(amount: Int? = nil, currency: Currency? = nil) {
+        self.amount = amount
+        self.currency = currency
     }
     
     enum CodingKeys: String, CodingKey {

@@ -7,12 +7,16 @@
 
 import Foundation
 
-struct TransactionDetail: Codable, Equatable, Hashable {
-    var description: String?
-    var bookingDate: Date?
-    var value: TransactionValue?
+public struct TransactionDetail: Codable, Equatable, Hashable {
+    public var description: String?
+    public var bookingDate: Date?
+    public var value: TransactionValue?
     
-    init(description: String? = nil, bookingDate: Date? = nil, value: TransactionValue? = nil) {
+    public init(
+        description: String? = nil,
+        bookingDate: Date? = nil,
+        value: TransactionValue? = nil
+    ) {
         self.description = description
         self.bookingDate = bookingDate
         self.value = value
