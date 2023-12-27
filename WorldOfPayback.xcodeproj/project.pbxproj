@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,14 +47,13 @@
 		2D1382522B3B792D00C870BF /* DependencyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382512B3B792D00C870BF /* DependencyMock.swift */; };
 		2D1382572B3B8EAE00C870BF /* ScreenRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */; };
 		2D13825A2B3B960B00C870BF /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382592B3B960B00C870BF /* CoordinatorTests.swift */; };
+		2D13826B2B3BBB8F00C870BF /* WorldOfPaybackApp in Frameworks */ = {isa = PBXBuildFile; productRef = 2D13826A2B3BBB8F00C870BF /* WorldOfPaybackApp */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
 		2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */; };
 		2D6D93072B35AB240057E0EB /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D93062B35AB240057E0EB /* FilterType.swift */; };
 		2D6D930B2B35AF1D0057E0EB /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D930A2B35AF1D0057E0EB /* PrimaryButtonStyle.swift */; };
 		2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */; };
-		2DDFEA6E2B31B2D800BA75AE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2DDFEA6D2B31B2D800BA75AE /* ComposableArchitecture */; };
-		2DDFEA712B31B32100BA75AE /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 2DDFEA702B31B32100BA75AE /* TCACoordinators */; };
 		2DDFEA752B31B3D700BA75AE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA742B31B3D700BA75AE /* WelcomeView.swift */; };
 		2DDFEA782B31D59B00BA75AE /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA772B31D59B00BA75AE /* ScreenRoute.swift */; };
 		2DDFEA7A2B31D65800BA75AE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA792B31D65800BA75AE /* Coordinator.swift */; };
@@ -143,6 +142,7 @@
 		2D1382512B3B792D00C870BF /* DependencyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyMock.swift; sourceTree = "<group>"; };
 		2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouteTests.swift; sourceTree = "<group>"; };
 		2D1382592B3B960B00C870BF /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		2D1382662B3BB9CD00C870BF /* AppPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AppPackages; path = ../AppPackages; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,8 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DDFEA712B31B32100BA75AE /* TCACoordinators in Frameworks */,
-				2DDFEA6E2B31B2D800BA75AE /* ComposableArchitecture in Frameworks */,
+				2D13826B2B3BBB8F00C870BF /* WorldOfPaybackApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,12 +388,21 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		2D1382622B3BB87100C870BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D1C34262B30C5AA006E3FAE = {
 			isa = PBXGroup;
 			children = (
+				2D1382662B3BB9CD00C870BF /* AppPackages */,
 				2D1C34312B30C5AA006E3FAE /* WorldOfPayback */,
 				2D1381F32B3AC87400C870BF /* WorldOfPayback Tests */,
 				2D1C34302B30C5AA006E3FAE /* Products */,
+				2D1382622B3BB87100C870BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -648,8 +656,7 @@
 			);
 			name = WorldOfPayback;
 			packageProductDependencies = (
-				2DDFEA6D2B31B2D800BA75AE /* ComposableArchitecture */,
-				2DDFEA702B31B32100BA75AE /* TCACoordinators */,
+				2D13826A2B3BBB8F00C870BF /* WorldOfPaybackApp */,
 			);
 			productName = wordofpayback;
 			productReference = 2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */;
@@ -686,8 +693,7 @@
 			);
 			mainGroup = 2D1C34262B30C5AA006E3FAE;
 			packageReferences = (
-				2DDFEA6C2B31B2D800BA75AE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				2DDFEA6F2B31B32100BA75AE /* XCRemoteSwiftPackageReference "TCACoordinators" */,
+				2D1382692B3BBB8F00C870BF /* XCLocalSwiftPackageReference "AppPackages" */,
 			);
 			productRefGroup = 2D1C34302B30C5AA006E3FAE /* Products */;
 			projectDirPath = "";
@@ -1383,35 +1389,17 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		2DDFEA6C2B31B2D800BA75AE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.5;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		2D1382692B3BBB8F00C870BF /* XCLocalSwiftPackageReference "AppPackages" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = AppPackages;
 		};
-		2DDFEA6F2B31B32100BA75AE /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.8.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2DDFEA6D2B31B2D800BA75AE /* ComposableArchitecture */ = {
+		2D13826A2B3BBB8F00C870BF /* WorldOfPaybackApp */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2DDFEA6C2B31B2D800BA75AE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		2DDFEA702B31B32100BA75AE /* TCACoordinators */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2DDFEA6F2B31B32100BA75AE /* XCRemoteSwiftPackageReference "TCACoordinators" */;
-			productName = TCACoordinators;
+			productName = WorldOfPaybackApp;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
