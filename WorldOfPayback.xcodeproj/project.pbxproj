@@ -22,7 +22,6 @@
 		2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382322B3B20D900C870BF /* ApiServiceTests.swift */; };
 		2D1382352B3B210600C870BF /* TransactionListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */; };
 		2D1382392B3B211E00C870BF /* DummyTransactionListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */; };
-		2D1382442B3B518300C870BF /* WelcomeStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382432B3B518300C870BF /* WelcomeStoreTests.swift */; };
 		2D1382462B3B527800C870BF /* TransactionDetailsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382452B3B527800C870BF /* TransactionDetailsStoreTests.swift */; };
 		2D1382482B3B5AA900C870BF /* TransactionListStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382472B3B5AA900C870BF /* TransactionListStoreTests.swift */; };
 		2D1382522B3B792D00C870BF /* DependencyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382512B3B792D00C870BF /* DependencyMock.swift */; };
@@ -61,7 +60,6 @@
 		2D1382322B3B20D900C870BF /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
 		2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRequestTests.swift; sourceTree = "<group>"; };
 		2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequestTests.swift; sourceTree = "<group>"; };
-		2D1382432B3B518300C870BF /* WelcomeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStoreTests.swift; sourceTree = "<group>"; };
 		2D1382452B3B527800C870BF /* TransactionDetailsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsStoreTests.swift; sourceTree = "<group>"; };
 		2D1382472B3B5AA900C870BF /* TransactionListStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListStoreTests.swift; sourceTree = "<group>"; };
 		2D1382512B3B792D00C870BF /* DependencyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyMock.swift; sourceTree = "<group>"; };
@@ -170,17 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				2D1382422B3B516D00C870BF /* Transactions */,
-				2D1382412B3B516100C870BF /* Welcome */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		2D1382412B3B516100C870BF /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				2D1382432B3B518300C870BF /* WelcomeStoreTests.swift */,
-			);
-			path = Welcome;
 			sourceTree = "<group>";
 		};
 		2D1382422B3B516D00C870BF /* Transactions */ = {
@@ -388,7 +377,6 @@
 				2D1382302B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift in Sources */,
 				2D13822E2B3B198900C870BF /* BuildConfigurationTests.swift in Sources */,
 				2D1382522B3B792D00C870BF /* DependencyMock.swift in Sources */,
-				2D1382442B3B518300C870BF /* WelcomeStoreTests.swift in Sources */,
 				2D1382462B3B527800C870BF /* TransactionDetailsStoreTests.swift in Sources */,
 				2D1382392B3B211E00C870BF /* DummyTransactionListRequestTests.swift in Sources */,
 				2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */,
