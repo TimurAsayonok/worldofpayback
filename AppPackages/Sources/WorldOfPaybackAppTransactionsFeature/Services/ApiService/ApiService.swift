@@ -16,7 +16,7 @@ public protocol ApiServiceProtocol {
 }
 
 public struct ApiService: ApiServiceProtocol {
-    var apiProvider: ApiProviderProtocol
+    public var apiProvider: ApiProviderProtocol
     
     public init(apiProvider: ApiProviderProtocol) {
         self.apiProvider = apiProvider

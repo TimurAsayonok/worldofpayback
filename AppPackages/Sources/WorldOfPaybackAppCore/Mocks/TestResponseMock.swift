@@ -4,7 +4,8 @@
 
 import Foundation
 
-struct TestResponseMock: Codable, Equatable {
+#if DEBUG
+public struct TestResponseMock: Codable, Equatable {
     public var id: String
 
     public init(id: String) {
@@ -15,3 +16,4 @@ struct TestResponseMock: Codable, Equatable {
         lhs.id == rhs.id
     }
 }
+#endif

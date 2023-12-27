@@ -3,10 +3,13 @@
 //
 
 import Foundation
-import WorldOfPaybackAppCore
 
+#if DEBUG
 public class BuildConfigurationProtocolMock: BuildConfigurationProtocol {
     public var apiBasedUrl: URL {
         URL(string: "https://api-test.payback.com")!
     }
+    
+    public init() {}
 }
+#endif

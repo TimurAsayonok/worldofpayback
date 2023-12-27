@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382322B3B20D900C870BF /* ApiServiceTests.swift */; };
 		2D1382792B3BC0F900C870BF /* WorldOfPaybackApp in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1382782B3BC0F900C870BF /* WorldOfPaybackApp */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		2D1381F22B3AC87400C870BF /* WorldOfPayback Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WorldOfPayback Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D1382322B3B20D900C870BF /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,25 +59,8 @@
 		2D1381F32B3AC87400C870BF /* WorldOfPayback Tests */ = {
 			isa = PBXGroup;
 			children = (
-				2D13822A2B3B195A00C870BF /* Services */,
 			);
 			path = "WorldOfPayback Tests";
-			sourceTree = "<group>";
-		};
-		2D13822A2B3B195A00C870BF /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				2D13822B2B3B196600C870BF /* ApiService */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		2D13822B2B3B196600C870BF /* ApiService */ = {
-			isa = PBXGroup;
-			children = (
-				2D1382322B3B20D900C870BF /* ApiServiceTests.swift */,
-			);
-			path = ApiService;
 			sourceTree = "<group>";
 		};
 		2D1382622B3BB87100C870BF /* Frameworks */ = {
@@ -260,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

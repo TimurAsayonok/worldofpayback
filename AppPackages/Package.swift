@@ -84,7 +84,8 @@ enum Module: String, CaseIterable {
             return .target(
                 name: rawValue,
                 dependencies: [
-                    .init(.LocalizationStrings)
+                    .init(.LocalizationStrings),
+                    .init(.WorldOfPaybackAppExtensions)
                 ]
             )
         case .WorldOfPaybackAppTransactionsFeature:

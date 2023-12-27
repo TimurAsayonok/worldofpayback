@@ -3,16 +3,19 @@
 //
 
 import Foundation
-import WorldOfPaybackAppCore
 
-class HeadersRequestDecoratorProtocolMock: HeadersRequestDecoratorProtocol {
-    var requestHeaders: [String: String?] {
+#if DEBUG
+public class HeadersRequestDecoratorProtocolMock: HeadersRequestDecoratorProtocol {
+    public var requestHeaders: [String: String?] {
         [HeaderRequestKey.xAuthorization.rawValue: "Bearer Token"]
     }
     
-    func decorate(urlRequest: inout URLRequest) {
+    public func decorate(urlRequest: inout URLRequest) {
         requestHeaders.forEach { key, value in
             urlRequest.setValue(value, forHTTPHeaderField: key)
         }
-    }    
+    }
+    
+    public init() {}
 }
+#endif
