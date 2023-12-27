@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import WorldOfPaybackAppComponents
 import SwiftUI
 
 struct WelcomeView: View {

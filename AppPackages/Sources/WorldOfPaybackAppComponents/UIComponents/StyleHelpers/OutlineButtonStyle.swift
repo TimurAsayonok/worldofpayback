@@ -8,10 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct OutlineButtonStyle: ButtonStyle {
-    var color: Color = .purple
+public struct OutlineButtonStyle: ButtonStyle {
+    var color: Color
     
-    func makeBody(configuration: Configuration) -> some View {
+    public init(color: Color = .purple) {
+        self.color = color
+    }
+    
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
             .foregroundStyle(color)

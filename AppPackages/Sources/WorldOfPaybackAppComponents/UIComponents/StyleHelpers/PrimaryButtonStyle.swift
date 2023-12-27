@@ -8,10 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct PrimaryButtonStyle: ButtonStyle {
-    var size: CGFloat = 16
+public struct PrimaryButtonStyle: ButtonStyle {
+    var size: CGFloat
     
-    func makeBody(configuration: Configuration) -> some View {
+    public init(size: CGFloat = 16) {
+        self.size = size
+    }
+    
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .foregroundColor(.white)
             .padding()

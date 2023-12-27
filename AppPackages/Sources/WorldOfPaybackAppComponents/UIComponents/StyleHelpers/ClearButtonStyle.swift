@@ -8,10 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct ClearButtonStyle: ButtonStyle {
+public struct ClearButtonStyle: ButtonStyle {
     var labelColor: Color = .purple
     
-    func makeBody(configuration: Configuration) -> some View {
+    public init(labelColor: Color) {
+        self.labelColor = labelColor
+    }
+    
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
             .foregroundStyle(labelColor)
