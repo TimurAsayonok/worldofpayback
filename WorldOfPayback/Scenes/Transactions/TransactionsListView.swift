@@ -8,6 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 import WorldOfPaybackModels
+import WorldOfPaybackAppComponents
 
 struct TransactionsListView: View {
     var store: StoreOf<TransactionListStore>

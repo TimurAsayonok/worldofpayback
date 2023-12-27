@@ -40,7 +40,10 @@ enum Module: String, CaseIterable {
         case .WorldOfPaybackAppComponents:
             return .target(
                 name: rawValue,
-                dependencies: []
+                dependencies: [
+                    .init(.WorldOfPaybackModels),
+                    .init(.LocalizationStrings)
+                ]
             )
         case .WorldOfPaybackAppCore:
             return .target(

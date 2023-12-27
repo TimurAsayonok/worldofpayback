@@ -8,12 +8,16 @@
 import SwiftUI
 import ComposableArchitecture
 import WorldOfPaybackModels
-import WorldOfPaybackAppComponents
+import LocalizationStrings
 
-struct FiltersView: View {
+public struct FiltersView: View {
     var store: StoreOf<FiltersStore>
     
-    var body: some View {
+    public init(store: StoreOf<FiltersStore>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
@@ -56,14 +60,16 @@ struct FiltersView: View {
     }
 }
 
-struct FiltersStore: Reducer {
-    struct State: Equatable {}
+public struct FiltersStore: Reducer {
+    public struct State: Equatable {
+        public init() {}
+    }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case selectFilter(FilterType?)
     }
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { _, action in
             switch action {
             case .selectFilter:
