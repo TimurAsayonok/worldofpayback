@@ -47,6 +47,11 @@ enum Module: String, CaseIterable {
                     .init(.TCACoordinators)
                 ]
             )
+//        case .WorldOfPaybackAppTests:
+//            return .target(
+//                name: rawValue,
+//                dependencies: []
+//            )
         case .LocalizationStrings:
             return .target(
                 name: rawValue,
@@ -132,16 +137,16 @@ enum Module: String, CaseIterable {
     
     var testTarget: Target? {
         switch self {
-//        case .WorldOfPaybackAppCore:
-//            return .target(
-//                name: testName,
-//                dependencies: []
-//            )
-//        case .WorldOfPaybackAppComponents:
-//            return .target(
-//                name: testName,
-//                dependencies: []
-//            )
+        case .WorldOfPaybackAppCore:
+            return .testTarget(
+                name: testName,
+                dependencies: []
+            )
+        case .WorldOfPaybackAppComponents:
+            return .testTarget(
+                name: testName,
+                dependencies: []
+            )
             
         default: return nil
         }
