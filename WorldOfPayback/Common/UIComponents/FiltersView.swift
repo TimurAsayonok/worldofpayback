@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import WorldOfPaybackModels
 
 struct FiltersView: View {
     var store: StoreOf<FiltersStore>
