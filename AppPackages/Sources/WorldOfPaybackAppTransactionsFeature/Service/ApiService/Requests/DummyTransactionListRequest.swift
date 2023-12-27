@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import WorldOfPaybackModels
+import WorldOfPaybackAppCore
+import WorldOfPaybackAppModels
 
 struct DummyTransactionListRequest: RequestProtocol {
     typealias Response = [TransactionModel]

@@ -7,6 +7,7 @@
 
 @testable import WorldOfPayback_Dev
 import XCTest
+import WorldOfPaybackModels
 
 final class TransactionResponseTests: XCTestCase {
     func testAllValues() {

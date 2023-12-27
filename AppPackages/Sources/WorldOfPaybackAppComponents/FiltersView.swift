@@ -7,7 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
-import WorldOfPaybackModels
+import WorldOfPaybackAppModels
 import LocalizationStrings
 
 public struct FiltersView: View {

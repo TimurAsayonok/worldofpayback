@@ -6,10 +6,9 @@
 //
 
 import Foundation
-import WorldOfPaybackModels
-import WorldOfPaybackAppCore
+import WorldOfPaybackAppModels
 
-protocol ApiProviderProtocol {
+public protocol ApiProviderProtocol {
     var basedUrl: URL { get }
     
     func send<T: RequestProtocol>(apiRequest: T, method: HTTPMethod) async throws -> T.Response
@@ -19,7 +18,7 @@ protocol ApiProviderProtocol {
 }
 
 // realization of the main HTTP requests
-extension ApiProviderProtocol {
+public extension ApiProviderProtocol {
     func get<T: RequestProtocol>(apiRequest: T) async throws -> T.Response {
         return try await send(apiRequest: apiRequest, method: .get)
     }
@@ -37,8 +36,8 @@ extension ApiProviderProtocol {
     }
 }
 
-class ApiProvider: ApiProviderProtocol {
-    var basedUrl: URL {
+public class ApiProvider: ApiProviderProtocol {
+    public var basedUrl: URL {
         buildConfiguration.apiBasedUrl
     }
     
@@ -46,7 +45,7 @@ class ApiProvider: ApiProviderProtocol {
     private let urlSession: URLSession
     private let headersRequestDecorator: HeadersRequestDecoratorProtocol
     
-    init(
+    public init(
         buildConfiguration: BuildConfigurationProtocol = BuildConfiguration.shared,
         urlSession: URLSession = URLSession(configuration: .default),
         headersRequestDecorator: HeadersRequestDecoratorProtocol = HeadersRequestDecorator()
@@ -57,7 +56,7 @@ class ApiProvider: ApiProviderProtocol {
     }
     
     /// Sends Api request to the server and returns data
-    func send<T: RequestProtocol>(apiRequest: T, method: HTTPMethod) async throws -> T.Response {
+    public func send<T: RequestProtocol>(apiRequest: T, method: HTTPMethod) async throws -> T.Response {
         var urlRequest: URLRequest
         
         do {
@@ -101,7 +100,7 @@ class ApiProvider: ApiProviderProtocol {
     }
     
     /// Methods returns mocked items just for testing
-    func getDummyItems<T: RequestProtocol>(apiRequest: T) async throws -> T.Response {
+    public func getDummyItems<T: RequestProtocol>(apiRequest: T) async throws -> T.Response {
         return try await withCheckedThrowingContinuation { continuation in
             do {
                 let dummyData = try self.dummyResponse()

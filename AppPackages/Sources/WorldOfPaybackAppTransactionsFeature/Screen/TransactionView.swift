@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import WorldOfPaybackModels
+import WorldOfPaybackAppModels
 import WorldOfPaybackAppComponents
 
 public struct TransactionView: View {

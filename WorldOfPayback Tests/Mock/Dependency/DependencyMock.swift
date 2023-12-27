@@ -7,6 +7,7 @@
 
 @testable import WorldOfPayback_Dev
 import Foundation
+import WorldOfPaybackModels
 
 extension ApiServiceKey {
     static var testValue: (_ throwError: Bool) -> any ApiServiceProtocol {

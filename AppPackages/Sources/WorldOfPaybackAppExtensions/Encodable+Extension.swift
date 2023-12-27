@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Encodable {
+public extension Encodable {
     func toData(jsonEncoder: JSONEncoder = JSONEncoder()) throws -> Data {
         return try jsonEncoder.encode(self)
     }

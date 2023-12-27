@@ -7,7 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
-import WorldOfPaybackModels
+import WorldOfPaybackAppModels
 
 public struct MainToolbarView: View {
     var store: StoreOf<MainToolbarStore>

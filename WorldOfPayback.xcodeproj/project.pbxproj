@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2D1381852B35DED300C870BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D1381872B35DED300C870BF /* Localizable.strings */; };
 		2D13818C2B35E11700C870BF /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13818B2B35E11700C870BF /* LocalizationHelper.swift */; };
-		2D13818E2B37514A00C870BF /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13818D2B37514A00C870BF /* Date+Extension.swift */; };
 		2D1381FD2B3ACBC600C870BF /* AlertModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1381FC2B3ACBC600C870BF /* AlertModelTests.swift */; };
 		2D1382022B3ACFF400C870BF /* FilterTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382012B3ACFF400C870BF /* FilterTypeTests.swift */; };
 		2D1382042B3AD00300C870BF /* ErrorResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382032B3AD00300C870BF /* ErrorResponseTests.swift */; };
@@ -48,17 +47,7 @@
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
 		2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */; };
 		2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */; };
-		2DDFEA972B33687200BA75AE /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA962B33687200BA75AE /* ApiProvider.swift */; };
-		2DDFEA992B3368D900BA75AE /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA982B3368D900BA75AE /* RequestProtocol.swift */; };
-		2DDFEA9B2B3369B500BA75AE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */; };
-		2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */; };
-		2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */; };
-		2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */; };
-		2DDFEAAE2B33A39F00BA75AE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAAD2B33A39F00BA75AE /* ApiService.swift */; };
-		2DDFEAB02B33A3C600BA75AE /* TransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */; };
-		2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */; };
 		2DDFEAC12B34817000BA75AE /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC02B34816F00BA75AE /* PBTransactions.json */; };
-		2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +65,6 @@
 		2D1381882B35DF3200C870BF /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D1381892B35DF4A00C870BF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D13818B2B35E11700C870BF /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
-		2D13818D2B37514A00C870BF /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		2D1381F22B3AC87400C870BF /* WorldOfPayback Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WorldOfPayback Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1381FC2B3ACBC600C870BF /* AlertModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModelTests.swift; sourceTree = "<group>"; };
 		2D1382012B3ACFF400C870BF /* FilterTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTypeTests.swift; sourceTree = "<group>"; };
@@ -117,17 +105,7 @@
 		2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DDFEA902B32176000BA75AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		2DDFEA962B33687200BA75AE /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
-		2DDFEA982B3368D900BA75AE /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
-		2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoder.swift; sourceTree = "<group>"; };
-		2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
-		2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersRequestDecorator.swift; sourceTree = "<group>"; };
-		2DDFEAAD2B33A39F00BA75AE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRequest.swift; sourceTree = "<group>"; };
-		2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		2DDFEAC02B34816F00BA75AE /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PBTransactions.json; path = ../../Downloads/PAYBACK_Coding_Challenge/PBTransactions.json; sourceTree = "<group>"; };
-		2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,10 +340,6 @@
 		2D1C34312B30C5AA006E3FAE /* WorldOfPayback */ = {
 			isa = PBXGroup;
 			children = (
-				2DDFEAB42B33AD0B00BA75AE /* Dependencies */,
-				2DDFEA952B33672000BA75AE /* NetworkLayer */,
-				2DDFEAA52B339D8500BA75AE /* Services */,
-				2DDFEA9E2B33721500BA75AE /* Extensions */,
 				2D13818A2B35E0AB00C870BF /* Helpers */,
 				2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */,
 				2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */,
@@ -384,61 +358,6 @@
 				2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2DDFEA952B33672000BA75AE /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-				2DDFEA962B33687200BA75AE /* ApiProvider.swift */,
-				2DDFEA9C2B336A0600BA75AE /* ParametersEncoder.swift */,
-				2DDFEA982B3368D900BA75AE /* RequestProtocol.swift */,
-				2DDFEA9A2B3369B500BA75AE /* HTTPMethod.swift */,
-				2DDFEAA12B33856F00BA75AE /* HeadersRequestDecorator.swift */,
-			);
-			path = NetworkLayer;
-			sourceTree = "<group>";
-		};
-		2DDFEA9E2B33721500BA75AE /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2DDFEA9F2B33724000BA75AE /* Encodable+Extension.swift */,
-				2D13818D2B37514A00C870BF /* Date+Extension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2DDFEAA52B339D8500BA75AE /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				2DDFEAAB2B33A37600BA75AE /* ApiService */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		2DDFEAAB2B33A37600BA75AE /* ApiService */ = {
-			isa = PBXGroup;
-			children = (
-				2DDFEAAD2B33A39F00BA75AE /* ApiService.swift */,
-				2DDFEAAC2B33A38F00BA75AE /* Requests */,
-			);
-			path = ApiService;
-			sourceTree = "<group>";
-		};
-		2DDFEAAC2B33A38F00BA75AE /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				2DDFEAAF2B33A3C600BA75AE /* TransactionListRequest.swift */,
-				2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */,
-			);
-			path = Requests;
-			sourceTree = "<group>";
-		};
-		2DDFEAB42B33AD0B00BA75AE /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				2DDFEAB72B33AFB600BA75AE /* Dependencies.swift */,
-			);
-			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,19 +531,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DDFEA9D2B336A0600BA75AE /* ParametersEncoder.swift in Sources */,
-				2D13818E2B37514A00C870BF /* Date+Extension.swift in Sources */,
-				2DDFEAA02B33724000BA75AE /* Encodable+Extension.swift in Sources */,
-				2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */,
 				2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */,
-				2DDFEAB02B33A3C600BA75AE /* TransactionListRequest.swift in Sources */,
 				2D13818C2B35E11700C870BF /* LocalizationHelper.swift in Sources */,
-				2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */,
-				2DDFEA992B3368D900BA75AE /* RequestProtocol.swift in Sources */,
-				2DDFEA9B2B3369B500BA75AE /* HTTPMethod.swift in Sources */,
-				2DDFEAB82B33AFB600BA75AE /* Dependencies.swift in Sources */,
-				2DDFEAAE2B33A39F00BA75AE /* ApiService.swift in Sources */,
-				2DDFEA972B33687200BA75AE /* ApiProvider.swift in Sources */,
 				2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

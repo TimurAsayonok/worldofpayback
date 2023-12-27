@@ -6,22 +6,23 @@
 //
 
 import Foundation
-import WorldOfPaybackModels
+import WorldOfPaybackAppModels
+import WorldOfPaybackAppCore
 
 // MARK: ApiService
 // Contains api service methods
-protocol ApiServiceProtocol {
+public protocol ApiServiceProtocol {
     func getTransactionList() async throws -> [TransactionModel]
 }
 
-struct ApiService: ApiServiceProtocol {
+public struct ApiService: ApiServiceProtocol {
     var apiProvider: ApiProviderProtocol
     
-    init(apiProvider: ApiProviderProtocol) {
+    public init(apiProvider: ApiProviderProtocol) {
         self.apiProvider = apiProvider
     }
     
-    func getTransactionList() async throws -> [TransactionModel] {
+    public func getTransactionList() async throws -> [TransactionModel] {
         // Sleep for 5 seconds jus for testing
         try await Task.sleep(until: .now + .seconds(5), clock: .continuous)
         
@@ -35,7 +36,7 @@ struct ApiService: ApiServiceProtocol {
         return response.items ?? []
     }
     
-    func getDummyTransactionList() async throws -> [TransactionModel] {
+    public func getDummyTransactionList() async throws -> [TransactionModel] {
         let dummyRequest = DummyTransactionListRequest()
         return try await apiProvider.getDummyItems(apiRequest: dummyRequest)
     }

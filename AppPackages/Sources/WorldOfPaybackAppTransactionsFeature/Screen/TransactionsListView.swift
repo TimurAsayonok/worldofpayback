@@ -7,7 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
-import WorldOfPaybackModels
+import WorldOfPaybackAppModels
 import WorldOfPaybackAppComponents
 import LocalizationStrings
 
@@ -159,8 +159,7 @@ public struct TransactionListStore: Reducer {
         case presentFilterView(Bool)
     }
     
-//    @Dependency(\.apiService) 
-//    var apiService
+    @Dependency(\.apiService) var apiService
     
     public var body: some ReducerOf<Self> {
         Reduce<State, Action> { state, action in
@@ -176,8 +175,8 @@ public struct TransactionListStore: Reducer {
                 state.isLoading = true
                 
                 return .run { send in
-//                    let response = try await apiService.getTransactionList()
-                    await send(.getTransactionListSucceed([]))
+                    let response = try await apiService.getTransactionList()
+                    await send(.getTransactionListSucceed(response))
                 } catch: { error, send in
                     await send(.getTransactionListError(error as? ErrorResponse))
                 }
@@ -195,7 +194,7 @@ public struct TransactionListStore: Reducer {
             
             case let .getTransactionListError(error):
                 state.isLoading = false
-                state.alertModel = WorldOfPaybackModels.AlertModel(message: error?.localizedDescription)
+                state.alertModel = AlertModel(message: error?.localizedDescription)
                 return .none
                 
             case .closeAlertAndRefresh:

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     var timestamp: String {
         let dataFormatter = DateFormatter()
         dataFormatter.setLocalizedDateFormatFromTemplate("dd/MM/YYYY")
@@ -16,7 +16,7 @@ extension Date {
     }
 }
 
-extension DateFormatter {
+public extension DateFormatter {
     static var customDateFormatter: Self {
         let dataFormatter = Self()
         dataFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"

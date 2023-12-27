@@ -5,10 +5,10 @@
 //  Created by Tsimur Asayonak on 12/19/23.
 //
 
-import ComposableArchitecture
-import WorldOfPaybackModels
-import WorldOfPaybackAppComponents
 import SwiftUI
+import ComposableArchitecture
+import WorldOfPaybackAppModels
+import WorldOfPaybackAppComponents
 
 public struct TransactionDetailsView: View {
     let store: StoreOf<TransactionDetailsStore>

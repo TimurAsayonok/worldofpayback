@@ -4,16 +4,17 @@
 import PackageDescription
 
 enum Module: String, CaseIterable {
+    case LocalizationStrings
     case WorldOfPaybackApp
 //    case WorldOfPaybackAppTests
     case WorldOfPaybackAppComponents
     case WorldOfPaybackAppCoordinator
     case WorldOfPaybackAppCore
-    case WorldOfPaybackModels
+    case WorldOfPaybackAppModels
     case WorldOfPaybackAppTransactionsFeature
     case WorldOfPaybackAppWelcomeFeature
-    case WorldOfPaybackServices
-    case LocalizationStrings
+    case WorldOfPaybackAppServices
+    case WorldOfPaybackAppExtensions
     
     static var staticModules: [Module] = [.WorldOfPaybackApp]
     
@@ -31,33 +32,41 @@ enum Module: String, CaseIterable {
             return .target(
                 name: rawValue,
                 dependencies: [
+                    .init(.LocalizationStrings),
                     .init(.WorldOfPaybackAppComponents),
                     .init(.WorldOfPaybackAppCoordinator),
                     .init(.WorldOfPaybackAppCore),
-                    .init(.WorldOfPaybackModels),
+                    .init(.WorldOfPaybackAppModels),
                     .init(.WorldOfPaybackAppTransactionsFeature),
                     .init(.WorldOfPaybackAppWelcomeFeature),
-                    .init(.LocalizationStrings),
-                    .init(.WorldOfPaybackServices)
+                    .init(.WorldOfPaybackAppServices),
+                    .init(.WorldOfPaybackAppExtensions)
                 ] + [
                     // External dependencies
                     .init(.ComposableArchitecture),
                     .init(.TCACoordinators)
                 ]
             )
+        case .LocalizationStrings:
+            return .target(
+                name: rawValue,
+                dependencies: [],
+                resources: [.process("Resources")]
+            )
         case .WorldOfPaybackAppComponents:
             return .target(
                 name: rawValue,
                 dependencies: [
-                    .init(.WorldOfPaybackModels),
-                    .init(.LocalizationStrings)
+                    .init(.WorldOfPaybackAppModels),
+                    .init(.LocalizationStrings),
+                    .init(.ComposableArchitecture)
                 ]
             )
         case .WorldOfPaybackAppCoordinator:
             return .target(
                 name: rawValue,
                 dependencies: [
-                    .init(.WorldOfPaybackModels),
+                    .init(.WorldOfPaybackAppModels),
                     .init(.WorldOfPaybackAppTransactionsFeature),
                     .init(.WorldOfPaybackAppWelcomeFeature),
                     .init(.LocalizationStrings)
@@ -66,9 +75,12 @@ enum Module: String, CaseIterable {
         case .WorldOfPaybackAppCore:
             return .target(
                 name: rawValue,
-                dependencies: []
+                dependencies: [
+                    .init(.WorldOfPaybackAppModels),
+                    .init(.WorldOfPaybackAppExtensions)
+                ]
             )
-        case .WorldOfPaybackModels:
+        case .WorldOfPaybackAppModels:
             return .target(
                 name: rawValue,
                 dependencies: [
@@ -79,7 +91,10 @@ enum Module: String, CaseIterable {
             return .target(
                 name: rawValue,
                 dependencies: [
-                    .init(.WorldOfPaybackModels),
+                    .init(.WorldOfPaybackAppComponents),
+                    .init(.WorldOfPaybackAppModels),
+                    .init(.WorldOfPaybackAppCore),
+                    .init(.ComposableArchitecture),
                     .init(.LocalizationStrings)
                 ]
             )
@@ -87,23 +102,24 @@ enum Module: String, CaseIterable {
             return .target(
                 name: rawValue,
                 dependencies: [
-                    .init(.WorldOfPaybackModels),
-                    .init(.LocalizationStrings)
+                    .init(.WorldOfPaybackAppModels),
+                    .init(.WorldOfPaybackAppComponents),
+                    .init(.LocalizationStrings),
+                    .init(.ComposableArchitecture)
                 ]
             )
-        case .WorldOfPaybackServices:
+        case .WorldOfPaybackAppServices:
             return .target(
                 name: rawValue,
                 dependencies: [
-                    .init(.WorldOfPaybackModels),
+                    .init(.WorldOfPaybackAppModels),
                     .init(.LocalizationStrings)
                 ]
             )
-        case .LocalizationStrings:
+        case .WorldOfPaybackAppExtensions:
             return .target(
                 name: rawValue,
-                dependencies: [],
-                resources: [.process("Resources")]
+                dependencies: []
             )
         }
     }

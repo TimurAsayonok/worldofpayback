@@ -1,13 +1,11 @@
 //
-//  RequestProtocol.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/20/23.
 //
 
 import Foundation
+import WorldOfPaybackAppExtensions
 
-protocol RequestProtocol: Encodable {
+public protocol RequestProtocol: Encodable {
     associatedtype Response: Codable
     associatedtype Error: Swift.Error & Codable
     
@@ -16,7 +14,7 @@ protocol RequestProtocol: Encodable {
 
 // MARK: RequestProtocol
 // Contains addition functions for working with Request
-extension RequestProtocol {
+public extension RequestProtocol {
     
     /// Returns JSONEncoder
     static func getJSONEncoder() -> JSONEncoder {
@@ -62,6 +60,6 @@ extension RequestProtocol {
     }
 }
 
-enum RequestProtocolError: Swift.Error {
+public enum RequestProtocolError: Swift.Error {
     case wrongSerialization
 }
