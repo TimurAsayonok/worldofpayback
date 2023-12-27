@@ -26,3 +26,16 @@ public struct AlertModel: Equatable {
         self.cancelButtonTitle = cancelButtonTitle
     }
 }
+
+#if DEBUG
+public extension AlertModel {
+    static func sut(message: String? = "Message") -> Self {
+        .init(
+            title: L10N.alertTitle,
+            message: message,
+            primaryButtonTitle: L10N.okButton,
+            cancelButtonTitle: L10N.cancelButton
+        )
+    }
+}
+#endif

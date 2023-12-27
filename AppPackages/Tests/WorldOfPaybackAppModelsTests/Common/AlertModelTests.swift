@@ -19,14 +19,3 @@ final class AlertModelTests: XCTestCase {
         XCTAssertEqual(sut.cancelButtonTitle, L10N.cancelButton)
     }
 }
-
-extension AlertModel {
-    static func sut(message: String? = "Message") -> Self {
-        .init(
-            title: L10N.alertTitle,
-            message: message,
-            primaryButtonTitle: L10N.okButton,
-            cancelButtonTitle: L10N.cancelButton
-        )
-    }
-}

@@ -1,14 +1,10 @@
 //
-//  DummyTransactionListRequestTests.swift
-//  WorldOfPayback Tests
-//
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
 import XCTest
-
-@testable import WorldOfPayback_Dev
-import XCTest
+import WorldOfPaybackAppTransactionsFeature
+import WorldOfPaybackAppModels
 
 final class DummyTransactionListRequestTests: XCTestCase {
     var sut: DummyTransactionListRequest!

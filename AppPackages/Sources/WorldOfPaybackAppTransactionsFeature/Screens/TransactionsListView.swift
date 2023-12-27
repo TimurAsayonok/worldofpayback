@@ -96,13 +96,14 @@ public struct TransactionsListView: View {
 
 public struct TransactionListStore: Reducer {
     public struct State: Equatable {
-        var transactionList: [TransactionModel]
-        var isLoading = false
-        var alertModel: AlertModel?
-        var isFilterViewPresented = false
-        var filteredType: FilterType?
         var filtersState: FiltersStore.State
         var toolbarButtonsState: MainToolbarStore.State
+        
+        public var transactionList: [TransactionModel]
+        public var isLoading = false
+        public var filteredType: FilterType?
+        public var alertModel: AlertModel?
+        public var isFilterViewPresented = false
         
         var filteredList: [TransactionModel] {
             let sorting: (ComparisonResult) -> [TransactionModel] = { comparison in

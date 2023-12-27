@@ -5,9 +5,9 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
 import Foundation
-import WorldOfPaybackModels
+import WorldOfPaybackAppModels
+import WorldOfPaybackAppTransactionsFeature
 
 extension ApiServiceKey {
     static var testValue: (_ throwError: Bool) -> any ApiServiceProtocol {

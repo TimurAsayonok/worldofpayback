@@ -173,6 +173,15 @@ enum Module: String, CaseIterable {
                     .init(.ComposableArchitecture)
                 ]
             )
+        case .WorldOfPaybackAppTransactionsFeature:
+            return .testTarget(
+                name: testName,
+                dependencies: [
+                    .init(self),
+                    .init(.ComposableArchitecture),
+                    .init(.WorldOfPaybackAppModels)
+                ]
+            )
             
         default: return nil
         }

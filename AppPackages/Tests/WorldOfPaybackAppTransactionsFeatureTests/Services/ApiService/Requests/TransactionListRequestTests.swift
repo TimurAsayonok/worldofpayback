@@ -1,11 +1,9 @@
 //
-//  TransactionListRequestTests.swift
-//  WorldOfPayback Tests
-//
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
+import WorldOfPaybackAppModels
+import WorldOfPaybackAppTransactionsFeature
 import XCTest
 
 final class TransactionListRequestTests: XCTestCase {

@@ -47,7 +47,7 @@ public struct TransactionDetailsView: View {
 
 public struct TransactionDetailsStore: Reducer {
     public struct State: Equatable {
-        var transaction: TransactionModel
+        public var transaction: TransactionModel
         
         public init(transaction: TransactionModel) {
             self.transaction = transaction

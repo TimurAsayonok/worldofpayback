@@ -20,11 +20,6 @@
 		2D13822E2B3B198900C870BF /* BuildConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13822D2B3B198900C870BF /* BuildConfigurationTests.swift */; };
 		2D1382302B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13822F2B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift */; };
 		2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382322B3B20D900C870BF /* ApiServiceTests.swift */; };
-		2D1382352B3B210600C870BF /* TransactionListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */; };
-		2D1382392B3B211E00C870BF /* DummyTransactionListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */; };
-		2D1382462B3B527800C870BF /* TransactionDetailsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382452B3B527800C870BF /* TransactionDetailsStoreTests.swift */; };
-		2D1382482B3B5AA900C870BF /* TransactionListStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382472B3B5AA900C870BF /* TransactionListStoreTests.swift */; };
-		2D1382522B3B792D00C870BF /* DependencyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382512B3B792D00C870BF /* DependencyMock.swift */; };
 		2D1382792B3BC0F900C870BF /* WorldOfPaybackApp in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1382782B3BC0F900C870BF /* WorldOfPaybackApp */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
@@ -58,11 +53,6 @@
 		2D13822D2B3B198900C870BF /* BuildConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfigurationTests.swift; sourceTree = "<group>"; };
 		2D13822F2B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfigurationTests.swift; sourceTree = "<group>"; };
 		2D1382322B3B20D900C870BF /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
-		2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRequestTests.swift; sourceTree = "<group>"; };
-		2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequestTests.swift; sourceTree = "<group>"; };
-		2D1382452B3B527800C870BF /* TransactionDetailsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsStoreTests.swift; sourceTree = "<group>"; };
-		2D1382472B3B5AA900C870BF /* TransactionListStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListStoreTests.swift; sourceTree = "<group>"; };
-		2D1382512B3B792D00C870BF /* DependencyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyMock.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				2D1382182B3B01DE00C870BF /* Mock */,
-				2D1382402B3B515700C870BF /* Screens */,
 				2D13822A2B3B195A00C870BF /* Services */,
 				2D1382132B3B00EB00C870BF /* NetworkLayer */,
 			);
@@ -158,33 +147,13 @@
 		2D1382312B3B20C400C870BF /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */,
-				2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */,
 			);
 			path = Requests;
-			sourceTree = "<group>";
-		};
-		2D1382402B3B515700C870BF /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				2D1382422B3B516D00C870BF /* Transactions */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		2D1382422B3B516D00C870BF /* Transactions */ = {
-			isa = PBXGroup;
-			children = (
-				2D1382452B3B527800C870BF /* TransactionDetailsStoreTests.swift */,
-				2D1382472B3B5AA900C870BF /* TransactionListStoreTests.swift */,
-			);
-			path = Transactions;
 			sourceTree = "<group>";
 		};
 		2D1382502B3B791C00C870BF /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
-				2D1382512B3B792D00C870BF /* DependencyMock.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -371,14 +340,9 @@
 				2D13821A2B3B01EC00C870BF /* URLMock.swift in Sources */,
 				2D1382292B3B0F5400C870BF /* TestErrorMock.swift in Sources */,
 				2D1382172B3B010500C870BF /* HTTPMethodTests.swift in Sources */,
-				2D1382352B3B210600C870BF /* TransactionListRequestTests.swift in Sources */,
-				2D1382482B3B5AA900C870BF /* TransactionListStoreTests.swift in Sources */,
 				2D1382252B3B0EE900C870BF /* TestRequestMock.swift in Sources */,
 				2D1382302B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift in Sources */,
 				2D13822E2B3B198900C870BF /* BuildConfigurationTests.swift in Sources */,
-				2D1382522B3B792D00C870BF /* DependencyMock.swift in Sources */,
-				2D1382462B3B527800C870BF /* TransactionDetailsStoreTests.swift in Sources */,
-				2D1382392B3B211E00C870BF /* DummyTransactionListRequestTests.swift in Sources */,
 				2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */,
 				2D1382232B3B06B300C870BF /* HeadersRequestDecoratorProtocolMock.swift in Sources */,
 				2D1382212B3B05B200C870BF /* BuildConfigurationProtocolMock.swift in Sources */,

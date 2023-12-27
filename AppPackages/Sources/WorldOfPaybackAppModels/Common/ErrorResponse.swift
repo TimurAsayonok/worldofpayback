@@ -22,3 +22,12 @@ public struct ErrorResponse: Codable, Equatable, Error, LocalizedError {
         "We have error with message: \(message)"
     }
 }
+
+#if DEBUG
+public extension ErrorResponse {
+    static var sut: Self {
+        .init(message: "error")
+    }
+}
+#endif
+

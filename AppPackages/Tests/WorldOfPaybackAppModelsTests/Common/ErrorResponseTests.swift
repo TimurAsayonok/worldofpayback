@@ -14,11 +14,4 @@ final class ErrorResponseTests: XCTestCase {
         XCTAssertNotNil(sut)
         XCTAssertNotNil(sut.message)
     }
-
-}
-
-extension ErrorResponse {
-    static var sut: Self {
-        .init(message: "error")
-    }
 }

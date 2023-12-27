@@ -9,11 +9,13 @@ import Foundation
 import WorldOfPaybackAppModels
 import WorldOfPaybackAppCore
 
-struct TransactionListRequest: RequestProtocol {
-    typealias Response = TransactionResponse
-    typealias Error = ErrorResponse
+public struct TransactionListRequest: RequestProtocol {
+    public typealias Response = TransactionResponse
+    public typealias Error = ErrorResponse
     
-    var path: String {
+    public var path: String {
         "/transactions"
     }
+    
+    public init() {}
 }
