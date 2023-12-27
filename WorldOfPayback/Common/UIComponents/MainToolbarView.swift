@@ -28,7 +28,6 @@ struct MainToolbarView: View {
 
 struct MainToolbarStore: Reducer {
     struct State: Equatable {
-        let id = UUID()
         let toolbarButtons: [ToolbarButton] = [
             .init(type: .filter), .init(type: .refresh)
         ]

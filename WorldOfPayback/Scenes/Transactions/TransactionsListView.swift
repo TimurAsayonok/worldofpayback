@@ -88,8 +88,7 @@ struct TransactionsListView: View {
 }
 
 struct TransactionListStore: Reducer {
-    struct State: Equatable {        
-        let id = UUID()
+    struct State: Equatable {
         var transactionList: [TransactionModel] = []
         var isLoading = false
         var alertModel: AlertModel?

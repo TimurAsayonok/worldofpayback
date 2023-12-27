@@ -55,9 +55,7 @@ struct FiltersView: View {
 }
 
 struct FiltersStore: Reducer {
-    struct State: Equatable {
-        let id = UUID()
-    }
+    struct State: Equatable {}
     
     enum Action: Equatable {
         case selectFilter(FilterType?)

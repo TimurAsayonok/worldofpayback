@@ -41,7 +41,6 @@ struct TransactionDetailsView: View {
 
 struct TransactionDetailsStore: Reducer {
     struct State: Equatable {
-        let id = UUID()
         var transaction: TransactionModel
     }
     

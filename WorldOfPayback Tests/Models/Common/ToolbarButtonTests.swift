@@ -12,7 +12,7 @@ import SwiftUI
 final class ToolbarButtonTests: XCTestCase {
     func testAllValues() {
         let testID = UUID(uuidString: "1111111")
-        let sut = ToolbarButton(uuid: testID, type: .filter)
+        let sut = ToolbarButton.sut(id: testID, type: .filter)
         
         XCTAssertEqual(sut.uuid, testID)
         XCTAssertEqual(sut.type, .filter)
@@ -30,5 +30,11 @@ final class ToolbarButtonTests: XCTestCase {
         
         XCTAssertEqual(sut.type, .refresh)
         XCTAssertEqual(sut.type?.getIcon(), Image(systemName: "arrow.clockwise"))
+    }
+}
+
+extension ToolbarButton {
+    static func sut(id: UUID? = UUID(), type: ButtonType) -> Self {
+        .init(uuid: id, type: type)
     }
 }
