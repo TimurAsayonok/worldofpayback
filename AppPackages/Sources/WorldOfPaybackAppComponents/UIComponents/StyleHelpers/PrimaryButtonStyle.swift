@@ -20,7 +20,7 @@ public struct PrimaryButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .padding()
             .frame(maxWidth: .infinity)
-            .background(Color(.purple))
+            .background(Color(red: 0.36, green: 0.26, blue: 0.78))
             .cornerRadius(size)
     }
 }
