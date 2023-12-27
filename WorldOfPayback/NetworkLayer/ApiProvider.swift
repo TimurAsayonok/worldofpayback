@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WorldOfPaybackModels
 
 protocol ApiProviderProtocol {
     var basedUrl: URL { get }

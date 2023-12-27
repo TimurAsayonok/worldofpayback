@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WorldOfPaybackModels
 
 struct TransactionListRequest: RequestProtocol {
     typealias Response = TransactionResponse

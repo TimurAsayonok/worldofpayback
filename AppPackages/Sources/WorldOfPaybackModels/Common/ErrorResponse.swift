@@ -10,6 +10,10 @@ import Foundation
 public struct ErrorResponse: Codable, Equatable, Error, LocalizedError {
     public let message: String
     
+    public init(message: String) {
+        self.message = message
+    }
+    
     enum CodingKeys: String, CodingKey {
         case message
     }
