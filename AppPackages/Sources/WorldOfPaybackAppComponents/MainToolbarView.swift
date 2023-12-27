@@ -9,10 +9,14 @@ import SwiftUI
 import ComposableArchitecture
 import WorldOfPaybackModels
 
-struct MainToolbarView: View {
+public struct MainToolbarView: View {
     var store: StoreOf<MainToolbarStore>
     
-    var body: some View {
+    public init(store: StoreOf<MainToolbarStore>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             HStack {
                 ForEach(viewStore.toolbarButtons, id: \.uuid) { button in
@@ -27,18 +31,22 @@ struct MainToolbarView: View {
     }
 }
 
-struct MainToolbarStore: Reducer {
-    struct State: Equatable {
-        let toolbarButtons: [ToolbarButton] = [
+public struct MainToolbarStore: Reducer {
+    public struct State: Equatable {
+        let toolbarButtons: [ToolbarButton]
+        
+        public init(toolbarButtons: [ToolbarButton] = [
             .init(type: .filter), .init(type: .refresh)
-        ]
+        ]) {
+            self.toolbarButtons = toolbarButtons
+        }
     }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case toolbarButtonPressed(ToolbarButton)
     }
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { _, action in
             switch action {
             case .toolbarButtonPressed:
