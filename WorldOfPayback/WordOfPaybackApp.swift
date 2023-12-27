@@ -9,6 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 import WorldOfPaybackAppComponents
 import WorldOfPaybackAppCoordinator
+import WorldOfPaybackServices
 
 @main
 struct WordOfPaybackApp: App {

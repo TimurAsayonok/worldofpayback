@@ -8,12 +8,12 @@
 import Network
 import Combine
 
-class NetworkMonitor: ObservableObject {
+public class NetworkMonitor: ObservableObject {
     private let networkMonitor = NWPathMonitor()
     private let workerQueue = DispatchQueue(label: "NWPathMonitor Monitor")
-    var isConnected = false
+    public var isConnected = false
 
-    init() {
+    public init() {
         networkMonitor.pathUpdateHandler = { path in
             self.isConnected = path.status == .satisfied
             Task {

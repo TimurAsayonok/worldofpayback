@@ -12,6 +12,7 @@ enum Module: String, CaseIterable {
     case WorldOfPaybackModels
     case WorldOfPaybackAppTransactionsFeature
     case WorldOfPaybackAppWelcomeFeature
+    case WorldOfPaybackServices
     case LocalizationStrings
     
     static var staticModules: [Module] = [.WorldOfPaybackApp]
@@ -36,7 +37,8 @@ enum Module: String, CaseIterable {
                     .init(.WorldOfPaybackModels),
                     .init(.WorldOfPaybackAppTransactionsFeature),
                     .init(.WorldOfPaybackAppWelcomeFeature),
-                    .init(.LocalizationStrings)
+                    .init(.LocalizationStrings),
+                    .init(.WorldOfPaybackServices)
                 ] + [
                     // External dependencies
                     .init(.ComposableArchitecture),
@@ -82,6 +84,14 @@ enum Module: String, CaseIterable {
                 ]
             )
         case .WorldOfPaybackAppWelcomeFeature:
+            return .target(
+                name: rawValue,
+                dependencies: [
+                    .init(.WorldOfPaybackModels),
+                    .init(.LocalizationStrings)
+                ]
+            )
+        case .WorldOfPaybackServices:
             return .target(
                 name: rawValue,
                 dependencies: [
