@@ -5,9 +5,10 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
 import XCTest
 import ComposableArchitecture
+import WorldOfPaybackAppModels
+import WorldOfPaybackAppComponents
 
 @MainActor
 final class FiltersStoreTests: XCTestCase {

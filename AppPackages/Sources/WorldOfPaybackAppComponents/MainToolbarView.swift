@@ -55,4 +55,6 @@ public struct MainToolbarStore: Reducer {
             }
         }
     }
+    
+    public init() {}
 }

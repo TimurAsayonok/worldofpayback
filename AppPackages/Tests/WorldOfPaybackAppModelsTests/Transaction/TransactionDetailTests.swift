@@ -7,7 +7,6 @@
 
 import XCTest
 import WorldOfPaybackAppModels
-import WorldOfPaybackAppExtensions
 
 final class TransactionDetailTests: XCTestCase {
     func testAllValues() {
@@ -16,16 +15,5 @@ final class TransactionDetailTests: XCTestCase {
         XCTAssertEqual(sut.description, "description")
         XCTAssertNotNil(sut.bookingDate)
         XCTAssertEqual(sut.value, TransactionValue.sut)
-    }
-}
-
-extension TransactionDetail {
-    static func sut() -> Self {
-        let date = DateFormatter.customDateFormatter.date(from: "2023-12-26T11:42:00")
-        return .init(
-            description: "description",
-            bookingDate: DateFormatter.customDateFormatter.date(from: "2023-12-26T11:42:00"),
-            value: TransactionValue.sut
-        )
     }
 }

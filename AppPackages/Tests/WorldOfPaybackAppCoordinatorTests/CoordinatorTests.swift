@@ -1,13 +1,13 @@
 //
-//  CoordinatorTests.swift
-//  WorldOfPayback Tests
-//
 //  Created by Tsimur Asayonak on 12/27/23.
 //
 
-@testable import WorldOfPayback_Dev
 import ComposableArchitecture
 import TCACoordinators
+import WorldOfPaybackAppCoordinator
+import WorldOfPaybackAppModelsTests
+import WorldOfPaybackAppTransactionsFeature
+import WorldOfPaybackAppWelcomeFeature
 import XCTest
 
 @MainActor

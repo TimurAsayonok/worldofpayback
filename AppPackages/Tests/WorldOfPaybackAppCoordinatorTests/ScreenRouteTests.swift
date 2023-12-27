@@ -5,8 +5,10 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
 import ComposableArchitecture
+import WorldOfPaybackAppCoordinator
+import WorldOfPaybackAppTransactionsFeature
+import WorldOfPaybackAppWelcomeFeature
 import XCTest
 
 @MainActor

@@ -18,15 +18,3 @@ final class TransactionModelTests: XCTestCase {
         XCTAssertNotNil(sut.transactionDetail)
     }
 }
-
-
-extension TransactionModel {
-    static func sut() -> Self {
-        .init(
-            partnerDisplayName: "partnerDisplayName",
-            alias: .init(reference: "reference"),
-            category: 1,
-            transactionDetail: TransactionDetail.sut()
-        )
-    }
-}

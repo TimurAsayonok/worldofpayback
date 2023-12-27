@@ -34,3 +34,16 @@ public extension TransactionModel {
         case transactionDetail
     }
 }
+
+#if DEBUG
+public extension TransactionModel {
+    static func sut() -> Self {
+        .init(
+            partnerDisplayName: "partnerDisplayName",
+            alias: .init(reference: "reference"),
+            category: 1,
+            transactionDetail: TransactionDetail.sut()
+        )
+    }
+}
+#endif

@@ -22,9 +22,3 @@ final class TransactionValueTests: XCTestCase {
         XCTAssertEqual(sut.formattedValue, "1 PBP")
     }
 }
-
-extension TransactionValue {
-    static var sut: Self {
-        .init(amount: 1, currency: .PBP)
-    }
-}

@@ -139,15 +139,30 @@ enum Module: String, CaseIterable {
         case .WorldOfPaybackAppComponents:
             return .testTarget(
                 name: testName,
-                dependencies: []
+                dependencies: [
+                    .init(self),
+                    .init(.WorldOfPaybackAppModels),
+                    .init(.ComposableArchitecture)
+                ]
             )
         case .WorldOfPaybackAppModels:
             return .testTarget(
                 name: testName,
                 dependencies: [
-                    .init(.WorldOfPaybackAppModels),
+                    .init(self),
                     .init(.LocalizationStrings),
                     .init(.WorldOfPaybackAppExtensions)
+                ]
+            )
+        case .WorldOfPaybackAppCoordinator:
+            return .testTarget(
+                name: testName,
+                dependencies: [
+                    .init(self),
+                    .init(.TCACoordinators),
+                    .init(.ComposableArchitecture),
+                    .init(.WorldOfPaybackAppTransactionsFeature),
+                    .init(.WorldOfPaybackAppWelcomeFeature)
                 ]
             )
             

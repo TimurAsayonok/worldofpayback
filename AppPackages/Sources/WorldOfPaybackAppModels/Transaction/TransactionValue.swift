@@ -25,3 +25,11 @@ public struct TransactionValue: Codable, Equatable, Hashable {
         case currency
     }
 }
+
+#if DEBUG
+public extension TransactionValue {
+    static var sut: Self {
+        .init(amount: 1, currency: .PBP)
+    }
+}
+#endif

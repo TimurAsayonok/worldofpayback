@@ -78,4 +78,6 @@ public struct FiltersStore: Reducer {
             }
         }
     }
+    
+    public init() {}
 }

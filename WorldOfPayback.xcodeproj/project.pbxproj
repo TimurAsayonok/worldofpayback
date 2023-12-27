@@ -22,14 +22,10 @@
 		2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382322B3B20D900C870BF /* ApiServiceTests.swift */; };
 		2D1382352B3B210600C870BF /* TransactionListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */; };
 		2D1382392B3B211E00C870BF /* DummyTransactionListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */; };
-		2D13823D2B3B4D0400C870BF /* FiltersStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13823C2B3B4D0400C870BF /* FiltersStoreTests.swift */; };
-		2D13823F2B3B4E4B00C870BF /* MainToolbarStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13823E2B3B4E4B00C870BF /* MainToolbarStoreTests.swift */; };
 		2D1382442B3B518300C870BF /* WelcomeStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382432B3B518300C870BF /* WelcomeStoreTests.swift */; };
 		2D1382462B3B527800C870BF /* TransactionDetailsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382452B3B527800C870BF /* TransactionDetailsStoreTests.swift */; };
 		2D1382482B3B5AA900C870BF /* TransactionListStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382472B3B5AA900C870BF /* TransactionListStoreTests.swift */; };
 		2D1382522B3B792D00C870BF /* DependencyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382512B3B792D00C870BF /* DependencyMock.swift */; };
-		2D1382572B3B8EAE00C870BF /* ScreenRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */; };
-		2D13825A2B3B960B00C870BF /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382592B3B960B00C870BF /* CoordinatorTests.swift */; };
 		2D1382792B3BC0F900C870BF /* WorldOfPaybackApp in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1382782B3BC0F900C870BF /* WorldOfPaybackApp */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
@@ -65,14 +61,10 @@
 		2D1382322B3B20D900C870BF /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
 		2D1382342B3B210600C870BF /* TransactionListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRequestTests.swift; sourceTree = "<group>"; };
 		2D1382382B3B211E00C870BF /* DummyTransactionListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequestTests.swift; sourceTree = "<group>"; };
-		2D13823C2B3B4D0400C870BF /* FiltersStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersStoreTests.swift; sourceTree = "<group>"; };
-		2D13823E2B3B4E4B00C870BF /* MainToolbarStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToolbarStoreTests.swift; sourceTree = "<group>"; };
 		2D1382432B3B518300C870BF /* WelcomeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStoreTests.swift; sourceTree = "<group>"; };
 		2D1382452B3B527800C870BF /* TransactionDetailsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsStoreTests.swift; sourceTree = "<group>"; };
 		2D1382472B3B5AA900C870BF /* TransactionListStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListStoreTests.swift; sourceTree = "<group>"; };
 		2D1382512B3B792D00C870BF /* DependencyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyMock.swift; sourceTree = "<group>"; };
-		2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouteTests.swift; sourceTree = "<group>"; };
-		2D1382592B3B960B00C870BF /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,13 +97,10 @@
 		2D1381F32B3AC87400C870BF /* WorldOfPayback Tests */ = {
 			isa = PBXGroup;
 			children = (
-				2D1382582B3B95F400C870BF /* Coordinator */,
 				2D1382182B3B01DE00C870BF /* Mock */,
 				2D1382402B3B515700C870BF /* Screens */,
-				2D1382552B3B8E9700C870BF /* ScreenRoute */,
 				2D13822A2B3B195A00C870BF /* Services */,
 				2D1382132B3B00EB00C870BF /* NetworkLayer */,
-				2D13823A2B3B4CCF00C870BF /* Common */,
 			);
 			path = "WorldOfPayback Tests";
 			sourceTree = "<group>";
@@ -177,23 +166,6 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
-		2D13823A2B3B4CCF00C870BF /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				2D13823B2B3B4CE500C870BF /* UIComponents */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		2D13823B2B3B4CE500C870BF /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-				2D13823C2B3B4D0400C870BF /* FiltersStoreTests.swift */,
-				2D13823E2B3B4E4B00C870BF /* MainToolbarStoreTests.swift */,
-			);
-			path = UIComponents;
-			sourceTree = "<group>";
-		};
 		2D1382402B3B515700C870BF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,22 +198,6 @@
 				2D1382512B3B792D00C870BF /* DependencyMock.swift */,
 			);
 			path = Dependency;
-			sourceTree = "<group>";
-		};
-		2D1382552B3B8E9700C870BF /* ScreenRoute */ = {
-			isa = PBXGroup;
-			children = (
-				2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */,
-			);
-			path = ScreenRoute;
-			sourceTree = "<group>";
-		};
-		2D1382582B3B95F400C870BF /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				2D1382592B3B960B00C870BF /* CoordinatorTests.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		2D1382622B3BB87100C870BF /* Frameworks */ = {
@@ -422,7 +378,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D13823F2B3B4E4B00C870BF /* MainToolbarStoreTests.swift in Sources */,
 				2D13821F2B3B04F100C870BF /* URLSessionMock.swift in Sources */,
 				2D13821A2B3B01EC00C870BF /* URLMock.swift in Sources */,
 				2D1382292B3B0F5400C870BF /* TestErrorMock.swift in Sources */,
@@ -433,18 +388,15 @@
 				2D1382302B3B1A1D00C870BF /* EnvironmentConfigurationTests.swift in Sources */,
 				2D13822E2B3B198900C870BF /* BuildConfigurationTests.swift in Sources */,
 				2D1382522B3B792D00C870BF /* DependencyMock.swift in Sources */,
-				2D13825A2B3B960B00C870BF /* CoordinatorTests.swift in Sources */,
 				2D1382442B3B518300C870BF /* WelcomeStoreTests.swift in Sources */,
 				2D1382462B3B527800C870BF /* TransactionDetailsStoreTests.swift in Sources */,
 				2D1382392B3B211E00C870BF /* DummyTransactionListRequestTests.swift in Sources */,
-				2D1382572B3B8EAE00C870BF /* ScreenRouteTests.swift in Sources */,
 				2D1382332B3B20D900C870BF /* ApiServiceTests.swift in Sources */,
 				2D1382232B3B06B300C870BF /* HeadersRequestDecoratorProtocolMock.swift in Sources */,
 				2D1382212B3B05B200C870BF /* BuildConfigurationProtocolMock.swift in Sources */,
 				2D13821D2B3B044100C870BF /* ApiProviderTests.swift in Sources */,
 				2D1382152B3B00FB00C870BF /* HeadersRequestDecoratorTests.swift in Sources */,
 				2D1382272B3B0F0800C870BF /* TestResponseMock.swift in Sources */,
-				2D13823D2B3B4D0400C870BF /* FiltersStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
