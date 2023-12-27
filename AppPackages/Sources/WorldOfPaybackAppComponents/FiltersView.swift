@@ -51,7 +51,7 @@ public struct FiltersView: View {
                     Button(L10N.clearButton) {
                         viewStore.send(.selectFilter(nil))
                     }
-                    .buttonStyle(ClearButtonStyle(labelColor: .purple))
+                    .buttonStyle(ClearButtonStyle())
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()

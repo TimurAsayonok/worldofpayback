@@ -1,17 +1,14 @@
 //
-//  OutlineButtonStyle.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/22/23.
 //
 
-import Foundation
 import SwiftUI
+import WorldOfPaybackAppExtensions
 
 public struct OutlineButtonStyle: ButtonStyle {
     var color: Color
     
-    public init(color: Color = .purple) {
+    public init(color: Color = Color.secondaryColor) {
         self.color = color
     }
     

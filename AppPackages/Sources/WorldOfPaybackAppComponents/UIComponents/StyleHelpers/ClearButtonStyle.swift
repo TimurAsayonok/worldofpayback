@@ -1,17 +1,14 @@
 //
-//  ClearButtonStyle.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/22/23.
 //
 
-import Foundation
 import SwiftUI
+import WorldOfPaybackAppExtensions
 
 public struct ClearButtonStyle: ButtonStyle {
-    var labelColor: Color = .purple
+    var labelColor: Color
     
-    public init(labelColor: Color) {
+    public init(labelColor: Color = Color.secondaryColor) {
         self.labelColor = labelColor
     }
     

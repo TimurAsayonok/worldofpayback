@@ -7,8 +7,9 @@
 
 import SwiftUI
 import ComposableArchitecture
-import WorldOfPaybackAppComponents
 import LocalizationStrings
+import WorldOfPaybackAppComponents
+import WorldOfPaybackAppExtensions
 
 public struct WelcomeView: View {
     let store: StoreOf<WelcomeStore>
@@ -23,13 +24,13 @@ public struct WelcomeView: View {
                 Spacer()
                 
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(.purple))
+                    .fill(Color.secondaryColor)
                     .frame(width: 40, height: 40)
                     .padding(.vertical, 20)
                 
                 Text(L10N.welcomeScreenTitle).font(.largeTitle).bold()
                 
-                Text(L10N.welcomeScreenMessage + L10N.startButtonTitle).font(.caption)
+                Text(L10N.welcomeScreenMessage + L10N.startButtonTitle).font(.footnote)
                 
                 Button(L10N.startButtonTitle) {
                     viewStore.send(.loginTapped)

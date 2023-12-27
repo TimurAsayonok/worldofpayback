@@ -58,6 +58,7 @@ enum Module: String, CaseIterable {
                 name: rawValue,
                 dependencies: [
                     .init(.WorldOfPaybackAppModels),
+                    .init(.WorldOfPaybackAppExtensions),
                     .init(.LocalizationStrings),
                     .init(.ComposableArchitecture)
                 ]
@@ -104,6 +105,7 @@ enum Module: String, CaseIterable {
                 dependencies: [
                     .init(.WorldOfPaybackAppModels),
                     .init(.WorldOfPaybackAppComponents),
+                    .init(.WorldOfPaybackAppExtensions),
                     .init(.LocalizationStrings),
                     .init(.ComposableArchitecture)
                 ]

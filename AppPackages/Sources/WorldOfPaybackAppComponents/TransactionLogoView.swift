@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WorldOfPaybackAppExtensions
 
 public struct TransactionLogoView: View {
     var transactionName: String?
@@ -27,7 +28,7 @@ public struct TransactionLogoView: View {
             .frame(width: size.width, height: size.height)
             .background {
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(red: 0.36, green: 0.26, blue: 0.78))
+                    .fill(Color.secondaryColor)
             }
     }
 }
