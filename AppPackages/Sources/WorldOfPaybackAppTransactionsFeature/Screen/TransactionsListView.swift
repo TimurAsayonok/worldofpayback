@@ -9,11 +9,16 @@ import SwiftUI
 import ComposableArchitecture
 import WorldOfPaybackModels
 import WorldOfPaybackAppComponents
+import LocalizationStrings
 
-struct TransactionsListView: View {
+public struct TransactionsListView: View {
     var store: StoreOf<TransactionListStore>
     
-    var body: some View {
+    public init(store: StoreOf<TransactionListStore>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             VStack {
                 if viewStore.state.transactionList.isEmpty {
@@ -89,15 +94,15 @@ struct TransactionsListView: View {
     }
 }
 
-struct TransactionListStore: Reducer {
-    struct State: Equatable {
-        var transactionList: [TransactionModel] = []
+public struct TransactionListStore: Reducer {
+    public struct State: Equatable {
+        var transactionList: [TransactionModel]
         var isLoading = false
-        var alertModel: WorldOfPaybackModels.AlertModel?
+        var alertModel: AlertModel?
         var isFilterViewPresented = false
         var filteredType: FilterType?
-        var filtersState = FiltersStore.State()
-        var toolbarButtonsState = MainToolbarStore.State()
+        var filtersState: FiltersStore.State
+        var toolbarButtonsState: MainToolbarStore.State
         
         var filteredList: [TransactionModel] {
             let sorting: (ComparisonResult) -> [TransactionModel] = { comparison in
@@ -122,9 +127,27 @@ struct TransactionListStore: Reducer {
         var totalAmount: Int {
             filteredList.reduce(0, { $0 + ($1.transactionDetail?.value?.amount ?? 0) })
         }
+        
+        public init(
+            transactionList: [TransactionModel] = [],
+            isLoading: Bool = false,
+            alertModel: AlertModel? = nil,
+            isFilterViewPresented: Bool = false,
+            filteredType: FilterType? = nil,
+            filtersState: FiltersStore.State = FiltersStore.State(),
+            toolbarButtonsState: MainToolbarStore.State = MainToolbarStore.State()
+        ) {
+            self.transactionList = transactionList
+            self.isLoading = isLoading
+            self.alertModel = alertModel
+            self.isFilterViewPresented = isFilterViewPresented
+            self.filteredType = filteredType
+            self.filtersState = filtersState
+            self.toolbarButtonsState = toolbarButtonsState
+        }
     }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case initScreen
         case getTransactionList
         case transactionItemTapped(TransactionModel)
@@ -136,10 +159,10 @@ struct TransactionListStore: Reducer {
         case presentFilterView(Bool)
     }
     
-    @Dependency(\.apiService) 
-    var apiService
+//    @Dependency(\.apiService) 
+//    var apiService
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce<State, Action> { state, action in
             switch action {
             case .initScreen:
@@ -153,8 +176,8 @@ struct TransactionListStore: Reducer {
                 state.isLoading = true
                 
                 return .run { send in
-                    let response = try await apiService.getTransactionList()
-                    await send(.getTransactionListSucceed(response))
+//                    let response = try await apiService.getTransactionList()
+                    await send(.getTransactionListSucceed([]))
                 } catch: { error, send in
                     await send(.getTransactionListError(error as? ErrorResponse))
                 }
@@ -199,4 +222,6 @@ struct TransactionListStore: Reducer {
             }
         }
     }
+    
+    public init() {}
 }

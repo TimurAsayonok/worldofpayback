@@ -6,23 +6,29 @@
 //
 
 import ComposableArchitecture
+import WorldOfPaybackAppWelcomeFeature
+import WorldOfPaybackAppTransactionsFeature
 import TCACoordinators
 
-struct Coordinator: Reducer {
-    struct State: Equatable, IndexedRouterState {
-        static let initialState = State(
+public struct Coordinator: Reducer {
+    public struct State: Equatable, IndexedRouterState {
+        public static let initialState = State(
             routes: [.root(.welcome(.init()), embedInNavigationView: true)]
         )
         
-        var routes: [Route<ScreenRoute.State>]
+        public var routes: [Route<ScreenRoute.State>]
+        
+        public init(routes: [Route<ScreenRoute.State>]) {
+            self.routes = routes
+        }
     }
     
-    enum Action: IndexedRouterAction {
+    public enum Action: IndexedRouterAction {
         case routeAction(Int, action: ScreenRoute.Action)
         case updateRoutes([Route<ScreenRoute.State>])
     }
     
-    var body: some Reducer<State, Action> {
+    public var body: some Reducer<State, Action> {
         return Reduce<State, Action> { state, action in
             switch action {
             case .routeAction(_, action: .welcome(.loginTapped)):
@@ -38,4 +44,6 @@ struct Coordinator: Reducer {
             ScreenRoute()
         }
     }
+    
+    public init() {}
 }

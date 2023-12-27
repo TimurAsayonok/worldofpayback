@@ -8,11 +8,17 @@
 import SwiftUI
 import ComposableArchitecture
 import TCACoordinators
+import WorldOfPaybackAppWelcomeFeature
+import WorldOfPaybackAppTransactionsFeature
 
-struct CoordinatorView: View {
+public struct CoordinatorView: View {
     let store: StoreOf<Coordinator>
     
-    var body: some View {
+    public init(store: StoreOf<Coordinator>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         TCARouter(store) { screen in
             SwitchStore(screen) { screen  in
                 switch screen {

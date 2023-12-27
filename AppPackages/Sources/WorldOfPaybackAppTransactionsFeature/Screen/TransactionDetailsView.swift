@@ -10,10 +10,14 @@ import WorldOfPaybackModels
 import WorldOfPaybackAppComponents
 import SwiftUI
 
-struct TransactionDetailsView: View {
+public struct TransactionDetailsView: View {
     let store: StoreOf<TransactionDetailsStore>
     
-    var body: some View {
+    public init(store: StoreOf<TransactionDetailsStore>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             let transaction = viewStore.state.transaction
             
@@ -41,14 +45,20 @@ struct TransactionDetailsView: View {
     }
 }
 
-struct TransactionDetailsStore: Reducer {
-    struct State: Equatable {
+public struct TransactionDetailsStore: Reducer {
+    public struct State: Equatable {
         var transaction: TransactionModel
+        
+        public init(transaction: TransactionModel) {
+            self.transaction = transaction
+        }
     }
     
-    enum Action: Equatable {}
+    public enum Action: Equatable {}
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         EmptyReducer()
     }
+    
+    public init() {}
 }

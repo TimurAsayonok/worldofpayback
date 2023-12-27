@@ -5,14 +5,19 @@
 //  Created by Tsimur Asayonak on 12/19/23.
 //
 
+import SwiftUI
 import ComposableArchitecture
 import WorldOfPaybackAppComponents
-import SwiftUI
+import LocalizationStrings
 
-struct WelcomeView: View {
+public struct WelcomeView: View {
     let store: StoreOf<WelcomeStore>
     
-    var body: some View {
+    public init(store: StoreOf<WelcomeStore>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             VStack(alignment: .leading) {
                 Spacer()
@@ -40,14 +45,16 @@ struct WelcomeView: View {
     }
 }
 
-struct WelcomeStore: Reducer {
-    struct State: Equatable {}
+public struct WelcomeStore: Reducer {
+    public struct State: Equatable {
+        public init() {}
+    }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case loginTapped
     }
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce<State, Action> { _, action in
             switch action {
             case .loginTapped:
@@ -56,4 +63,6 @@ struct WelcomeStore: Reducer {
             }
         }
     }
+    
+    public init() {}
 }

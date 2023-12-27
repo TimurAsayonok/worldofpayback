@@ -7,8 +7,11 @@ enum Module: String, CaseIterable {
     case WorldOfPaybackApp
 //    case WorldOfPaybackAppTests
     case WorldOfPaybackAppComponents
+    case WorldOfPaybackAppCoordinator
     case WorldOfPaybackAppCore
     case WorldOfPaybackModels
+    case WorldOfPaybackAppTransactionsFeature
+    case WorldOfPaybackAppWelcomeFeature
     case LocalizationStrings
     
     static var staticModules: [Module] = [.WorldOfPaybackApp]
@@ -28,8 +31,11 @@ enum Module: String, CaseIterable {
                 name: rawValue,
                 dependencies: [
                     .init(.WorldOfPaybackAppComponents),
+                    .init(.WorldOfPaybackAppCoordinator),
                     .init(.WorldOfPaybackAppCore),
                     .init(.WorldOfPaybackModels),
+                    .init(.WorldOfPaybackAppTransactionsFeature),
+                    .init(.WorldOfPaybackAppWelcomeFeature),
                     .init(.LocalizationStrings)
                 ] + [
                     // External dependencies
@@ -45,6 +51,16 @@ enum Module: String, CaseIterable {
                     .init(.LocalizationStrings)
                 ]
             )
+        case .WorldOfPaybackAppCoordinator:
+            return .target(
+                name: rawValue,
+                dependencies: [
+                    .init(.WorldOfPaybackModels),
+                    .init(.WorldOfPaybackAppTransactionsFeature),
+                    .init(.WorldOfPaybackAppWelcomeFeature),
+                    .init(.LocalizationStrings)
+                ]
+            )
         case .WorldOfPaybackAppCore:
             return .target(
                 name: rawValue,
@@ -54,6 +70,22 @@ enum Module: String, CaseIterable {
             return .target(
                 name: rawValue,
                 dependencies: [
+                    .init(.LocalizationStrings)
+                ]
+            )
+        case .WorldOfPaybackAppTransactionsFeature:
+            return .target(
+                name: rawValue,
+                dependencies: [
+                    .init(.WorldOfPaybackModels),
+                    .init(.LocalizationStrings)
+                ]
+            )
+        case .WorldOfPaybackAppWelcomeFeature:
+            return .target(
+                name: rawValue,
+                dependencies: [
+                    .init(.WorldOfPaybackModels),
                     .init(.LocalizationStrings)
                 ]
             )

@@ -6,21 +6,23 @@
 //
 
 import ComposableArchitecture
+import WorldOfPaybackAppWelcomeFeature
+import WorldOfPaybackAppTransactionsFeature
 
-struct ScreenRoute: Reducer {
-    enum State: Equatable {
+public struct ScreenRoute: Reducer {
+    public enum State: Equatable {
         case welcome(WelcomeStore.State)
         case transactionsList(TransactionListStore.State)
         case transactionItemDetails(TransactionDetailsStore.State)
     }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case welcome(WelcomeStore.Action)
         case transactionsList(TransactionListStore.Action)
         case transactionItemDetails(TransactionDetailsStore.Action)
     }
     
-    var body: some Reducer<State, Action> {
+    public var body: some Reducer<State, Action> {
         Scope(state: /State.welcome, action: /Action.welcome) {
             WelcomeStore()
         }

@@ -9,10 +9,14 @@ import SwiftUI
 import WorldOfPaybackModels
 import WorldOfPaybackAppComponents
 
-struct TransactionView: View {
+public struct TransactionView: View {
     var transaction: TransactionModel
+    
+    public init(transaction: TransactionModel) {
+        self.transaction = transaction
+    }
 
-    var body: some View {
+    public var body: some View {
         HStack {
             TransactionLogoView(transactionName: transaction.partnerDisplayName)
             VStack(alignment: .leading, spacing: 8) {
@@ -26,9 +30,9 @@ struct TransactionView: View {
                         .font(.footnote)
                         .foregroundStyle(.gray)
                     
-                    Text(transaction.transactionDetail?.bookingDate?.timestamp ?? "")
-                        .font(.footnote)
-                        .foregroundStyle(.gray)
+//                    Text(transaction.transactionDetail?.bookingDate?.timestamp ?? "")
+//                        .font(.footnote)
+//                        .foregroundStyle(.gray)
                 }
                 Text(transaction.transactionDetail?.value?.formattedValue ?? "")
                     .font(.callout)
