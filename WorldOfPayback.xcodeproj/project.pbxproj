@@ -83,7 +83,6 @@
 		2DDFEAC12B34817000BA75AE /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC02B34816F00BA75AE /* PBTransactions.json */; };
 		2DDFEAC32B34888100BA75AE /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */; };
 		2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */; };
-		2DDFEAC82B34A76600BA75AE /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */; };
 		2DDFEACA2B34CCBF00BA75AE /* TransactionLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */; };
 		2DDFEACC2B35977800BA75AE /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEACB2B35977800BA75AE /* FiltersView.swift */; };
 /* End PBXBuildFile section */
@@ -179,7 +178,6 @@
 		2DDFEAC02B34816F00BA75AE /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PBTransactions.json; path = ../../Downloads/PAYBACK_Coding_Challenge/PBTransactions.json; sourceTree = "<group>"; };
 		2DDFEAC22B34888100BA75AE /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequest.swift; sourceTree = "<group>"; };
-		2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 		2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLogoView.swift; sourceTree = "<group>"; };
 		2DDFEACB2B35977800BA75AE /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -602,7 +600,6 @@
 			isa = PBXGroup;
 			children = (
 				2DDFEAB22B33A54D00BA75AE /* ErrorResponse.swift */,
-				2DDFEAC62B34A5F400BA75AE /* AlertModel.swift */,
 				2D6D93062B35AB240057E0EB /* FilterType.swift */,
 				2D1381912B375E4E00C870BF /* ToolbarButton.swift */,
 			);
@@ -816,7 +813,6 @@
 				2D6D93072B35AB240057E0EB /* FilterType.swift in Sources */,
 				2DDFEAA82B339DC900BA75AE /* EnvironmentConfiguration.swift in Sources */,
 				2DDFEA8A2B31F46A00BA75AE /* TransactionDetail.swift in Sources */,
-				2DDFEAC82B34A76600BA75AE /* AlertModel.swift in Sources */,
 				2D13818C2B35E11700C870BF /* LocalizationHelper.swift in Sources */,
 				2DDFEA8F2B31F52A00BA75AE /* Currency.swift in Sources */,
 				2DDFEAA22B33856F00BA75AE /* HeadersRequestDecorator.swift in Sources */,

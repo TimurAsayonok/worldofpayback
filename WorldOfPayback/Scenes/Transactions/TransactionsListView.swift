@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import WorldOfPaybackModels
 
 struct TransactionsListView: View {
     var store: StoreOf<TransactionListStore>
@@ -91,7 +92,7 @@ struct TransactionListStore: Reducer {
     struct State: Equatable {
         var transactionList: [TransactionModel] = []
         var isLoading = false
-        var alertModel: AlertModel?
+        var alertModel: WorldOfPaybackModels.AlertModel?
         var isFilterViewPresented = false
         var filteredType: FilterType?
         var filtersState = FiltersStore.State()
@@ -170,7 +171,7 @@ struct TransactionListStore: Reducer {
             
             case let .getTransactionListError(error):
                 state.isLoading = false
-                state.alertModel = AlertModel(message: error?.localizedDescription)
+                state.alertModel = WorldOfPaybackModels.AlertModel(message: error?.localizedDescription)
                 return .none
                 
             case .closeAlertAndRefresh:

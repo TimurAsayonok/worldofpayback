@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import LocalizationStrings
 
-struct AlertModel: Equatable {
-    var title: String
-    var message: String?
-    var primaryButtonTitle: String?
-    var cancelButtonTitle: String?
+public struct AlertModel: Equatable {
+    public var title: String
+    public var message: String?
+    public var primaryButtonTitle: String?
+    public var cancelButtonTitle: String?
     
-    init(
+    public init(
         title: String = L10N.alertTitle,
         message: String? = nil,
         primaryButtonTitle: String? = L10N.okButton,

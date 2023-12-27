@@ -8,6 +8,8 @@ enum Module: String, CaseIterable {
 //    case WorldOfPaybackAppTests
     case WorldOfPaybackAppComponents
     case WorldOfPaybackAppCore
+    case WorldOfPaybackModels
+    case LocalizationStrings
     
     static var staticModules: [Module] = [.WorldOfPaybackApp]
     
@@ -26,7 +28,9 @@ enum Module: String, CaseIterable {
                 name: rawValue,
                 dependencies: [
                     .init(.WorldOfPaybackAppComponents),
-                    .init(.WorldOfPaybackAppCore)
+                    .init(.WorldOfPaybackAppCore),
+                    .init(.WorldOfPaybackModels),
+                    .init(.LocalizationStrings)
                 ] + [
                     // External dependencies
                     .init(.ComposableArchitecture),
@@ -42,6 +46,19 @@ enum Module: String, CaseIterable {
             return .target(
                 name: rawValue,
                 dependencies: []
+            )
+        case .WorldOfPaybackModels:
+            return .target(
+                name: rawValue,
+                dependencies: [
+                    .init(.LocalizationStrings)
+                ]
+            )
+        case .LocalizationStrings:
+            return .target(
+                name: rawValue,
+                dependencies: [],
+                resources: [.process("Resources")]
             )
         }
     }
@@ -99,6 +116,7 @@ extension Target.Dependency {
 
 let package = Package(
     name: "AppPackages",
+    defaultLocalization: "en",
     platforms: [.iOS(.v17)],
     products: Module.allCases.map(\.product),
     dependencies: Dependency.allCases.map(\.packageDependency),
