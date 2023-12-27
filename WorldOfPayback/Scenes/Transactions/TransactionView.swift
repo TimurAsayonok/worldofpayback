@@ -9,7 +9,6 @@ import SwiftUI
 import WorldOfPaybackModels
 import WorldOfPaybackAppComponents
 
-
 struct TransactionView: View {
     var transaction: TransactionModel
 

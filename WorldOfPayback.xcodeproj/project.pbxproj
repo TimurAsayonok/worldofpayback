@@ -391,7 +391,6 @@
 				2DDFEA952B33672000BA75AE /* NetworkLayer */,
 				2DDFEAA52B339D8500BA75AE /* Services */,
 				2DDFEA9E2B33721500BA75AE /* Extensions */,
-				2DDFEA912B32224F00BA75AE /* Common */,
 				2D13818A2B35E0AB00C870BF /* Helpers */,
 				2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */,
 				2DDFEA642B30D3F200BA75AE /* AppDelegate.swift */,
@@ -454,21 +453,6 @@
 				2DDFEA802B31F2E700BA75AE /* TransactionDetailsView.swift */,
 			);
 			path = Transactions;
-			sourceTree = "<group>";
-		};
-		2DDFEA912B32224F00BA75AE /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				2DDFEA922B32225B00BA75AE /* UIComponents */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		2DDFEA922B32225B00BA75AE /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		2DDFEA952B33672000BA75AE /* NetworkLayer */ = {
