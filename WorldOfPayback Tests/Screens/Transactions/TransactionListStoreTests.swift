@@ -69,7 +69,7 @@ final class TransactionListStoreTests: XCTestCase {
         let store = TestStore(initialState: TransactionListStore.State()) {
             TransactionListStore()
         } withDependencies: {
-            $0.apiService = ApiServiceKey.testValue
+            $0.apiService = ApiServiceKey.testValue(false)
         }
         
         await store.send(.toolbarButtonsAction(.toolbarButtonPressed(.init(type: .refresh))))

@@ -23,7 +23,7 @@ final class TransactionListRequestTests: XCTestCase {
     }
     
     func testMustHaveCorrectResponse() {
-        XCTAssertEqual("\(type(of: sut).Response.self)", "\([TransactionModel].self)")
+        XCTAssertEqual("\(type(of: sut).Response.self)", "\(TransactionResponse.self)")
     }
     
     func testMustHaveCorrectError() {
