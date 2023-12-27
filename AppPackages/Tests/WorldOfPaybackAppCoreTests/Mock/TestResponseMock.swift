@@ -1,11 +1,7 @@
 //
-//  TestResponseMock.swift
-//  WorldOfPayback Tests
-//
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
 import Foundation
 
 struct TestResponseMock: Codable, Equatable {

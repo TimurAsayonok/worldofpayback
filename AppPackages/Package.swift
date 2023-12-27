@@ -134,7 +134,9 @@ enum Module: String, CaseIterable {
         case .WorldOfPaybackAppCore:
             return .testTarget(
                 name: testName,
-                dependencies: []
+                dependencies: [
+                    .init(self)
+                ]
             )
         case .WorldOfPaybackAppComponents:
             return .testTarget(

@@ -5,7 +5,6 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
 import XCTest
 
 final class BuildConfigurationTests: XCTestCase {

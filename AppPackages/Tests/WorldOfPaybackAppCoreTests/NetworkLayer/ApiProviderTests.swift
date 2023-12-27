@@ -5,7 +5,7 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
+import WorldOfPaybackAppCore
 import XCTest
 
 final class ApiProviderTests: XCTestCase {
@@ -80,15 +80,4 @@ final class ApiProviderTests: XCTestCase {
             XCTAssertEqual(error, TestErrorMock())
         }
     }
-    
-    //    func testMustFailWithStatusCode401() {
-    //        urlSession.data = try? TestRequest.Error().toData(jsonEncoder: JSONEncoder())
-    //        urlSession.response = HTTPURLResponse.mock(401)
-    //        let request = TestRequest(string: "String", int: 0, bool: true)
-    //        let result = sut.send(apiRequest: request, method: .get)
-    //
-    //        XCTAssertThrowsError(try result.toBlocking().single()) { error in
-    //            XCTAssertEqual(error as? TestError, TestError())
-    //        }
-    //    }
 }

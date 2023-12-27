@@ -1,12 +1,9 @@
 //
-//  HeadersRequestDecoratorProtocolMock.swift
-//  WorldOfPayback Tests
-//
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
 import Foundation
+import WorldOfPaybackAppCore
 
 class HeadersRequestDecoratorProtocolMock: HeadersRequestDecoratorProtocol {
     var requestHeaders: [String: String?] {

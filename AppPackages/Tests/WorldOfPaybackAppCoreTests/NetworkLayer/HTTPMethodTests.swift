@@ -5,7 +5,7 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
+import WorldOfPaybackAppCore
 import XCTest
 
 final class HTTPMethodTests: XCTestCase {
