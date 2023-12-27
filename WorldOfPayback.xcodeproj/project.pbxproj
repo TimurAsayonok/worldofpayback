@@ -47,7 +47,7 @@
 		2D1382522B3B792D00C870BF /* DependencyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382512B3B792D00C870BF /* DependencyMock.swift */; };
 		2D1382572B3B8EAE00C870BF /* ScreenRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */; };
 		2D13825A2B3B960B00C870BF /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382592B3B960B00C870BF /* CoordinatorTests.swift */; };
-		2D13826B2B3BBB8F00C870BF /* WorldOfPaybackApp in Frameworks */ = {isa = PBXBuildFile; productRef = 2D13826A2B3BBB8F00C870BF /* WorldOfPaybackApp */; };
+		2D1382792B3BC0F900C870BF /* WorldOfPaybackApp in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1382782B3BC0F900C870BF /* WorldOfPaybackApp */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
 		2D1C343A2B30C5AB006E3FAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34392B30C5AB006E3FAE /* Preview Assets.xcassets */; };
@@ -142,7 +142,6 @@
 		2D1382512B3B792D00C870BF /* DependencyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyMock.swift; sourceTree = "<group>"; };
 		2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouteTests.swift; sourceTree = "<group>"; };
 		2D1382592B3B960B00C870BF /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
-		2D1382662B3BB9CD00C870BF /* AppPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AppPackages; path = ../AppPackages; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
 		2D1C34362B30C5AB006E3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,7 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D13826B2B3BBB8F00C870BF /* WorldOfPaybackApp in Frameworks */,
+				2D1382792B3BC0F900C870BF /* WorldOfPaybackApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +397,6 @@
 		2D1C34262B30C5AA006E3FAE = {
 			isa = PBXGroup;
 			children = (
-				2D1382662B3BB9CD00C870BF /* AppPackages */,
 				2D1C34312B30C5AA006E3FAE /* WorldOfPayback */,
 				2D1381F32B3AC87400C870BF /* WorldOfPayback Tests */,
 				2D1C34302B30C5AA006E3FAE /* Products */,
@@ -656,7 +654,7 @@
 			);
 			name = WorldOfPayback;
 			packageProductDependencies = (
-				2D13826A2B3BBB8F00C870BF /* WorldOfPaybackApp */,
+				2D1382782B3BC0F900C870BF /* WorldOfPaybackApp */,
 			);
 			productName = wordofpayback;
 			productReference = 2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */;
@@ -693,7 +691,7 @@
 			);
 			mainGroup = 2D1C34262B30C5AA006E3FAE;
 			packageReferences = (
-				2D1382692B3BBB8F00C870BF /* XCLocalSwiftPackageReference "AppPackages" */,
+				2D1382772B3BC0F900C870BF /* XCLocalSwiftPackageReference "AppPackages" */,
 			);
 			productRefGroup = 2D1C34302B30C5AA006E3FAE /* Products */;
 			projectDirPath = "";
@@ -1390,14 +1388,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		2D1382692B3BBB8F00C870BF /* XCLocalSwiftPackageReference "AppPackages" */ = {
+		2D1382772B3BC0F900C870BF /* XCLocalSwiftPackageReference "AppPackages" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = AppPackages;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2D13826A2B3BBB8F00C870BF /* WorldOfPaybackApp */ = {
+		2D1382782B3BC0F900C870BF /* WorldOfPaybackApp */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WorldOfPaybackApp;
 		};

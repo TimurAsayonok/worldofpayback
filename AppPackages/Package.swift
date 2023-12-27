@@ -87,10 +87,6 @@ enum Dependency: String, CaseIterable {
     }
 }
 
-//enum Submodule: String {
-//    
-//}
-
 extension Target.Dependency {
     init(_ module: Module) {
         self.init(stringLiteral: module.rawValue)
@@ -99,10 +95,6 @@ extension Target.Dependency {
     init(_ dependency: Dependency) {
         self = .product(name: dependency.rawValue, package: dependency.packageName)
     }
-
-//    init(_ dependency: Submodule) {
-//        self = .product(name: dependency.rawValue, package: dependency.packageName)
-//    }
 }
 
 let package = Package(
