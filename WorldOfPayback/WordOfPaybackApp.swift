@@ -10,14 +10,18 @@ import ComposableArchitecture
 
 @main
 struct WordOfPaybackApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var networkMonitor = NetworkMonitor()
     
     var body: some Scene {
         WindowGroup {
-            CoordinatorView(store: Store(initialState: .initialState, reducer: {
-                Coordinator()
-            }))
-            .safeAreaPadding(16)
+            if networkMonitor.isConnected {
+                CoordinatorView(store: Store(initialState: .initialState, reducer: {
+                    Coordinator()
+                }))
+                .safeAreaPadding(16)
+            } else {
+                NetworkUnavailableView()
+            }
         }
     }
 }

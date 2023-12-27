@@ -31,3 +31,7 @@
 
 // MARK: - Alert
 "alert_title" = "Hoppla!";
+
+// MARK: - Network Unavailable
+"no_internet_connection_title" = "Keine Internetverbindung";
+"no_internet_connection_description" = "Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.";
