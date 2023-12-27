@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct TransactionLogoView: View {
+public struct TransactionLogoView: View {
     var transactionName: String?
     var size: CGSize
     
-    init(
+    public init(
         transactionName: String? = nil,
         size: CGSize = CGSize(width: 80, height: 80)
     ) {
@@ -19,7 +19,7 @@ struct TransactionLogoView: View {
         self.size = size
     }
     
-    var body: some View {
+    public var body: some View {
         Text(String(transactionName?.first?.uppercased() ?? "T"))
             .font(.title)
             .bold()
@@ -27,7 +27,7 @@ struct TransactionLogoView: View {
             .frame(width: size.width, height: size.height)
             .background {
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(.purple))
+                    .fill(Color(red: 0.36, green: 0.26, blue: 0.78))
             }
     }
 }

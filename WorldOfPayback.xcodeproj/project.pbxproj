@@ -44,7 +44,6 @@
 		2D1382572B3B8EAE00C870BF /* ScreenRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */; };
 		2D13825A2B3B960B00C870BF /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382592B3B960B00C870BF /* CoordinatorTests.swift */; };
 		2D1382792B3BC0F900C870BF /* WorldOfPaybackApp in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1382782B3BC0F900C870BF /* WorldOfPaybackApp */; };
-		2D1382832B3C46FF00C870BF /* NetworkUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382822B3C46FF00C870BF /* NetworkUnavailableView.swift */; };
 		2D1382852B3C471D00C870BF /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382842B3C471D00C870BF /* NetworkMonitor.swift */; };
 		2D1C34332B30C5AA006E3FAE /* WordOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */; };
 		2D1C34372B30C5AB006E3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C34362B30C5AB006E3FAE /* Assets.xcassets */; };
@@ -71,7 +70,6 @@
 		2DDFEABE2B34699700BA75AE /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEABD2B34699700BA75AE /* TransactionView.swift */; };
 		2DDFEAC12B34817000BA75AE /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC02B34816F00BA75AE /* PBTransactions.json */; };
 		2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */; };
-		2DDFEACA2B34CCBF00BA75AE /* TransactionLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +122,6 @@
 		2D1382512B3B792D00C870BF /* DependencyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyMock.swift; sourceTree = "<group>"; };
 		2D1382562B3B8EAE00C870BF /* ScreenRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouteTests.swift; sourceTree = "<group>"; };
 		2D1382592B3B960B00C870BF /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
-		2D1382822B3C46FF00C870BF /* NetworkUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUnavailableView.swift; sourceTree = "<group>"; };
 		2D1382842B3C471D00C870BF /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		2D1C342F2B30C5AA006E3FAE /* WorldOfPayback Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldOfPayback Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1C34322B30C5AA006E3FAE /* WordOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfPaybackApp.swift; sourceTree = "<group>"; };
@@ -153,7 +150,6 @@
 		2DDFEABD2B34699700BA75AE /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		2DDFEAC02B34816F00BA75AE /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PBTransactions.json; path = ../../Downloads/PAYBACK_Coding_Challenge/PBTransactions.json; sourceTree = "<group>"; };
 		2DDFEAC42B3490B500BA75AE /* DummyTransactionListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTransactionListRequest.swift; sourceTree = "<group>"; };
-		2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,8 +467,6 @@
 		2DDFEA922B32225B00BA75AE /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				2DDFEAC92B34CCBF00BA75AE /* TransactionLogoView.swift */,
-				2D1382822B3C46FF00C870BF /* NetworkUnavailableView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -724,8 +718,6 @@
 				2DDFEAC52B3490B500BA75AE /* DummyTransactionListRequest.swift in Sources */,
 				2DDFEA7C2B31D8E800BA75AE /* CoordinatorView.swift in Sources */,
 				2DDFEA652B30D3F200BA75AE /* AppDelegate.swift in Sources */,
-				2D1382832B3C46FF00C870BF /* NetworkUnavailableView.swift in Sources */,
-				2DDFEACA2B34CCBF00BA75AE /* TransactionLogoView.swift in Sources */,
 				2DDFEA782B31D59B00BA75AE /* ScreenRoute.swift in Sources */,
 				2DDFEAAA2B339E5200BA75AE /* BuildConfiguration.swift in Sources */,
 				2DDFEAB62B33AD7400BA75AE /* ApiServiceDependency.swift in Sources */,

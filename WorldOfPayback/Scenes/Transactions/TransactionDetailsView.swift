@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import WorldOfPaybackModels
+import WorldOfPaybackAppComponents
 import SwiftUI
 
 struct TransactionDetailsView: View {

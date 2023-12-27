@@ -5,8 +5,10 @@
 //  Created by Tsimur Asayonak on 12/21/23.
 //
 
-import WorldOfPaybackModels
 import SwiftUI
+import WorldOfPaybackModels
+import WorldOfPaybackAppComponents
+
 
 struct TransactionView: View {
     var transaction: TransactionModel

@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import LocalizationStrings
 
-struct NetworkUnavailableView: View {
-    var body: some View {
+public struct NetworkUnavailableView: View {
+    public init() {}
+    
+    public var body: some View {
         ContentUnavailableView(
             L10N.noInternetConnectionTitle,
             systemImage: "wifi.exclamationmark",
