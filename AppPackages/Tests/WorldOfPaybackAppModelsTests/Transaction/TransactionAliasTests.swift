@@ -5,9 +5,8 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
 import XCTest
-import WorldOfPaybackModels
+import WorldOfPaybackAppModels
 
 final class TransactionAliasTests: XCTestCase {
     func testAllValues() {

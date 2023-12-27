@@ -5,9 +5,9 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
 import XCTest
-import WorldOfPaybackModels
+import WorldOfPaybackAppModels
+import WorldOfPaybackAppExtensions
 
 final class TransactionDetailTests: XCTestCase {
     func testAllValues() {
@@ -22,7 +22,6 @@ final class TransactionDetailTests: XCTestCase {
 extension TransactionDetail {
     static func sut() -> Self {
         let date = DateFormatter.customDateFormatter.date(from: "2023-12-26T11:42:00")
-        print("Date", date)
         return .init(
             description: "description",
             bookingDate: DateFormatter.customDateFormatter.date(from: "2023-12-26T11:42:00"),

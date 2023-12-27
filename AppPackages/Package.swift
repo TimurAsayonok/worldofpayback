@@ -6,7 +6,6 @@ import PackageDescription
 enum Module: String, CaseIterable {
     case LocalizationStrings
     case WorldOfPaybackApp
-//    case WorldOfPaybackAppTests
     case WorldOfPaybackAppComponents
     case WorldOfPaybackAppCoordinator
     case WorldOfPaybackAppCore
@@ -47,11 +46,6 @@ enum Module: String, CaseIterable {
                     .init(.TCACoordinators)
                 ]
             )
-//        case .WorldOfPaybackAppTests:
-//            return .target(
-//                name: rawValue,
-//                dependencies: []
-//            )
         case .LocalizationStrings:
             return .target(
                 name: rawValue,
@@ -146,6 +140,15 @@ enum Module: String, CaseIterable {
             return .testTarget(
                 name: testName,
                 dependencies: []
+            )
+        case .WorldOfPaybackAppModels:
+            return .testTarget(
+                name: testName,
+                dependencies: [
+                    .init(.WorldOfPaybackAppModels),
+                    .init(.LocalizationStrings),
+                    .init(.WorldOfPaybackAppExtensions)
+                ]
             )
             
         default: return nil

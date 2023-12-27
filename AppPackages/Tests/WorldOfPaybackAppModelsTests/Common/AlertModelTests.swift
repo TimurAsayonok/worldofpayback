@@ -5,7 +5,8 @@
 //  Created by Tsimur Asayonak on 12/26/23.
 //
 
-@testable import WorldOfPayback_Dev
+import LocalizationStrings
+import WorldOfPaybackAppModels
 import XCTest
 
 final class AlertModelTests: XCTestCase {
