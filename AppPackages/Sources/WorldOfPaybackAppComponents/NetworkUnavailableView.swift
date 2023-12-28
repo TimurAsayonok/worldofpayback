@@ -1,7 +1,4 @@
 //
-//  NetworkUnavailableView.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/27/23.
 //
 

@@ -1,7 +1,4 @@
 //
-//  HeadersRequestDecorator.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/20/23.
 //
 

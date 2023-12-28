@@ -1,7 +1,4 @@
 //
-//  ApiProvider.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/20/23.
 //
 
@@ -109,7 +106,6 @@ public class ApiProvider: ApiProviderProtocol {
                 // we are using force unwrap just for testing dummy data!
                 continuation.resume(with: .success(model.items as! T.Response))
             } catch {
-                print("Error", error)
                 continuation.resume(with: .failure(error))
             }
         }

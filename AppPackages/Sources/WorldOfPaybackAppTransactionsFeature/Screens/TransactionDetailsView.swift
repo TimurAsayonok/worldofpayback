@@ -1,7 +1,4 @@
 //
-//  TransactionDetailsView.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/19/23.
 //
 
