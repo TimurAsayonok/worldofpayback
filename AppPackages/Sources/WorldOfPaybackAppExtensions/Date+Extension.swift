@@ -8,7 +8,7 @@ public extension Date {
     var timestamp: String {
         let dataFormatter = DateFormatter()
         dataFormatter.setLocalizedDateFormatFromTemplate("dd/MM/YYYY")
-        
+
         return String(format: "%@", dataFormatter.string(from: self))
     }
 }
