@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WorldOfPaybackAppCore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(
