@@ -69,6 +69,8 @@ enum Module: String, CaseIterable {
                     .init(.WorldOfPaybackAppModels),
                     .init(.WorldOfPaybackAppTransactionsFeature),
                     .init(.WorldOfPaybackAppWelcomeFeature),
+                    .init(.ComposableArchitecture),
+                    .init(.TCACoordinators),
                     .init(.LocalizationStrings)
                 ]
             )
