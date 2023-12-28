@@ -1,7 +1,4 @@
 //
-//  TransactionView.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/21/23.
 //
 
@@ -30,9 +27,10 @@ public struct TransactionView: View {
                         .font(.footnote)
                         .foregroundStyle(.gray)
                     
-//                    Text(transaction.transactionDetail?.bookingDate?.timestamp ?? "")
-//                        .font(.footnote)
-//                        .foregroundStyle(.gray)
+                    Text(transaction.transactionDetail?.bookingDate?.timestamp
+                         ?? "")
+                        .font(.footnote)
+                        .foregroundStyle(.gray)
                 }
                 Text(transaction.transactionDetail?.value?.formattedValue ?? "")
                     .font(.callout)

@@ -1,7 +1,4 @@
 //
-//  TransactionLogoView.swift
-//  WorldOfPayback
-//
 //  Created by Tsimur Asayonak on 12/21/23.
 //
 
